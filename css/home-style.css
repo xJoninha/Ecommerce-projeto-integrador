@@ -1,0 +1,129 @@
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+
+/* criação das variaveis para cores e fontes */
+:root {
+    --cor-primaria: #2e0049;
+    --cor-primaria-light: #5b2b75;
+    --cor-primaria-dark: #130023;
+
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-light: #ffffff;
+    --cor-secundaria-dark: #c0b3c2;
+
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
+
+    --font-famaly-1: 'Tinos', serif;
+    --font-famaly-2: 'Smooch Sans', sans-serif;
+}
+
+/* aplicação da formatação do corpo do html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-famaly-1);
+}/* --------------------------------------- */
+
+main {
+    background-color: var(--cor-secundaria);
+}
+
+/* START- Estilização da parte do 'carrocel' da home */
+.main-carrocel {
+    margin: 8px auto;
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 3px;
+}
+
+.main-carrocel img {
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+}/* --------------------------------------- */
+
+/* START- Estilização de 'categorias-destaques' */
+.categorias-destaques-text {
+    color: var(--cor-primaria-light);
+    margin: 5px auto 2px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+}
+
+.categorias-destaques {
+    /* background-color: blue; */
+    margin: 0 auto;
+    width: 95vw;
+    height: 425px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.categorias-destaques img{
+    width: 100%;
+    height: 100%;
+}
+
+.categorias-destaques section {
+    margin: 0px auto 5px;
+    box-shadow: 2px 2px 3px 0px;
+    background-color: yellow;
+    width: 40%;
+    height: 45%;
+}/* --------------------------------------- */
+
+/* START- Estilização de 'container-mais-vendidos' */
+.container-mais-vendidos-text {
+    margin: 15px auto 0px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container-mais-vendidos {
+    /* background-color: green; */
+    margin: 0 auto;
+    width: 95vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.container-mais-vendidos section {
+    margin: 0px auto 5px;
+    border: 2px solid black;
+    background-color: pink;
+    width: 45%;
+    height: 170px;
+}/* --------------------------------------- */
+
+/* START- Estilização de 'container-mais-vendidos' */
+.container-promocoes-text {
+    margin: 15px auto 0px;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container-promocoes {
+    /* background-color: gray; */
+    margin: 0 auto;
+    width: 95vw;
+    max-height: 555px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container-promocoes section {
+    margin: 0px auto 5px;
+    border: 2px solid black;
+    background-color: orange;
+    width: 45%;
+    height: 170px;
+}/* --------------------------------------- */
+
