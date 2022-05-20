@@ -37,7 +37,8 @@ main {
     height: 150px;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 0px 5px 3px;
+    border: 1px solid black;
+    /* box-shadow: 2px 2px 4px 2px; */
 }
 
 .main-carrocel img {
@@ -66,13 +67,14 @@ main {
 
 .categorias-destaques img{
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .categorias-destaques section {
     margin: 0px auto 5px;
-    box-shadow: 2px 2px 3px 0px;
-    background-color: yellow;
+    box-shadow: 0px 0px 3px 1px;
+    background-color: #e8decf;
     width: 40%;
     height: 45%;
 }/* --------------------------------------- */
@@ -96,10 +98,57 @@ main {
 
 .container-mais-vendidos section {
     margin: 0px auto 5px;
-    border: 2px solid black;
-    background-color: pink;
+    background-color: var(--cor-primaria-light);
     width: 45%;
-    height: 170px;
+    height: 220px;
+    position: relative;
+}
+
+.container-mais-vendidos section div {
+    /* background-color: red; */
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mais-vendidos img {
+    border-radius: 4px;
+    border: 1px solid var(--cor-secundaria-dark);
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+}
+
+.container-mais-vendidos section h3 {
+    height: 40px;
+    color: var(--cor-texto-primario);
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mais-vendidos section p {
+    padding-right: 17px;
+    color: var(--cor-texto-primario);
+    position: absolute;
+    right: 0;
+    bottom: 38px;
+}
+
+.container-mais-vendidos section button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 120px;
+    height: 30px;
+    margin-left: 7px;
+    position: absolute;
+    bottom: 5px;
+    font-size: 14px;
 }/* --------------------------------------- */
 
 /* START- Estilização de 'container-mais-vendidos' */
