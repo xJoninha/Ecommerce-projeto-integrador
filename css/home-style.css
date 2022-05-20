@@ -50,14 +50,13 @@ main {
 /* START- Estilização de 'categorias-destaques' */
 .categorias-destaques-text {
     color: var(--cor-primaria-light);
-    margin: 5px auto 2px;
+    margin: 5px auto 6px;
     width: 95vw;
     display: flex;
     justify-content: center;
 }
 
 .categorias-destaques {
-    /* background-color: blue; */
     margin: 0 auto;
     width: 95vw;
     height: 425px;
@@ -67,21 +66,20 @@ main {
 
 .categorias-destaques img{
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
 }
 
 .categorias-destaques section {
     margin: 0px auto 5px;
     box-shadow: 0px 0px 3px 1px;
-    background-color: #e8decf;
     width: 40%;
-    height: 45%;
+    height: 172px;
 }/* --------------------------------------- */
 
 /* START- Estilização de 'container-mais-vendidos' */
 .container-mais-vendidos-text {
-    margin: 15px auto 0px;
+    color: var(--cor-primaria-dark);
+    margin: 0 auto 5px;
     width: 95vw;
     display: flex;
     justify-content: center;
@@ -97,8 +95,9 @@ main {
 }
 
 .container-mais-vendidos section {
-    margin: 0px auto 5px;
+    margin: 0px auto 10px;
     background-color: var(--cor-primaria-light);
+    box-shadow: 0px 0px 3px 1px;
     width: 45%;
     height: 220px;
     position: relative;
@@ -114,8 +113,9 @@ main {
 }
 
 .container-mais-vendidos img {
+    background-color: var(--cor-secundaria-light);
     border-radius: 4px;
-    border: 1px solid var(--cor-secundaria-dark);
+    border: 1px solid var(--cor-primaria-dark);
     margin: 0 auto;
     width: 90%;
     height: 90%;
@@ -153,6 +153,7 @@ main {
 
 /* START- Estilização de 'container-mais-vendidos' */
 .container-promocoes-text {
+    color: var(--cor-primaria-light);
     margin: 15px auto 0px;
     width: 70vw;
     display: flex;
