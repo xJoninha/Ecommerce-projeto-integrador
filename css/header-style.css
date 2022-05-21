@@ -3,14 +3,14 @@
     --cor-primaria: #2e0049;
     --cor-primaria-light: #5b2b75;
     --cor-primaria-dark: #130023;
-
+    
     --cor-secundaria: #f3e5f5;
     --cor-secundaria-light: #ffffff;
     --cor-secundaria-dark: #c0b3c2;
-
+    
     --cor-texto-primario: #fff;
     --cor-texto-secundaria: #000;
-
+    
     --font-famaly-1: 'Tinos', serif;
     --font-famaly-2: 'Smooch Sans', sans-serif;
 }
@@ -21,22 +21,127 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-famaly-1);
+    border: 1px solid red;
 }/* --------------------------------------- */
 
-.header-container {
+header {
     width: 100%;
     background-color: var(--cor-primaria);
     padding: auto;
     margin: auto;
     font-size: 22px;
+    list-style-type: none;
+}
+
+.header-redes-sociais {
+    padding: auto;
+    border: auto;
+    margin: auto;
 }
 
 .header-redes-sociais ul {
     display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    padding-right: 0.5vh;
+    padding-top: 0.5vh;
 }
 
 .header-redes-sociais li {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+    padding: auto;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 2px;
+}
+
+.header-container-principal {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+.header-logo {
+    padding: auto;
+    border: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header-logo img {
+    object-fit: scale-down;
+}
+
+.header-busca {
+    padding: auto;
+    border: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header-busca-login-adega {
+    padding: auto;
+    border: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.header-busca:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.header-busca a:hover {
+
+}
+.header-login {
+    padding: auto;
+    border: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header-login:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.header-adega {
+    padding: auto;
+    border: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header-adega:hover {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 8px; */
 }
