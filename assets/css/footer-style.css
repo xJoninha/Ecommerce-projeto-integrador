@@ -1,0 +1,153 @@
+/* criação das variaveis para cores e fontes */
+:root {
+    --cor-primaria: #2e0049;
+    --cor-primaria-light: #5b2b75;
+    --cor-primaria-dark: #130023;
+    
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-light: #ffffff;
+    --cor-secundaria-dark: #c0b3c2;
+    
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
+    
+    --font-famaly-1: 'Tinos', serif;
+    --font-famaly-2: 'Smooch Sans', sans-serif;
+}
+
+/* aplicação da formatação do corpo do html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-famaly-1);
+    text-decoration: none;
+    list-style: none;
+    /* border: 1px solid red; */
+}/* --------------------------------------- */
+
+footer {
+    width: 100%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-primario);
+    padding: auto;
+    margin: auto;
+    font-size: 22px;
+    list-style-type: none;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-central-atendimento {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.footer-central-atendimento h5 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer-central-atendimento a {
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.footer-redes-sociais {
+    padding-top: 5px;
+}
+
+.footer-redes-sociais h5 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer-icones-redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+}
+.footer-icones-redes-sociais li {
+    padding-left: 10px;
+}
+
+.footer-formas-de-pagamento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: auto;
+}
+
+.footer-formas-de-pagamento h5 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer-formas-de-pagamento ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.footer-formas-de-pagamento li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-atalhos ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-atalhos li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer-atalhos li:not(:last-child)::after {
+    content: '|';
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+.footer-rodape {
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: auto;
+}
