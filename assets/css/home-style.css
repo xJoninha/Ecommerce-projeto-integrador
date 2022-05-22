@@ -70,12 +70,13 @@ main, html{
 .categorias-destaques {
     border-bottom: 1px solid var(--cor-secundaria-escuro);
     margin: 0 auto;
-    width: 95vw;
-    max-height: 810px;
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    flex-flow: row wrap;
+    min-width: 300px;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    /* gap: 5px;
+    flex-flow: row wrap; */
 }
 
 .categorias-destaques section {
@@ -111,7 +112,7 @@ main, html{
 
 /* START- 'container-mais-vendidos' */
 .container-mais-vendidos-text {
-    color: var(--cor-primaria-escuro);
+    color: var(--cor-primaria-claro);
     margin: 0 auto 5px;
     width: 95vw;
     display: flex;
@@ -214,15 +215,14 @@ main, html{
     margin: 0 auto;
     width: 95vw;
     max-height: 555px;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .container-promocoes section {    
     background-color: var(--cor-texto-primario);
     margin: 5px auto;
-    width: 45%;
+    width: 90%;
     height: 220px;
     max-width: 190px;
     border-radius: 3px;
@@ -308,3 +308,68 @@ main, html{
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
 
+@media screen and (min-width: 600px){
+    .categorias-destaques {
+        display: flex;
+        justify-content: center;
+        flex-flow: row nowrap;
+        column-gap: 5vw;
+    }
+
+    .categorias-destaques img {
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* START- 'categorias-destaques */
+    .categorias-destaques section {
+        max-width: 176px;
+        height: 400px;
+    }
+    
+    .categorias-destaques img{
+        object-fit: cover;
+    }/*---------------------------------*/
+
+
+    /* START- 'container-mais-vendidos */
+    .container-mais-vendidos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container-mais-vendidos section {
+        width: 80%;
+    }/*---------------------------------*/
+
+
+    /*START- 'container-promocoes'*/
+    .container-promocoes {
+        margin: 0 auto;
+        width: 90vw;
+        max-height: 555px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .container-promocoes section {    
+        max-width: 166px;
+    }/*--------------------------------*/
+}
+
+@media screen and (min-width: 1024px) {
+
+    .categorias-destaques{
+        max-width: 950px;
+    }
+
+    .container-mais-vendidos {
+        max-width: 950px;
+    }
+
+    .container-promocoes {
+        max-width: 950px;
+    }
+}
