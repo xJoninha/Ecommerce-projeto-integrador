@@ -64,11 +64,11 @@ main, html{
     display: flex;
     justify-content: center;
     font-size: var(--fonte-tamanho-grande);
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--cor-secundaria-escuro);
 }
 
 .categorias-destaques {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--cor-secundaria-escuro);
     margin: 0 auto;
     width: 95vw;
     max-height: 810px;
@@ -120,7 +120,7 @@ main, html{
 }
 
 .container-mais-vendidos {
-    border-bottom: 1px solid var(--cor-primaria-escuro);
+    border-bottom: 1px solid var(--cor-secundaria-escuro);
     margin: 0 auto;
     width: 95vw;
     display: flex;
