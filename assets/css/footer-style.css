@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@200&display=swap%27');
+
 /* criação das variaveis para cores e fontes */
 :root {
     --cor-primaria: #2e0049;
@@ -11,8 +13,8 @@
     --cor-texto-primario: #fff;
     --cor-texto-secundaria: #000;
     
-    --font-famaly-1: 'Tinos', serif;
-    --font-famaly-2: 'Smooch Sans', sans-serif;
+    --estilo-fonte-1: 'Raleway', 'sans-serif';
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
 }
 
 /* aplicação da formatação do corpo do html */
@@ -35,7 +37,7 @@ footer {
     width: 100%;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-primario);
-    padding: auto;
+    padding: 5px;
     margin: auto;
     position: fixed;
     bottom: 0;
@@ -57,12 +59,15 @@ footer {
 
 .footer-central-atendimento h5 {
     text-align: center;
+    font-family: var(--estilo-fonte-2);
+    font-size: 24px;
 }
 
 .footer-central-atendimento a {
     padding-top: 5px;
     text-align: center;
     text-decoration: none;
+    font-family: var(--estilo-fonte-1);
 }
 
 .footer-redes-sociais {
@@ -71,6 +76,8 @@ footer {
 
 .footer-redes-sociais h5 {
     text-align: center;
+    font-family: var(--estilo-fonte-2);
+    font-size: 24px;
 }
 
 .footer-icones-redes-sociais {
@@ -98,6 +105,8 @@ footer {
 
 .footer-formas-de-pagamento h5 {
     text-align: center;
+    font-family: var(--estilo-fonte-2);
+    font-size: 24px;
 }
 
 .footer-formas-de-pagamento ul {
@@ -120,6 +129,9 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    font-family: var(--estilo-fonte-1);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .footer-atalhos ul {
@@ -146,4 +158,10 @@ footer {
     justify-content: center;
     width: 100%;
     height: auto;
+    font-family: var(--estilo-fonte-1);
+    font-size: 18px;
+    /* border-top: 1px solid var(--cor-secundaria); */
+    background-color: var(--cor-primaria-dark);
+    margin-top: 5px;
+    padding: 2px;
 }
