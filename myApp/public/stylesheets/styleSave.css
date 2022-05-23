@@ -1,0 +1,159 @@
+@media only screen and (min-device-width: 320px) {
+
+    /* START- Estilização da parte do 'carrocel' da home */
+    .main-carrocel {
+        max-height: 130px;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'categorias-destaques' */
+    .categorias-destaques {
+        margin: 5px auto 0;
+        width: 90vw;
+        height: 440px;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .categorias-destaques section {
+        margin: 0px auto 0px;
+        background-color: yellow;
+        width: 45%;
+        height: 40%;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'container-mais-vendidos' */
+    .container-mais-vendidos-text {
+        margin: 15px auto 0px;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-mais-vendidos {
+        background-color: green;
+        margin: 0 auto;
+        width: 90vw;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+
+    .container-mais-vendidos section {
+        margin: 0px 5px 15px;
+        border: 2px solid black;
+        background-color: pink;
+        width: 40%;
+        height: 170px;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'container-mais-vendidos' */
+    .container-promocoes-text {
+        margin: 15px auto 0px;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-promocoes {
+        background-color: gray;
+        margin: 0 auto;
+        width: 90vw;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+
+    .container-promocoes section {
+        margin: 0px 5px 15px;
+        border: 2px solid black;
+        background-color: pink;
+        width: 40%;
+        height: 170px;
+    }/* --------------------------------------- */
+}
+
+@media only screen and (min-device-width: 768px) {
+
+    /* START- Estilização da parte do 'carrocel' da home */
+    .main-carrocel {
+        max-height: 230px;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'categorias-destaques' */
+    .categorias-destaques {
+        margin: 5px auto 0;
+        width: 90vw;
+        height: 440px;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .categorias-destaques section {
+        margin: 0px auto 0px;
+        background-color: yellow;
+        width: 45%;
+        height: 40%;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'container-mais-vendidos' */
+    .container-mais-vendidos-text {
+        margin: 15px auto 0px;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-mais-vendidos {
+        background-color: green;
+        margin: 0 auto;
+        width: 90vw;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+
+    .container-mais-vendidos section {
+        margin: 0px 5px 15px;
+        border: 2px solid black;
+        background-color: pink;
+        width: 40%;
+        height: 170px;
+    }/* --------------------------------------- */
+
+    /* START- Estilização de 'container-mais-vendidos' */
+    .container-promocoes-text {
+        margin: 15px auto 0px;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-promocoes {
+        background-color: gray;
+        margin: 0 auto;
+        width: 90vw;
+        max-height: 555px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+
+    .container-promocoes section {
+        margin: 0px 5px 15px;
+        border: 2px solid black;
+        background-color: pink;
+        width: 40%;
+        height: 170px;
+    }/* --------------------------------------- */
+}
