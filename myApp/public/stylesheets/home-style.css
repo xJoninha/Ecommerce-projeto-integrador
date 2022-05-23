@@ -63,7 +63,7 @@ main, html{
     width: 95vw;
     display: flex;
     justify-content: center;
-    font-family: var(--teste2);
+    font-family: var(--estilo-fonte-2);
     font-size: var(--fonte-tamanho-extraGrande);
     border-top: 1px solid var(--cor-secundaria-escuro);
 }
@@ -80,7 +80,7 @@ main, html{
 
 .categorias-destaques section {
     margin: 15px 5px;
-    box-shadow: 0px 0px 3px 1px;
+    box-shadow: 0px 0px 2px 1px var(--cor-primaria-escuro);
     width: auto;
     height: 172px;
     position: relative;
@@ -99,6 +99,7 @@ main, html{
     text-align: center;
     background-color: var(--cor-primaria-claro-opaco);
     border-radius: 3px;
+    color: var(--cor-texto-secundaria);
     text-shadow: 1px 1px 1px white;
     font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
@@ -141,7 +142,7 @@ main, html{
 }
 
 .container-mais-vendidos section:hover {
-    box-shadow: 0px 0px 3px 0px;
+    box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
 }
 
 .container-mais-vendidos section div {
@@ -197,7 +198,7 @@ main, html{
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bold;
     line-height: 13px;
-    bcolor: var(--cor-texto-secundaria);
+    color: var(--cor-texto-secundaria);
 }
 
 .container-mais-vendidos section button:hover{
@@ -212,13 +213,14 @@ main, html{
     width: 70vw;
     display: flex;
     justify-content: center;
-    font-family: var(--teste2);
+    font-family: var(--estilo-fonte-2);
     font-size: var(--fonte-tamanho-extraGrande);
 }
 
 .container-promocoes {
     margin: 0 auto;
     width: 95vw;
+    min-height: 562px;
     max-height: 555px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -235,7 +237,7 @@ main, html{
 }
 
 .container-promocoes section:hover {
-    box-shadow: 0px 0px 3px 0px;
+    box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
 }
 
 .container-promocoes section div {
@@ -306,6 +308,7 @@ main, html{
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bold;
     line-height: 13px;
+    color: var(--cor-texto-secundaria);
 }
 
 .container-promocoes section button:hover{
@@ -370,6 +373,7 @@ main, html{
 @media screen and (min-width: 900px) {
     .container-promocoes {
         display: flex;
+        min-height: 300px;
     }
 }
 
