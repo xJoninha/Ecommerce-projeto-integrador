@@ -1,5 +1,5 @@
 /* importação das fontes */
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@200&display=swap');
 
 /* criação das variaveis para cores e fontes */
 :root {
@@ -16,8 +16,8 @@
     --cor-texto-secundaria: #000;
     --cor-botão-selecionado: #ff9100;
 
-    --estilo-fonte-1: 'Tinos', serif;
-    --estilo-fonte-2: 'Smooch Sans', sans-serif;
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
 
     --fonte-tamanho-extraPequeno: 0.9rem;
     --fonte-tamanho-pequeno: 1.2rem;
@@ -31,7 +31,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--estilo-fonte-1);
+    font-family: var(--estilo-fonte-2);
 }/* --------------------------------------- */
 
 main, html{
@@ -63,7 +63,8 @@ main, html{
     width: 95vw;
     display: flex;
     justify-content: center;
-    font-size: var(--fonte-tamanho-grande);
+    font-family: var(--teste2);
+    font-size: var(--fonte-tamanho-extraGrande);
     border-top: 1px solid var(--cor-secundaria-escuro);
 }
 
@@ -75,8 +76,6 @@ main, html{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    /* gap: 5px;
-    flex-flow: row wrap; */
 }
 
 .categorias-destaques section {
@@ -96,7 +95,7 @@ main, html{
 }
 
 .categorias-destaques-titulo-cards h3 {
-    width: 75%;
+    width: 85%;
     text-align: center;
     background-color: var(--cor-primaria-claro-opaco);
     border-radius: 3px;
@@ -117,7 +116,8 @@ main, html{
     width: 95vw;
     display: flex;
     justify-content: center;
-    font-size: var(--fonte-tamanho-grande);
+    font-family: var(--estilo-fonte-2);
+    font-size: var(--fonte-tamanho-extraGrande);
 }
 
 .container-mais-vendidos {
@@ -135,7 +135,7 @@ main, html{
     border-radius: 3px;
     background-color: var(--cor-secundaria-claro);
     width: 45%;
-    height: 220px;
+    height: 250px;
     max-width: 190px;
     position: relative;
 }
@@ -165,6 +165,7 @@ main, html{
     height: 40px;
     color: var(--cor-primaria-escuro);
     text-align: center;
+    font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-extraPequeno);
     display: flex;
     justify-content: center;
@@ -173,12 +174,13 @@ main, html{
 
 .container-mais-vendidos section p {
     padding-right: 17px;
-    color: var(--cor-primaria-escuro);
+    color: var(--cor-texto-secundaria);
+    font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
     font-weight: bold;
     position: absolute;
-    right: 0;
-    bottom: 35px;
+    right: 3px;
+    bottom: 45px;
 }
 
 .container-mais-vendidos section button {
@@ -190,7 +192,8 @@ main, html{
     margin: 0 auto;
     position: absolute;
     left: 7%;
-    bottom: 5px;
+    bottom: 10px;
+    font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bold;
     line-height: 13px;
@@ -208,7 +211,8 @@ main, html{
     width: 70vw;
     display: flex;
     justify-content: center;
-    font-size: var(--fonte-tamanho-grande);
+    font-family: var(--teste2);
+    font-size: var(--fonte-tamanho-extraGrande);
 }
 
 .container-promocoes {
@@ -223,7 +227,7 @@ main, html{
     background-color: var(--cor-texto-primario);
     margin: 5px auto;
     width: 90%;
-    height: 220px;
+    height: 250px;
     max-width: 190px;
     border-radius: 3px;
     position: relative;
@@ -254,38 +258,37 @@ main, html{
     height: 40px;
     color: var(--cor-primaria-escuro);
     text-align: center;
+    font-family: var(--estilo-fonte-1);
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-promocoes section p {
-    color: var(--cor-primaria-escuro);
-    position: absolute;
-    right: 0;
-    bottom: 38px;
-    font-weight: bold;
-    font-size: var(--fonte-tamanho-extraPequeno);
-}
-
 .container-promocoes .preco-antigo {
-    background-color: gray;
+    color: var(--cor-primaria-escuro);
+    background-color: var(--cor-secundaria-escuro);
     border-radius: 2px;
-    width: 48px;
-    height: 14px;
+    width: 62px;
+    height: 18px;
+    font-weight: bold;
     text-align: center;
     text-decoration: line-through;
-    font-size: 12px;
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-family: var(--estilo-fonte-1);
     position: absolute;
-    left: 5%;
-    bottom: 43px;
+    left: 7%;
+    bottom: 67px;
 }
 
 .container-promocoes .preco-novo {
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+    font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
     position: absolute;
     right: 10px;
+    bottom: 45px;
 }
 
 .container-promocoes section button {
@@ -297,7 +300,8 @@ main, html{
     margin: 0 auto;
     position: absolute;
     left: 7%;
-    bottom: 5px;
+    bottom: 10px;
+    font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bold;
     line-height: 13px;
@@ -342,21 +346,30 @@ main, html{
 
     .container-mais-vendidos section {
         width: 80%;
+    }
+    
+    .container-mais-vendidos section h3{
+        font-size: var(--fonte-tamanho-pequeno);
     }/*---------------------------------*/
-
-
+    
+    
     /*START- 'container-promocoes'*/
     .container-promocoes {
         margin: 0 auto;
         width: 90vw;
         max-height: 555px;
-        display: flex;
-        flex-flow: row wrap;
+        display: grid;
     }
 
     .container-promocoes section {    
-        max-width: 166px;
+        max-width: 190px;
     }/*--------------------------------*/
+}
+
+@media screen and (min-width: 900px) {
+    .container-promocoes {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 1024px) {
