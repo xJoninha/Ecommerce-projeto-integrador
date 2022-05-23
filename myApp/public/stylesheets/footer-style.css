@@ -26,7 +26,6 @@
     text-decoration: none;
     color: var(--cor-texto-primario);
     list-style: none;
-    /* border: 1px solid red; */
 }/* --------------------------------------- */
 
 a:link {
@@ -144,6 +143,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    font-family: var(--estilo-fonte-2);
 }
 
 .footer-atalhos li:not(:last-child)::after {
@@ -158,7 +158,6 @@ footer {
     height: auto;
     font-family: var(--estilo-fonte-1);
     font-size: 18px;
-    /* border-top: 1px solid var(--cor-secundaria); */
     background-color: var(--cor-primaria-dark);
     margin-top: 5px;
     padding: 2px;
