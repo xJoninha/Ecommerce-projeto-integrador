@@ -34,11 +34,33 @@
     font-family: var(--estilo-fonte-2);
 }/* --------------------------------------- */
 
-main, html{
+html, body, main{
     background-color: var(--cor-secundaria);
 }
 
-/* START- 'carrocel' da home */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* START- 'carrossel' da home usando BS */
+.carousel-inner {
+    margin: 8px auto;
+    width: auto;
+    min-height: 162px;
+    max-height: 390px;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.carousel-inner img {
+    
+}/*---------------------------------------*/
+
+/*Carrossel- salvando presets*/
 .main-carrocel {
     margin: 8px auto;
     width: auto;
@@ -48,7 +70,7 @@ main, html{
     justify-content: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-}
+}/*-----------------------------------------*/
 
 .main-carrocel img {
     width: 100%;
@@ -181,7 +203,7 @@ main, html{
     font-weight: bold;
     position: absolute;
     right: 3px;
-    bottom: 45px;
+    bottom: 30px;
 }
 
 .container-mais-vendidos section button {
@@ -189,7 +211,7 @@ main, html{
     border: none;
     border-radius: 4px;
     width: 85%;
-    height: 30px;
+    height: 35px;
     margin: 0 auto;
     position: absolute;
     left: 7%;
@@ -273,7 +295,7 @@ main, html{
     background-color: var(--cor-secundaria-escuro);
     border-radius: 2px;
     width: 62px;
-    height: 18px;
+    height: 20px;
     font-weight: bold;
     text-align: center;
     text-decoration: line-through;
@@ -281,7 +303,7 @@ main, html{
     font-family: var(--estilo-fonte-1);
     position: absolute;
     left: 7%;
-    bottom: 67px;
+    bottom: 55px;
 }
 
 .container-promocoes .preco-novo {
@@ -291,7 +313,7 @@ main, html{
     font-size: var(--fonte-tamanho-pequeno);
     position: absolute;
     right: 10px;
-    bottom: 45px;
+    bottom: 30px;
 }
 
 .container-promocoes section button {
@@ -299,7 +321,7 @@ main, html{
     border: none;
     border-radius: 4px;
     width: 85%;
-    height: 30px;
+    height: 35px;
     margin: 0 auto;
     position: absolute;
     left: 7%;
@@ -330,6 +352,21 @@ main, html{
 }
 
 @media screen and (min-width: 768px) {
+    .carousel {
+        margin: 0 auto;
+        max-width: 840px;
+    }
+
+    .carousel-inner {
+        margin: 8px auto;
+        min-width: 200px;
+        max-width: 840px;
+        min-height: 162px;
+        max-height: 390px;
+        justify-content: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
 
     /* START- 'categorias-destaques */
     .categorias-destaques section {
