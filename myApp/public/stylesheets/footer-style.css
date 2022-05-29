@@ -15,6 +15,12 @@
     
     --estilo-fonte-1: 'Raleway', 'sans-serif';
     --estilo-fonte-2: 'Dancing Script', 'cursive';
+
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
 }
 
 /* aplicação da formatação do corpo do html */
@@ -26,6 +32,7 @@
     text-decoration: none;
     color: var(--cor-texto-primario);
     list-style: none;
+    /* border: 1px solid red; */
 }/* --------------------------------------- */
 
 a:link {
@@ -36,8 +43,9 @@ footer {
     width: 100%;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-primario);
-    padding: 5px;
+    /* padding: 5px; */
     margin: auto;
+    bottom: 0;
 }
 
 .footer-container {
@@ -52,12 +60,13 @@ footer {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .footer-central-atendimento h5 {
     text-align: center;
-    font-family: var(--estilo-fonte-2);
-    font-size: 24px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-grande);
 }
 
 .footer-central-atendimento a {
@@ -65,16 +74,18 @@ footer {
     text-align: center;
     text-decoration: none;
     font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-medio);
 }
 
 .footer-redes-sociais {
-    padding-top: 5px;
+    /* padding-top: 5px; */
+    margin-top: 10px;
 }
 
 .footer-redes-sociais h5 {
     text-align: center;
-    font-family: var(--estilo-fonte-2);
-    font-size: 24px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-grande);
 }
 
 .footer-icones-redes-sociais {
@@ -85,6 +96,11 @@ footer {
     padding-top: 5px;
     gap: 5px;
 }
+
+.footer-icones-redes-sociais ul {
+    padding: 5px 0px 0px;
+}
+
 .footer-icones-redes-sociais li {
     display: flex;
     flex-wrap: wrap;
@@ -98,12 +114,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: auto;
+    margin-top: 10px;
 }
 
 .footer-formas-de-pagamento h5 {
     text-align: center;
-    font-family: var(--estilo-fonte-2);
-    font-size: 24px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-grande);
 }
 
 .footer-formas-de-pagamento ul {
@@ -111,7 +128,8 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 5px;
+    column-gap: 10px;
+    padding: 0px 20px 0px;
 }
 
 .footer-formas-de-pagamento li {
@@ -127,8 +145,9 @@ footer {
     flex-direction: row;
     justify-content: center;
     font-family: var(--estilo-fonte-1);
-    font-size: 20px;
+    font-size: var(--fonte-tamanho-grande);
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .footer-atalhos ul {
@@ -143,7 +162,6 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    font-family: var(--estilo-fonte-2);
 }
 
 .footer-atalhos li:not(:last-child)::after {
@@ -157,8 +175,12 @@ footer {
     width: 100%;
     height: auto;
     font-family: var(--estilo-fonte-1);
-    font-size: 18px;
+    font-size: var(--fonte-tamanho-pequeno);
+    /* border-top: 1px solid var(--cor-secundaria); */
     background-color: var(--cor-primaria-dark);
-    margin-top: 5px;
-    padding: 2px;
+    margin-top: 10px;
+}
+
+.footer-rodape p {
+    padding: 5px 5px 5px 5px;
 }
