@@ -32,7 +32,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--estilo-fonte-2);
-}/* --------------------------------------- */
+}
 
 html, body, main{
     background-color: var(--cor-secundaria);
@@ -43,7 +43,7 @@ html, body, main{
     margin-bottom: 0.5rem;
     font-weight: bold;
     line-height: 1.2;
-}
+}/* --------------------------------------- */
 
 /* START- 'carrossel' da home usando BS */
 .carousel-inner {
@@ -54,29 +54,15 @@ html, body, main{
     justify-content: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-}
-
-.carousel-inner img {
-    
 }/*---------------------------------------*/
-
-/*Carrossel- salvando presets*/
-.main-carrocel {
-    margin: 8px auto;
-    width: auto;
-    min-height: 162px;
-    max-height: 390px;
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}/*-----------------------------------------*/
 
 .main-carrocel img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}/* --------------------------------------- */
+}
+
+/* --------------------------------------- */
 
 /* START- 'categorias-destaques' */
 .categorias-destaques-text {
@@ -223,7 +209,7 @@ html, body, main{
     color: var(--cor-texto-secundaria);
 }
 
-.container-mais-vendidos section button:hover{
+.container-mais-vendidos section:hover button{
     color: var(--cor-secundaria-claro);
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
@@ -333,7 +319,7 @@ html, body, main{
     color: var(--cor-texto-secundaria);
 }
 
-.container-promocoes section button:hover{
+.container-promocoes section:hover button{
     color: var(--cor-secundaria-claro);
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
