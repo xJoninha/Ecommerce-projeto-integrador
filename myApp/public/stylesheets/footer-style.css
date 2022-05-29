@@ -35,10 +35,10 @@
     /* border: 1px solid red; */
 }/* --------------------------------------- */
 
-ol,
+/* ol,
 ul {
     padding: 0px !important;
-}
+} */
 
 a:link {
     text-decoration: none;
@@ -51,7 +51,7 @@ footer {
     background-color: var(--cor-primaria);
     color: var(--cor-texto-primario);
     /* padding: 5px; */
-    margin: 0 auto;
+    margin: 0;
     bottom: 0;
 }
 
@@ -73,7 +73,7 @@ footer {
 .footer-central-atendimento h5 {
     text-align: center;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-grande);
+    font-size: var(--fonte-tamanho-medio);
 }
 
 .footer-central-atendimento a {
@@ -81,7 +81,7 @@ footer {
     text-align: center;
     text-decoration: none;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-medio);
+    font-size: var(--fonte-tamanho-pequeno);
 }
 
 .footer-redes-sociais {
@@ -92,7 +92,7 @@ footer {
 .footer-redes-sociais h5 {
     text-align: center;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-grande);
+    font-size: var(--fonte-tamanho-medio);
 }
 
 .footer-icones-redes-sociais {
@@ -101,11 +101,11 @@ footer {
     flex-direction: row;
     justify-content: center;
     padding-top: 5px;
-    gap: 5px;
+    gap: 16px;
 }
 
 .footer-icones-redes-sociais ul {
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
 }
 
 .footer-icones-redes-sociais li {
@@ -127,7 +127,7 @@ footer {
 .footer-formas-de-pagamento h5 {
     text-align: center;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-grande);
+    font-size: var(--fonte-tamanho-medio);
 }
 
 .footer-formas-de-pagamento ul {
@@ -136,7 +136,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
 }
 
 .footer-formas-de-pagamento li {
@@ -152,7 +152,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-grande);
+    font-size: var(--fonte-tamanho-medio);
     font-weight: bold;
     margin-top: 10px;
     list-style: none;
@@ -170,11 +170,13 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .footer-atalhos li:not(:last-child)::after {
     content: '|';
     padding: 10px 10px 10px 10px;
+    align-items: center;
 }
 
 .footer-rodape {
@@ -192,5 +194,5 @@ footer {
 .footer-rodape p {
     padding: 5px 5px 5px 5px;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-medio);
+    font-size: var(--fonte-tamanho-pequeno);
 }
