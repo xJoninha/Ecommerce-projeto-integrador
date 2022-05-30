@@ -103,6 +103,12 @@ html, body, main{
     width: auto;
     height: 172px;
     position: relative;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.categorias-destaques section:hover {
+    opacity: 1;
 }
 
 .categorias-destaques-titulo-cards {
