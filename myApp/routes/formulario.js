@@ -4,7 +4,8 @@ const { check, body } = require('express-validator');
 const controller = require('../controller/controllerFormulario');
 
 const validateRegister = [
-    body('email').notEmpty().withMessage('Campo "E-mail" obrigatório.').bail().isEmail().withMessage('E-mail inválido.')
+    body('email').notEmpty().withMessage('O campo "E-mail" é obrigatório.').bail().isEmail().withMessage('E-mail inválido.'),
+    body('cpf').notEmpty().withMessage('O campo "CPF" é obrigatório.').bail().isNumeric().withMessage('CPF inválido.')
 ]
  
 router.get('/', controller.index); 

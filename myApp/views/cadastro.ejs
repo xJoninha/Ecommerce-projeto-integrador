@@ -26,16 +26,25 @@
                 <form action="" method="post">
                     <label for="email">E-mail:*</label>
                     <% if (typeof errors !== 'undefined') { %>
-                        <ul>
                         <% for(let error in errors) { %>
-                            <li><%= errors[error].msg %></li>
+                        <% if(error == 'email') { %>
+                            <p style="font-size:larger; color: red;"><%= errors[error].msg %></p>
                         <% } %>
-                        </ul>
+                        <% } %>
                 <% } %>
                     <input type="text" name="email" id="email">                    
                     
                     <label for="cpf">CPF:*</label>
+                    <% if (typeof errors !== 'undefined') { %>
+                        <% for(let error in errors) { %>
+                        <% if(error == 'cpf') { %>
+                            <p style="font-size:larger; color: red;"><%= errors[error].msg %></p>
+                        <% } %>
+                        <% } %>
+                <% } %>
                     <input type="number" name="cpf" id="cpf">
+
+
                     <label for="name">Nome:*</label>
                     <input type="text" name="name" id="name">
                     <label for="last_name">Sobrenome:*</label>

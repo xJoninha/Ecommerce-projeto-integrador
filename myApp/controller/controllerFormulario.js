@@ -8,7 +8,7 @@ const controller = {
         const errors = validationResult(req);
 
         if(!errors.isEmpty()) {
-            console.log(validationResult)
+            console.log(errors.mapped())
             return res.render('cadastro', {errors: errors.mapped()});
         } else {
             console.log(errors)
