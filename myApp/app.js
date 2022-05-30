@@ -5,11 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');            //chamando rota 01
-var usersRouter = require('./routes/users');            //chamando rota 02
+var usersRouter = require('./routes/users');   
+var formularioRouter = require('./routes/formulario')         //chamando rota 02
 
-var app = express();                                //esse é conhecido também, chamando as funções e métodos do express.
-
-
+var app = express();               //esse é conhecido também, chamando as funções e métodos do express.
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));      //puxar vistas ejs
@@ -26,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));            //essa linha
 
 
 app.use('/', indexRouter);                      //chamando rota 1, para página geral onde uma barra é necessária
-app.use('/users', usersRouter);                 //chamando rota 2 para a pagina /users
+app.use('/users', usersRouter); 
+app.use('/cadastro', formularioRouter);                //chamando rota 2 para a pagina /users
 
 
 //******************************************************************************************************** */

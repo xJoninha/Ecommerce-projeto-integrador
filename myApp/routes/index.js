@@ -4,5 +4,5 @@ const controlerotaindex = require('../controller/controlerotaindex');
 
 /* GET home page. */
 router.get('/', controlerotaindex.chamaindex);
-
+ 
 module.exports = router;

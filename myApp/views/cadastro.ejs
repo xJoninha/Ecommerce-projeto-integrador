@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="../public/stylesheets/cadastro-style.css">
+        <link rel="stylesheet" href="./stylesheets/cadastro-style.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,30 @@
     </head>
     
     <body>
-    
-        <header>
-    
-        </header>
+     
+        <%- include('../views/partials/header'); -%>
+
     
         <main>
     
             <div class="subtitle">
                 <h1>Cadastro</h1>
-            </div>
+            </div> 
     
             <section class="data">
     
                 <h2>Dados Pessoais</h2>
-    
-    
                 <form action="" method="post">
                     <label for="email">E-mail:*</label>
-                    <input type="text" name="email" id="email">
+                    <% if (typeof errors !== 'undefined') { %>
+                        <ul>
+                        <% for(let error in errors) { %>
+                            <li><%= errors[error].msg %></li>
+                        <% } %>
+                        </ul>
+                <% } %>
+                    <input type="text" name="email" id="email">                    
+                    
                     <label for="cpf">CPF:*</label>
                     <input type="number" name="cpf" id="cpf">
                     <label for="name">Nome:*</label>
