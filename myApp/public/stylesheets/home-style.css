@@ -14,7 +14,6 @@
 
     --cor-texto-primario: #fff;
     --cor-texto-secundaria: #000;
-    --cor-botão-selecionado: #ff9100;
 
     --estilo-fonte-1: 'Raleway', sans-serif;
     --estilo-fonte-2: 'Dancing Script', 'cursive';
@@ -36,38 +35,51 @@
 
 html, body, main{
     background-color: var(--cor-secundaria);
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    line-height: 1.2;
 }/* --------------------------------------- */
 
-/* START- 'carrossel' da home usando BS */
-.carousel-inner {
-    margin: 8px auto;
+/* START- 'carrossel' da home usando Slick Slide */
+.carousel {
+    margin: 10px auto;
     width: auto;
-    min-height: 162px;
-    max-height: 390px;
-    justify-content: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}/*---------------------------------------*/
+    height: 100%;
+}
 
-.main-carrocel img {
+.slick-prev:before, .slick-next:before {
+    color: var(--cor-primaria-claro);
+    opacity: 0.5;
+    font-size: 30px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    bottom: -35px;
+}
+
+.slick-prev {
+    left: -35px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--cor-primaria-escuro);
+}
+
+.slick-dots li button:before {
+    font-size: 15px;
+    color: var(--cor-primaria-claro);
+}
+
+.carousel img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-/* --------------------------------------- */
+}/* --------------------------------------- */
 
 /* START- 'categorias-destaques' */
 .categorias-destaques-text {
     color: var(--cor-primaria-claro);
-    margin: 15px auto 6px;
+    margin: 50px auto 6px;
     width: 95vw;
     display: flex;
     justify-content: center;
@@ -77,7 +89,6 @@ html, body, main{
 }
 
 .categorias-destaques {
-    border-bottom: 1px solid var(--cor-secundaria-escuro);
     margin: 0 auto;
     min-width: 300px;
     max-width: 90vw;
@@ -92,6 +103,12 @@ html, body, main{
     width: auto;
     height: 172px;
     position: relative;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.categorias-destaques section:hover {
+    opacity: 1;
 }
 
 .categorias-destaques-titulo-cards {
@@ -120,8 +137,9 @@ html, body, main{
 
 /* START- 'container-mais-vendidos' */
 .container-mais-vendidos-text {
+    border-top: 1px solid var(--cor-secundaria-escuro);
     color: var(--cor-primaria-claro);
-    margin: 0 auto 5px;
+    margin: 20px auto 5px;
     width: 95vw;
     display: flex;
     justify-content: center;
@@ -130,7 +148,6 @@ html, body, main{
 }
 
 .container-mais-vendidos {
-    border-bottom: 1px solid var(--cor-secundaria-escuro);
     margin: 0 auto;
     width: 95vw;
     display: flex;
@@ -189,7 +206,7 @@ html, body, main{
     font-weight: bold;
     position: absolute;
     right: 3px;
-    bottom: 30px;
+    bottom: 50px;
 }
 
 .container-mais-vendidos section button {
@@ -216,9 +233,10 @@ html, body, main{
 
 /* START- 'container-promocoes' */
 .container-promocoes-text {
+    border-top: 1px solid var(--cor-secundaria-escuro);
     color: var(--cor-primaria-claro);
-    margin: 15px auto 0px;
-    width: 70vw;
+    margin: 20px auto 0px;
+    width: 95vw;
     display: flex;
     justify-content: center;
     font-family: var(--estilo-fonte-2);
@@ -289,7 +307,7 @@ html, body, main{
     font-family: var(--estilo-fonte-1);
     position: absolute;
     left: 7%;
-    bottom: 55px;
+    bottom: 69px;
 }
 
 .container-promocoes .preco-novo {
@@ -299,7 +317,7 @@ html, body, main{
     font-size: var(--fonte-tamanho-pequeno);
     position: absolute;
     right: 10px;
-    bottom: 30px;
+    bottom: 46px;
 }
 
 .container-promocoes section button {
@@ -339,19 +357,12 @@ html, body, main{
 
 @media screen and (min-width: 768px) {
     .carousel {
-        margin: 0 auto;
         max-width: 840px;
+        border: 3px solid var(--cor-secundaria-escuro);
     }
 
-    .carousel-inner {
-        margin: 8px auto;
-        min-width: 200px;
-        max-width: 840px;
-        min-height: 162px;
-        max-height: 390px;
-        justify-content: center;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+    .slick-dots {
+        bottom: -30px;
     }
 
     /* START- 'categorias-destaques */
