@@ -1,0 +1,18 @@
+{
+  "user": {
+    "email": "davideoliveira622@gmail.com",
+    "cpf": "2421329018",
+    "nome": "Davi",
+    "sobrenome": "de Oliveira",
+    "nascimento": "2022-06-10",
+    "age": "on",
+    "celular": "5435336105",
+    "destinatario": "Davi Augusto de Oliveira",
+    "cep": "95084000",
+    "logradouro": "fsafd",
+    "cidade_bairro": "Caxias do Sul",
+    "numero": "1155",
+    "senha": "pantera",
+    "terms": "on"
+  }
+}
