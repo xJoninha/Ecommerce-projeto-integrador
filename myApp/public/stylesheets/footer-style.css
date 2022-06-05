@@ -24,7 +24,7 @@
     box-sizing: border-box;
     font-family: var(--font-famaly-1);
     text-decoration: none;
-    color: var(--cor-texto-primario);
+    color: var(--cor-texto-primario); 
     list-style: none;
 }/* --------------------------------------- */
 
