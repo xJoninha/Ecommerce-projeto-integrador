@@ -1,6 +1,9 @@
 const IndexController = {
     home: (req, res) => res.render('home'),
-    vitrine: (req, res) => res.render('vitrine')
+    vitrineTinto: (req, res) => res.render('vitrine-tinto'),
+    vitrineBranco: (req, res) => res.render('vitrine-branco'),
+    vitrineRose: (req, res) => res.render('vitrine-rose'),
+    vitrineEspumante: (req, res) => res.render('vitrine-espumante')
 }
 
 
