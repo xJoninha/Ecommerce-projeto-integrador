@@ -84,22 +84,23 @@ html, body, main{
 
 .container-vitrine img {
     background-color: var(--cor-secundaria-claro);
-    border-bottom: 1px solid var(--cor-primaria-escuro);
     margin: 0 auto;
-    width: 90%;
     height: 90%;
 }
 
 .container-vitrine section h3 {
+    margin: 0 auto;
     padding: 0 5px;
-    height: 40px;
+    height: 50px;
     color: var(--cor-primaria-escuro);
     text-align: center;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-extraPequeno);
+    font-size: var(--fonte-tamanho-pequeno);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid var(--cor-primaria-escuro);
+    width: 90%;
 }
 
 .container-vitrine section p {
@@ -135,7 +136,29 @@ html, body, main{
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
 
+@media screen and (min-width: 600px) {
+    .container-vitrine {
+        gap: 10%;
+    }
+}
+
+@media screen and (min-width: 748px) {
+    .container-vitrine {
+        gap: 15%;
+    }
+}
+
+@media screen and (min-width: 828px) {
+    .container-vitrine {
+        gap: 1%;
+    }
+}
+
 @media screen and (min-width: 1024px) {
+    .container-vitrine {
+        gap: 5%;
+    }
+    
     .vitrine-text {
         max-width: 955px;
     }
