@@ -4,8 +4,10 @@ const controller = require('../controller/controllerUsers');
 
 router.get('/', controller.index);
 
-router.get('/:id/editar', controller.listaEditar);
-router.put('/:id/editar', controller.editar);
+router.get('/:id', controller.showUser)
+
+router.get('/:id/editar', controller.editForm);
+router.put('/:id/editar', controller.edit);
 
 
 

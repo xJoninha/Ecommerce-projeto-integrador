@@ -47,14 +47,24 @@ const controller = {};
     } 
     }
 
-    controller.listaEditar = (req, res) => {
+    controller.showUser = (req, res) => {
+      let id = req.params.id;
+      let findUser = getUsers().find(user => user.id == id);
+      console.log(findUser)
+      res.render('user', {
+        title: `Usuário`,
+        user: findUser, 
+      })
+    }
+
+    controller.editForm = (req, res) => {
       res.render('editar', {
         title: `Usuários`,
-        users: getUsers(), 
+        user: getUsers(), 
     })
     }
 
-    controller.editar = (req, res) => {
+    controller.edit = (req, res) => {
 
     }
 
