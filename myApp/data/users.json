@@ -14,5 +14,37 @@
     "cidade_bairro": "Caxias do Sul",
     "password": "pantera2",
     "terms": "on"
+  },
+  {
+    "id": 2,
+    "email": "davideoliveira622@gmail.com",
+    "cpf": "02421329019",
+    "name": "Davi",
+    "last_name": "de Oliveira",
+    "birthday": "2022-06-10",
+    "age": "on",
+    "telephone": "5435336105",
+    "destinatario": "Davi Augusto de Oliveira",
+    "cep": "95084000",
+    "logradouro": "fsafd",
+    "cidade_bairro": "Caxias do Sul",
+    "password": "asdasdasd",
+    "terms": "on"
+  },
+  {
+    "id": 3,
+    "email": "davideoliveira622@gmail.com",
+    "cpf": "02421329019",
+    "name": "Davi",
+    "last_name": "de Oliveira",
+    "birthday": "2022-06-10",
+    "age": "on",
+    "telephone": "5435336105",
+    "destinatario": "Davi Augusto de Oliveira",
+    "cep": "95084000",
+    "logradouro": "fsafd",
+    "cidade_bairro": "Caxias do Sul",
+    "password": "asdasdasd",
+    "terms": "on"
   }
 ]
