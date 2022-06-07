@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index');            //chamando rota 01
 const usersRouter = require('./routes/users');   
+const cadastroRouter = require('./routes/cadastro');
 
 const app = express();               //esse é conhecido também, chamando as funções e métodos do express.
 
@@ -27,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));            //essa linha
 
 app.use('/', indexRouter);                      //chamando rota 1, para página geral onde uma barra é necessária
 app.use('/users', usersRouter);               //chamando rota 2 para a pagina /users
-app.use('/users/cadastro', usersRouter);
+app.use('/cadastro', cadastroRouter);
+
 
 
 //******************************************************************************************************** */

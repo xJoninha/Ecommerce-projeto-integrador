@@ -21,7 +21,9 @@ const setUsers = (users) => helper.write('users.json', users);
 // Controllers
 const controller = {};
 
-    controller.index = (req, res) => {res.render('cadastro')};
+    controller.index = async (req, res) => {res.render('users', {title: `Usuários`, usersList: await getUsers() })};
+
+    controller.form = (req, res) => res.render('cadastro');
 
     controller.register =  (req, res) => {
         const errors = validationResult(req);
@@ -45,14 +47,14 @@ const controller = {};
     } 
     }
 
-    controller.listaExcluir = (req, res) => {
-      res.render('excluir', {
+    controller.listaEditar = (req, res) => {
+      res.render('editar', {
         title: `Usuários`,
         users: getUsers(), 
     })
     }
 
-    controller.excluir = (req, res) => {
+    controller.editar = (req, res) => {
 
     }
 
