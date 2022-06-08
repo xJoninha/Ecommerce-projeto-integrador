@@ -10,5 +10,7 @@ router.get('/vitrine-tinto', IndexController.vitrineTinto);
 router.get('/vitrine-branco', IndexController.vitrineBranco);
 router.get('/vitrine-rose', IndexController.vitrineRose);
 router.get('/vitrine-espumante', IndexController.vitrineEspumante);
+router.get('/produto', IndexController.paginaProduto);
+router.get('/adega', IndexController.adega);
 
 module.exports = router;
