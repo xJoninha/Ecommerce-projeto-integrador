@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');            //chamando rota 01
 var usersRouter = require('./routes/users');   
-var formularioRouter = require('./routes/formulario')         //chamando rota 02
+var formularioRouter = require('./routes/formulario');        //chamando rota 02
 
 var app = express();               //esse é conhecido também, chamando as funções e métodos do express.
 
