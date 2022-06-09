@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/stylesheets/users-style.css">
+    <link rel="stylesheet" href="/stylesheets/user-style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,80 @@
 
     <%- include('../views/partials/header'); %>
 
-    
+    <main>
+
+    <h1>Dados do usuário  <%= user.name %> <%= user.last_name %> </h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dados</th>
+                <th>Valores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>                
+                <th>Nome</th>
+                <td><%= user.name %></td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td><%= user.email %></td>
+            </tr>
+
+            <tr>
+                <th>CPF</th>
+                <td><%= user.cpf %></td>
+            </tr>
+
+            <tr>
+                <th>Nascimento</th>
+                <td><%= user.birthday %></td>
+            </tr>
+
+            <tr>
+                <th>Maioridade</th>
+                <td><%= user.age %></td>
+            </tr>
+
+            <tr>
+                <th>Telefone</th>
+                <td><%= user.telephone %></td>
+            </tr>
+
+            <tr>
+                <th>Destinatário</th>
+                <td><%= user.destinatario %></td>
+            </tr>
+
+            <tr>
+                <th>CEP</th>
+                <td><%= user.cep %></td>
+            </tr>
+
+            <tr>
+                <th>Logradouro</th>
+                <td><%= user.logradouro %></td>
+            </tr>
+
+            <tr>
+                <th>Cidade e Bairro</th>
+                <td><%= user.cidade_bairro %></td>
+            </tr>
+
+            <tr>
+                <th>Número</th>
+                <td><%= user.number %></td>
+            </tr>
+            <tr>
+                <th>Senha</th>
+                <td><%= user.password %></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    </main>
     
 </body>
 </html>

@@ -50,11 +50,11 @@ const controller = {};
     controller.showUser = (req, res) => {
       let id = req.params.id;
       let findUser = getUsers().find(user => user.id == id);
-      console.log(findUser)
       res.render('user', {
         title: `Usuário`,
         user: findUser, 
       })
+      console.log(findUser);
     }
 
     controller.editForm = (req, res) => {
