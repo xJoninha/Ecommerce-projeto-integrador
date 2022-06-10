@@ -1,6 +1,8 @@
 /* importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@200&display=swap');
 
+
+
 /* criação das variaveis para cores e fontes */
 :root {
     --cor-primaria: #2e0049;
@@ -25,6 +27,8 @@
     --fonte-tamanho-extraGrande: 2.7rem;
 }
 
+
+
 /* aplicação da formatação do corpo do html */
 * {
     margin: 0;
@@ -36,6 +40,8 @@
 html, body, main{
     background-color: var(--cor-secundaria);
 }/* --------------------------------------- */
+
+
 
 /* START- 'carrossel' da home usando Slick Slide */
 .carousel {
@@ -76,6 +82,8 @@ html, body, main{
     object-fit: cover;
 }/* --------------------------------------- */
 
+
+
 /* START- 'categorias-destaques' */
 .categorias-destaques-text {
     color: var(--cor-primaria-claro);
@@ -103,12 +111,8 @@ html, body, main{
     width: auto;
     height: 172px;
     position: relative;
-    opacity: 0.85;
     cursor: pointer;
-}
-
-.categorias-destaques section:hover {
-    opacity: 1;
+    overflow: hidden;
 }
 
 .categorias-destaques-titulo-cards {
@@ -117,10 +121,12 @@ html, body, main{
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .categorias-destaques-titulo-cards h3 {
-    width: 85%;
+    width: auto;
+    padding: 0 5px;
     text-align: center;
     background-color: var(--cor-primaria-claro-opaco);
     border-radius: 3px;
@@ -133,108 +139,23 @@ html, body, main{
 .categorias-destaques img{
     width: 100%;
     height: 100%;
+    filter: grayscale(40%);
+    display: block;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.categorias-destaques img:hover {
+    transform: scale(1.5);
+    filter: grayscale(0%);
 }/* --------------------------------------- */
 
-/* START- 'container-mais-vendidos' */
-.container-mais-vendidos-text {
-    border-top: 1px solid var(--cor-secundaria-escuro);
-    color: var(--cor-primaria-claro);
-    margin: 20px auto 5px;
-    width: 95vw;
-    display: flex;
-    justify-content: center;
-    font-family: var(--estilo-fonte-2);
-    font-size: var(--fonte-tamanho-extraGrande);
-}
 
-.container-mais-vendidos {
-    margin: 0 auto;
-    width: 95vw;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    gap: 15px;
-}
-
-.container-mais-vendidos section {
-    margin: 0px auto 10px;
-    border-radius: 3px;
-    background-color: var(--cor-secundaria-claro);
-    width: 45%;
-    height: 250px;
-    max-width: 190px;
-    position: relative;
-}
-
-.container-mais-vendidos section:hover {
-    box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
-}
-
-.container-mais-vendidos section div {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-mais-vendidos img {
-    background-color: var(--cor-secundaria-claro);
-    margin: 0 auto;
-    height: 90%;
-}
-
-.container-mais-vendidos section h3 {
-    margin: 5px auto;
-    border-top: 1px solid var(--cor-primaria-escuro);
-    width: 90%;
-    padding: 7px 0;
-    height: auto;
-    color: var(--cor-primaria-escuro);
-    text-align: center;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-extraPequeno);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-mais-vendidos section p {
-    padding-right: 17px;
-    color: var(--cor-texto-secundaria);
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    position: absolute;
-    right: 3px;
-    bottom: 50px;
-}
-
-.container-mais-vendidos section button {
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    width: 85%;
-    height: 35px;
-    margin: 0 auto;
-    position: absolute;
-    left: 7%;
-    bottom: 10px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-extraPequeno);
-    font-weight: bold;
-    line-height: 13px;
-    color: var(--cor-texto-secundaria);
-}
-
-.container-mais-vendidos section:hover button{
-    color: var(--cor-secundaria-claro);
-    background-color: var(--cor-primaria-claro);
-}/* --------------------------------------- */
 
 /* START- 'container-promocoes' */
 .container-promocoes-text {
     border-top: 1px solid var(--cor-secundaria-escuro);
+    padding-top: 5px;
     color: var(--cor-primaria-claro);
     margin: 20px auto 0px;
     width: 95vw;
@@ -245,7 +166,7 @@ html, body, main{
 }
 
 .container-promocoes {
-    margin: 0 auto;
+    margin: 5px auto 20px;
     width: 95vw;
     min-height: 562px;
     max-height: 555px;
@@ -336,9 +257,111 @@ html, body, main{
     font-weight: bold;
     line-height: 13px;
     color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
 }
 
 .container-promocoes section:hover button{
+    color: var(--cor-secundaria-claro);
+    background-color: var(--cor-primaria-claro);
+}/* --------------------------------------- */
+
+
+
+/* START- 'container-mais-vendidos' */
+.container-mais-vendidos-text {
+    border-top: 1px solid var(--cor-secundaria-escuro);
+    padding-top: 5px;
+    color: var(--cor-primaria-claro);
+    margin: 20px auto 5px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    font-family: var(--estilo-fonte-2);
+    font-size: var(--fonte-tamanho-extraGrande);
+}
+
+.container-mais-vendidos {
+    margin: 5px auto 40px;
+    width: 95vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    gap: 15px;
+}
+
+.container-mais-vendidos section {
+    margin: 0px auto 10px;
+    border-radius: 3px;
+    background-color: var(--cor-secundaria-claro);
+    width: 45%;
+    height: 250px;
+    max-width: 190px;
+    position: relative;
+}
+
+.container-mais-vendidos section:hover {
+    box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
+}
+
+.container-mais-vendidos section div {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mais-vendidos img {
+    background-color: var(--cor-secundaria-claro);
+    margin: 0 auto;
+    height: 90%;
+}
+
+.container-mais-vendidos section h3 {
+    margin: 5px auto;
+    border-top: 1px solid var(--cor-primaria-escuro);
+    width: 90%;
+    padding: 7px 0;
+    height: auto;
+    color: var(--cor-primaria-escuro);
+    text-align: center;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mais-vendidos section p {
+    padding-right: 17px;
+    color: var(--cor-texto-secundaria);
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    position: absolute;
+    right: 3px;
+    bottom: 50px;
+}
+
+.container-mais-vendidos section button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 85%;
+    height: 35px;
+    margin: 0 auto;
+    position: absolute;
+    left: 7%;
+    bottom: 10px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bold;
+    line-height: 13px;
+    color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
+}
+
+.container-mais-vendidos section:hover button {
     color: var(--cor-secundaria-claro);
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
@@ -376,21 +399,6 @@ html, body, main{
         object-fit: cover;
     }/*---------------------------------*/
 
-
-    /* START- 'container-mais-vendidos */
-    .container-mais-vendidos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .container-mais-vendidos section {
-        width: 80%;
-        height: 260px;
-    }
-    
-    .container-mais-vendidos section h3{
-        font-size: var(--fonte-tamanho-pequeno);
-    }/*---------------------------------*/
     
     
     /*START- 'container-promocoes'*/
@@ -418,6 +426,23 @@ html, body, main{
     .container-promocoes .preco-novo {
         bottom: 50px;
     }/*--------------------------------*/
+
+
+
+    /* START- 'container-mais-vendidos */
+    .container-mais-vendidos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container-mais-vendidos section {
+        width: 80%;
+        height: 260px;
+    }
+    
+    .container-mais-vendidos section h3{
+        font-size: var(--fonte-tamanho-pequeno);
+    }/*---------------------------------*/
 }
 
 @media screen and (min-width: 900px) {

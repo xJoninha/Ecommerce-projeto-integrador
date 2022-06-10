@@ -129,6 +129,7 @@ html, body, main{
     font-weight: bold;
     line-height: 13px;
     color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
 }
 
 .container-vitrine section:hover button{
