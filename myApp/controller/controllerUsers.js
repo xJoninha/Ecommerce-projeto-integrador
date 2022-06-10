@@ -54,13 +54,14 @@ const controller = {};
         title: `Usuário`,
         user: findUser, 
       })
-      console.log(findUser);
     }
 
     controller.editForm = (req, res) => {
+      let id = req.params.id;
+      let findUser = getUsers().find(user => user.id == id);
       res.render('editar', {
         title: `Usuários`,
-        user: getUsers(), 
+        user: findUser, 
     })
     }
 

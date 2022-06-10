@@ -1,18 +1,19 @@
 [
   {
     "id": 1,
-    "email": "fulanodetal@tal.com",
-    "cpf": "32132151324",
-    "name": "Fulano",
-    "last_name": "de Tal",
-    "birthday": "1999-02-06",
+    "email": "davideoliveira622@gmail.com",
+    "cpf": "02421329019",
+    "name": "Davi",
+    "last_name": "de Oliveira",
+    "birthday": "2022-06-10",
     "age": "on",
-    "telephone": "11958465562",
-    "destinatario": "Ciclano",
-    "cep": "45846000",
-    "logradouro": "Não Sei",
-    "cidade_bairro": "Lugar Nenhum",
-    "password": "senhasegura",
+    "telephone": "5435336105",
+    "destinatario": "Davi Augusto de Oliveira",
+    "cep": "95084000",
+    "logradouro": "bah mano",
+    "cidade_bairro": "Caxias do Sul",
+    "number": "1155",
+    "password": "pantera2",
     "terms": "on"
   }
 ]

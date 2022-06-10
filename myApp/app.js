@@ -21,6 +21,7 @@ app.use(logger('dev'));                             //.....
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());                                  //.....
+app.use(methodOverride('_method')); 
 
 app.use(express.static(path.join(__dirname, 'public')));            //essa linha está definindo a pasta public como rota padrão, ou seja, qualquer chamada dentro dessa pasta não precisa 
                                                                                                           // colocar o caminho até ela.

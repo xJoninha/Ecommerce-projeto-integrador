@@ -13,7 +13,7 @@ const validateRegister = [
     body('cep').notEmpty().withMessage('O campo "CEP" é obrigatório.').bail().isLength({min: 8, max: 8}).withMessage('CEP inválido.'),
     body('logradouro').notEmpty().withMessage('O campo "Logradouro" é obrigatório.'),
     body('cidade_bairro').notEmpty().withMessage('O campo "Cidade e Bairro" é obrigatório.').bail().isString().withMessage('Cidade e/ou bairro inválido.'),
-    body('numero').notEmpty().withMessage('O campo "Número" é obrigatório.').bail().isNumeric().withMessage('Número inválido.'),
+    body('number').notEmpty().withMessage('O campo "Número" é obrigatório.').bail().isNumeric().withMessage('Número inválido.'),
     body('password').notEmpty().withMessage('O campo "Senha" é obrigatório.').bail().isLength({min: 7}).withMessage('A senha deve ter no mínimo 7 caracteres.'),
     body('confirm_password').notEmpty().withMessage('O campo "Confirmar Senha" é obrigatório.'),
     body('terms').notEmpty().withMessage('É necessário preencher este campo.')
