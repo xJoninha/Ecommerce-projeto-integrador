@@ -2,11 +2,11 @@
 <html>
 
   <head>
-    <link rel='stylesheet' href='../public/stylesheets/adega.css' />
+    <link rel='stylesheet' href='./stylesheets/adega.css' />
   </head>
   <body>
 
-    <header>Espaço Header</header>
+    <%- include('../views/partials/header'); -%>
 
     <main>
         <div class="tituloDaPagina">
@@ -17,7 +17,7 @@
 
             <section class="caixaItemCarrinho_sec-1">
                 <div>
-                    <img src="../public/images/garrafas/Faruna-TINTO.svg" alt="">
+                    <img src="./images/garrafas/Faruna-TINTO.svg" alt="">
                 </div>
                 <input type="number" value="1" step="1" />
                 <h3>Vinho Faruna - Tinto</h3>
@@ -27,7 +27,7 @@
             </section>
             <section class="caixaItemCarrinho_sec-2">
                 <div>
-                    <img src="../public/images/garrafas/Playa_Azul-BRANCO.svg" alt="">
+                    <img src="./images/garrafas/Playa_Azul-BRANCO.svg" alt="">
                 </div>
                 <input type="number" value="1" step="1" />
                 <h3>Vinho Playa Azul - Branco</h3>
@@ -37,7 +37,7 @@
 
             <section class="caixaItemCarrinho-3">
                 <div>
-                    <img src="../public/images/garrafas/Belhara_Estate_Epic-TINTO.svg" alt="">
+                    <img src="./images/garrafas/Belhara_Estate_Epic-TINTO.svg" alt="">
                 </div>
                 <input type="number" value="1" step="1" />
                 <h3>Belhara Estate Epic - Tinto</h3>
@@ -110,8 +110,7 @@
 
     </main>
 
-
-    <footer>Espaço Footer</footer>
+    <%- include('../views/partials/footer'); -%>
 
 </body>
 </html>

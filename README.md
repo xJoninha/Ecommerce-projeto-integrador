@@ -1,7 +1,7 @@
 # Ecommerce de Vinhos
-## Projeto integrador, criado no curso da digital house
+## Projeto integrador, criado no curso da Digital House
 - Alunos
-- Jonas francisco da silva => https://github.com/xJoninha
-- Bianca pacheco da silva => https://github.com/Biancabps
-- Davi augusto de oliveira => https://github.com/Tarus622
-- Vinicius moraes => https://github.com/vini-ctrl
+- Jonas Francisco da Silva => https://github.com/xJoninha
+- Bianca Pacheco da Silva => https://github.com/Biancabps
+- Davi Augusto de Oliveira => https://github.com/Tarus622
+- Vinicius Moraes => https://github.com/vini-ctrl

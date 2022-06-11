@@ -5,6 +5,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 
+<<<<<<< HEAD
+=======
+var indexRouter = require('./routes/index');            //chamando rota 01
+var usersRouter = require('./routes/users');   
+var formularioRouter = require('./routes/formulario');        //chamando rota 02
+>>>>>>> cdae5d02353d6ed7a4c15db95681472879e555b0
 
 const indexRouter = require('./routes/index');            //chamando rota 01
 const usersRouter = require('./routes/users');   
