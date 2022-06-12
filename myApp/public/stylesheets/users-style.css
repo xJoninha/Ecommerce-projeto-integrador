@@ -1,0 +1,52 @@
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+
+/* criação das variaveis para cores e fontes */
+:root {
+    --cor-primaria: #2e0049;
+    --cor-primaria-light: #5b2b75;
+    --cor-primaria-dark: #130023;
+
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-light: #ffffff;
+    --cor-secundaria-dark: #c0b3c2;
+
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
+
+    --font-famaly-1: 'Tinos', serif;
+    --font-famaly-2: 'Smooch Sans', sans-serif;
+}
+
+
+/* aplicação da formatação do corpo do html 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-famaly-1);
+    color: var(--cor-texto-secundaria);
+} */
+
+main, aside {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+
+section .data {
+    position: relative;
+}
+
+section h2 {
+    margin: 20px 20px;
+}
+
+th,
+td, tr {
+    color: black;
+  padding: 16px;
+}

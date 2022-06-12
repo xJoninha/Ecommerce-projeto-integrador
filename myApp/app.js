@@ -1,14 +1,22 @@
-var createError = require('http-errors');            //essa variável em conjunto com o código em error handler mais abaixo estão aqui para retornar erros http. PÁGINA DE ERRO
-var express = require('express');                       //buscando express, já conhecido
-var path = require('path');                     //...
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');            //essa constiável em conjunto com o código em error handler mais abaixo estão aqui para retornar erros http. PÁGINA DE ERRO
+const express = require('express');                       //buscando express, já conhecido
+const path = require('path');                     //...
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
 
+<<<<<<< HEAD
+=======
 var indexRouter = require('./routes/index');            //chamando rota 01
 var usersRouter = require('./routes/users');   
 var formularioRouter = require('./routes/formulario');        //chamando rota 02
+>>>>>>> cdae5d02353d6ed7a4c15db95681472879e555b0
 
-var app = express();               //esse é conhecido também, chamando as funções e métodos do express.
+const indexRouter = require('./routes/index');            //chamando rota 01
+const usersRouter = require('./routes/users');   
+const cadastroRouter = require('./routes/cadastro');
+
+const app = express();               //esse é conhecido também, chamando as funções e métodos do express.
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));      //puxar vistas ejs
@@ -19,14 +27,16 @@ app.use(logger('dev'));                             //.....
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());                                  //.....
+app.use(methodOverride('_method')); 
 
 app.use(express.static(path.join(__dirname, 'public')));            //essa linha está definindo a pasta public como rota padrão, ou seja, qualquer chamada dentro dessa pasta não precisa 
                                                                                                           // colocar o caminho até ela.
 
 
 app.use('/', indexRouter);                      //chamando rota 1, para página geral onde uma barra é necessária
-app.use('/users', usersRouter); 
-app.use('/cadastro', formularioRouter);                //chamando rota 2 para a pagina /users
+app.use('/users', usersRouter);               //chamando rota 2 para a pagina /users
+app.use('/cadastro', cadastroRouter);
+
 
 
 //******************************************************************************************************** */

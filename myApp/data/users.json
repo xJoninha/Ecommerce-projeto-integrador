@@ -1,18 +1,19 @@
-{
-  "user": {
+[
+  {
+    "id": 1,
     "email": "davideoliveira622@gmail.com",
-    "cpf": "2421329018",
-    "nome": "Davi",
-    "sobrenome": "de Oliveira",
-    "nascimento": "2022-06-10",
+    "cpf": "02421329019",
+    "name": "Davi",
+    "last_name": "de Oliveira",
+    "birthday": "2022-06-10",
     "age": "on",
-    "celular": "5435336105",
+    "telephone": "5435336105",
     "destinatario": "Davi Augusto de Oliveira",
     "cep": "95084000",
-    "logradouro": "fsafd",
+    "logradouro": "bah mano",
     "cidade_bairro": "Caxias do Sul",
-    "numero": "1155",
-    "senha": "pantera",
+    "number": "1155",
+    "password": "pantera2",
     "terms": "on"
   }
-}
+]
