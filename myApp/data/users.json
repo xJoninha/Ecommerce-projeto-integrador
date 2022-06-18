@@ -5,15 +5,15 @@
     "cpf": "02421329019",
     "name": "Davi",
     "last_name": "de Oliveira",
-    "birthday": "2022-06-10",
+    "birthday": "1998-09-10",
     "age": "on",
     "telephone": "5435336105",
     "destinatario": "Davi Augusto de Oliveira",
     "cep": "95084000",
-    "logradouro": "bah mano",
+    "logradouro": "Lugar Nenhum",
     "cidade_bairro": "Caxias do Sul",
     "number": "1155",
-    "password": "pantera2",
+    "hash": "$2b$10$gRYUUOPK10QnXuX.XRWecuDp/NssXgejGaqVTCJ2JX2I4mbrcGigu",
     "terms": "on"
   }
 ]
