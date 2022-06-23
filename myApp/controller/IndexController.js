@@ -1,3 +1,37 @@
+const fs = require("fs");
+const path = require("path");
+
+
+//INTERAÇÃO COM BDADOS DE VINHOS
+
+
+//CRUD - 1º LEITURA..
+//***********************************************************//***********************************************************  */
+
+
+//helper vai ajudar a ler o json
+const helper = {};
+helper.read = (fileName) =>
+  fs.readFileSync(path.join(__dirname, `../bdados/${fileName}`), "utf-8");
+
+  const controllerBebidas = {};
+
+  const getVinhos = () => JSON.parse(helper.read("vinhos.json"));
+
+  const getVinhosPorId = (id) =>
+  getVinhos().find((vinhos) => vinhos.id == id);
+
+  controllerBebidas.show = (req, res) =>
+  res.render("produto", {
+    vinhoAdega: getVinhosPorId(req.params.id)
+  });
+
+
+
+//*********************************************************** */
+// Administração de páginas
+//*********************************************************** */
+//***********************************************************//***********************************************************  */
 const IndexController = {
     home: (req, res) => res.render('home'),
     vitrineTinto: (req, res) => res.render('vitrine-tinto'),
@@ -13,4 +47,4 @@ const IndexController = {
 
 
 
-module.exports = IndexController;
+module.exports = {IndexController, controllerBebidas};
