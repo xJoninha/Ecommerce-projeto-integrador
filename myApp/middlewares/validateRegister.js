@@ -1,5 +1,5 @@
 const express = require('express');
-const { check, body } = require('express-validator');
+const { check, body } = require('express-validator'); 
 
 const validateRegister = [
     body('email').notEmpty().withMessage('O campo "E-mail" é obrigatório.').bail().isEmail().withMessage('E-mail inválido.'),
@@ -19,6 +19,6 @@ const validateRegister = [
     body('terms').notEmpty().withMessage('É necessário preencher este campo.')
 
 
-]
+] 
 
 module.exports = validateRegister

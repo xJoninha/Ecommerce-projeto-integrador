@@ -5,7 +5,7 @@ const controller = require('../controller/UsersController');
 const validateRegister = require('../middlewares/validateRegister');
 
 router.get('/', controller.form); 
-router.post('/', validateRegister, controller.register); 
+router.post('/', validateRegister, controller.register);  
 
 
 

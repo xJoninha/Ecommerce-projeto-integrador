@@ -32,7 +32,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="email" id="email">                    
+                    <input type="text" name="email" id="email" value="<%= old.email %> ">                    
                     
                     <label for="cpf">CPF:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -42,7 +42,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="number" name="cpf" id="cpf">
+                    <input type="number" name="cpf" id="cpf" value="<%= old.cpf %>">
 
 
                     <label for="name">Nome:*</label>
@@ -53,7 +53,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" value="<%= old.name %> ">
 
                     <label for="last_name">Sobrenome:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -63,7 +63,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="last_name" id="last_name">
+                    <input type="text" name="last_name" id="last_name" value="<%= old.last_name %> ">
 
                     <label for="birthday">Data de nascimento:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -73,7 +73,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="date" name="birthday" id="birthday">
+                    <input type="date" name="birthday" id="birthday" value="<%= old.birthday %>">
     
                     <div class="pessoal_data_age">
                         <label for="age">Tenho mais de 18 anos.*</label>
@@ -95,7 +95,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="tel" name="telephone" id="telephone">
+                    <input type="tel" name="telephone" id="telephone" value="<%= old.telephone %> ">
     
     
                     <h2>Endereço</h2>
@@ -109,7 +109,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="destinatario" id="destinatario">
+                    <input type="text" name="destinatario" id="destinatario" value="<%= old.destinatario %> ">
                     
                     <label for="cep">CEP:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -118,8 +118,8 @@
                             <p style="font-size:larger; color: red;"><%= errors[error].msg %></p>
                         <% } %>
                         <% } %>
-                <% } %>
-                    <input type="number" name="cep" id="cep">
+                <% } %> 
+                    <input type="number" name="cep" id="cep" value="<%= old.cep %>">
 
                     <label for="name">Logradouro:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -129,7 +129,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="logradouro" id="logradouro">
+                    <input type="text" name="logradouro" id="logradouro" value="<%= old.logradouro %>">
 
                     <label for="cidade_bairro">Cidade e Bairro:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -139,17 +139,17 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="cidade_bairro" id="cidade_bairro">
+                    <input type="text" name="cidade_bairro" id="cidade_bairro" value="<%= old.cidade_bairro %>">
 
-                    <label for="numero">Número*:</label>
+                  <label for="numero">Número*:</label>
                     <% if (typeof errors !== 'undefined') { %>
                         <% for(let error in errors) { %>
-                        <% if(error == 'numero') { %>
+                        <% if(error == 'number') { %>
                             <p style="font-size:larger; color: red;"><%= errors[error].msg %></p>
                         <% } %>
-                        <% } %>
-                <% } %>
-                    <input type="number" name="number" id="numero">
+                        <% } %> 
+                <% }%>
+                    <input type="number" name="number" id="numero" value="<%= old.number %>" >
 
                     <label for="complemento">Complemento:</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -159,7 +159,7 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="complemento" id="complemento">
+                    <input type="text" name="complemento" id="complemento" value="<%= old.complemento %> ">
 
                     <label for="password">Senha*:</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -183,7 +183,7 @@
 
                     <div class="political_privacity">
                         <label for="terms">Ciente das políticas de privacidade e termos de uso do site.*</label>
-                        <input type="checkbox" name="terms" id="terms" class="political_privacity_input">
+                        <input type="checkbox" name="terms" id="terms" class="political_privacity_input" value="<%= old.terms %> ">
                         <% if (typeof errors !== 'undefined') { %>
                             <% for(let error in errors) { %>
                             <% if(error == 'terms') { %>

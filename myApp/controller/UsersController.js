@@ -15,22 +15,21 @@ const controller = {};
     controller.form = (req, res) => res.render('cadastro');
 
     controller.register =  (req, res) => {
-        const errors = validationResult(req);
-        const usersList =  userModel.getUsers();
+        let errors = validationResult(req); 
+        let usersList =  userModel.getUsers();
 
         if(!errors.isEmpty()) {
-            console.log(errors.mapped())
-        res.render('cadastro', {errors: errors.mapped()});
+        res.render('cadastro', {errors: errors.mapped(), old: req.body});
         } else {
 
-        let hash = bcrypt.hashSync(req.body.password, 10);
+        let password = bcrypt.hashSync(req.body.password, 10);
 
-        const { email, cpf, name, last_name, birthday, age, telephone, destinatario, cep, logradouro, cidade_bairro, number, terms } = req.body;
+        let { email, cpf, name, last_name, birthday, age, telephone, destinatario, cep, logradouro, cidade_bairro, number, complemento, terms } = req.body;
 
-        const id = usersList.length +1;
+        let id = usersList.length +1;
 
 
-        const newUser = { id, email, cpf, name, last_name, birthday, age, telephone, destinatario, cep, logradouro, cidade_bairro, number, hash, terms };
+        let newUser = { id, email, cpf, name, last_name, birthday, age, telephone, destinatario, cep, logradouro, cidade_bairro, number, complemento, password, terms };
 
         usersList.push(newUser);
         userModel.setUsers(usersList);
@@ -58,7 +57,17 @@ const controller = {};
     }
 
     controller.edit = (req, res) => {
-      
+        let errors = validationResult(req);
+        let id = req.params.id;
+        let usersList = userModel.getUsers();
+        if(!errors.isEmpty()) {
+            console.log(errors.mapped())
+        res.render('editar', {errors: errors.mapped()});
+        } else {
+
+        res.render('editar', { user: usersList[id] });
+
+    } 
     }
 
 
