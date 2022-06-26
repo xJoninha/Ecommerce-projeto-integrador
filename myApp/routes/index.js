@@ -1,8 +1,4 @@
 var express = require('express');
-<<<<<<< HEAD
-const router = express.Router();
-const IndexController = require('../controller/IndexController'); 
-=======
 var router = express.Router();
 const objetoController = require('../controller/IndexController');
 const IndexController = objetoController.IndexController;           //vem do mesmo controller
@@ -10,7 +6,6 @@ const controllerBebidas = objetoController.controllerBebidas;       //vem do mes
 
 
 //ROTAS
->>>>>>> main
 
 router.get('/', IndexController.home);
 router.get('/vitrine-tinto', IndexController.vitrineTinto);
