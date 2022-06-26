@@ -32,5 +32,23 @@
     "number": "600",
     "password": "$2b$10$bPqhFx36OWniWjPNzY2kOObGuYKpc3uOdrDZB4LS8bxc4sWi3oNu.",
     "terms": "on"
+  },
+  {
+    "id": 3,
+    "email": "davideoliveira622@gmail.com",
+    "cpf": "02421329019",
+    "name": "Davi",
+    "last_name": "de Oliveira",
+    "birthday": "2022-06-10",
+    "age": "on",
+    "telephone": "54992621954",
+    "destinatario": "Davi Augusto de Oliveira",
+    "cep": "95084000",
+    "logradouro": "Lugar Nenhum",
+    "cidade_bairro": "Caxias do Sul",
+    "number": "1155",
+    "complemento": "n sei",
+    "password": "$2b$10$swf.aqBqbTSoOs2qoD0rUeHO.CHNNw48pz5QOjLhYD32AQZhf9n5y",
+    "terms": "on"
   }
 ]
