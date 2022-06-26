@@ -25,6 +25,7 @@
                 <h2>Dados Pessoais</h2>
                 <form action="" method="post">
                     <label for="email">E-mail:*</label>
+
                     <% if (typeof errors !== 'undefined') { %>
                         <% for(let error in errors) { %>
                         <% if(error == 'email') { %>
@@ -32,9 +33,12 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="email" id="email" value="<%= old.email %> ">                    
-                    
+                    <input type="text" name="email" id="email" <% if (typeof errors !== 'undefined') { %>
+                    value="<%= old.email %>" 
+                    <% } %>>
+
                     <label for="cpf">CPF:*</label>
+
                     <% if (typeof errors !== 'undefined') { %>
                         <% for(let error in errors) { %>
                         <% if(error == 'cpf') { %>
@@ -42,7 +46,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="number" name="cpf" id="cpf" value="<%= old.cpf %>">
+                    <input type="number" name="cpf" id="cpf" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.cpf %>" 
+                        <% } %>>
 
 
                     <label for="name">Nome:*</label>
@@ -53,7 +59,10 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="name" id="name" value="<%= old.name %> ">
+                    <input type="text" name="name" id="name" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.name %>" 
+                        <% } %>>     
+
 
                     <label for="last_name">Sobrenome:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -63,7 +72,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="last_name" id="last_name" value="<%= old.last_name %> ">
+                    <input type="text" name="last_name" id="last_name" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.last_name %>" 
+                        <% } %>>     
 
                     <label for="birthday">Data de nascimento:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -73,7 +84,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="date" name="birthday" id="birthday" value="<%= old.birthday %>">
+                    <input type="date" name="birthday" id="birthday" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.birthday %>" 
+                        <% } %>>     
     
                     <div class="pessoal_data_age">
                         <label for="age">Tenho mais de 18 anos.*</label>
@@ -95,7 +108,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="tel" name="telephone" id="telephone" value="<%= old.telephone %> ">
+                    <input type="tel" name="telephone" id="telephone" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.telephone %>" 
+                        <% } %>>     
     
     
                     <h2>Endereço</h2>
@@ -109,7 +124,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="destinatario" id="destinatario" value="<%= old.destinatario %> ">
+                    <input type="text" name="destinatario" id="destinatario" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.destinatario %>" 
+                        <% } %>>     
                     
                     <label for="cep">CEP:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -119,7 +136,9 @@
                         <% } %>
                         <% } %>
                 <% } %> 
-                    <input type="number" name="cep" id="cep" value="<%= old.cep %>">
+                    <input type="number" name="cep" id="cep" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.cep %>" 
+                        <% } %>>     
 
                     <label for="name">Logradouro:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -129,7 +148,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="logradouro" id="logradouro" value="<%= old.logradouro %>">
+                    <input type="text" name="logradouro" id="logradouro" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.logradouro %>" 
+                        <% } %>>     
 
                     <label for="cidade_bairro">Cidade e Bairro:*</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -139,7 +160,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="cidade_bairro" id="cidade_bairro" value="<%= old.cidade_bairro %>">
+                    <input type="text" name="cidade_bairro" id="cidade_bairro" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.cidade_bairro %>" 
+                        <% } %>>     
 
                   <label for="numero">Número*:</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -149,7 +172,9 @@
                         <% } %>
                         <% } %> 
                 <% }%>
-                    <input type="number" name="number" id="numero" value="<%= old.number %>" >
+                    <input type="number" name="number" id="numero" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.number %>" 
+                        <% } %>>     
 
                     <label for="complemento">Complemento:</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -159,7 +184,9 @@
                         <% } %>
                         <% } %>
                 <% } %>
-                    <input type="text" name="complemento" id="complemento" value="<%= old.complemento %> ">
+                    <input type="text" name="complemento" id="complemento" <% if (typeof errors !== 'undefined') { %>
+                        value="<%= old.complemento %>"
+                        <% } %>>     
 
                     <label for="password">Senha*:</label>
                     <% if (typeof errors !== 'undefined') { %>
@@ -183,7 +210,7 @@
 
                     <div class="political_privacity">
                         <label for="terms">Ciente das políticas de privacidade e termos de uso do site.*</label>
-                        <input type="checkbox" name="terms" id="terms" class="political_privacity_input" value="<%= old.terms %> ">
+                        <input type="checkbox" name="terms" id="terms" class="political_privacity_input">
                         <% if (typeof errors !== 'undefined') { %>
                             <% for(let error in errors) { %>
                             <% if(error == 'terms') { %>
