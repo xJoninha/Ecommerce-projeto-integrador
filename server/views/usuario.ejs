@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/home-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe do Usuário</title>
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <a href="/usuarios" class="link-usuarios">Todos Usuarios</a>
+
+        <h2 class="users-list-title"><%= titulo %> - id: <%= usuario.id %></h2>
+        <section class="users-list-box">
+                <% if (locals.usuario) { %>
+                <table class="users-list-table">
+
+                    <thead>
+                        <tr class="users-list-title">
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Sobrenome</td>
+                            <td>Nascimento</td>
+                            <td>Email</td>
+                            <td>Senha</td>
+                            <td>Admin</td>
+                            <td>CPF</td>
+                            <td>Telefone</td>
+                            <td>Configurações</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                        <tr class="users-list-content">
+                            <td><%= usuario.id %></td>
+                            <td><%= usuario.nome %></td>
+                            <td><%= usuario.sobrenome %></td>
+                            <td><%= usuario.nascimento %></td>
+                            <td><%= usuario.email %></td>
+                            <td><%= usuario.senha %></td>
+                            <td>
+                                <% if ( usuario.userAdmin === 1 ) { %>
+                                    Sim
+                                <% } else { %>
+                                    Não
+                                <% } %>
+                            </td>
+                            <td><%= usuario.cpf %></td>
+                            <td><%= usuario.telefone %></td>
+                            <td class="users-list-options">
+                                <a href="/usuarios/<%= usuario.id %>/editar" class="config-editar">Editar</a>
+                                <a href="/usuarios/<%= usuario.id %>/excluir" class="config-excluir">Excluir</a>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+
+                </table>
+                <% } else { %>
+                <div>
+                    <h3>Não há usuários cadastrados ainda.</h3>
+                </div>
+                <% } %>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+    
+</body>
+</html>

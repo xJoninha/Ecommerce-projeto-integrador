@@ -34,14 +34,201 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--estilo-fonte-2);
 }
 
 html, body, main{
     background-color: var(--cor-secundaria);
 }/* --------------------------------------- */
 
+/*---PROVISORIO----BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+.link-usuarios {
+    padding: 0 5px;
+    position: relative;
+    top: 8px;
+    margin-left: 50px;
+    font-size: var(--fonte-tamanho-medio);
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+    width: 220px;
+    height: 36px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+    background-color: #9e59c34a;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
 
+.link-usuarios:hover {
+    background-color: #5b2b758d;
+    color: var(--cor-secundaria-claro);
+}
+
+.users-list-title {
+    margin: 10px auto 0px;
+    font-family: var(--estilo-fonte-1);
+    text-align: center;
+}
+
+.users-list-subtitle {
+    margin: 10px auto 0px;
+    font-family: var(--estilo-fonte-1);
+    text-align: center;
+}
+
+.users-list-box {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.users-list-table {
+    border: 1px solid var(--cor-primaria-escuro);
+    background-color: var(--cor-secundaria-claro);
+}
+
+.users-list-title td{
+    font-size: var(--fonte-tamanho-medio);
+    padding: 0 5px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--cor-primaria-escuro);
+    color: var(--cor-secundaria-claro);
+}
+
+.users-list-content td {
+    height: 55px;
+    padding: 0 10px;
+    font-size: var(--fonte-tamanho-pequeno);
+    background-color: var(--cor-secundaria);
+}
+
+.users-list-options {
+    font-weight: bold;
+    text-align: center;
+}
+
+.config-ver {
+    padding: 2px 5px;
+    color: var(--cor-primaria-claro);
+    background-color: rgba(0, 128, 255, 0.274);
+    transition: 0.2s ease-in-out;
+    border: 1px solid black;
+}
+
+.config-editar {
+    padding: 2px 5px;
+    color: var(--cor-primaria-claro);
+    background-color: rgba(0, 255, 38, 0.274);
+    transition: 0.2s ease-in-out;
+    border: 1px solid black;
+}
+
+.config-excluir {
+    padding: 2px 5px;
+    color: var(--cor-primaria-claro);
+    background-color: rgba(255, 0, 0, 0.275);
+    transition: 0.2s ease-in-out;
+    border: 1px solid black;
+}
+
+.config-ver:hover {
+    background-color: rgb(0, 128, 255);
+    border-radius: 8px;
+    color: white;
+}
+
+.config-editar:hover {
+    background-color: rgb(0, 255, 38);
+    border-radius: 8px;
+    color: white;
+}
+
+.config-excluir:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 8px;
+    color: white;
+}
+
+/*---PROVISORIO----BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+
+
+/*---PROVISORIO----CADASTRO--------*/
+
+.form-title {
+    text-align: center;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-grande);
+}
+
+.form-box {
+    margin: 50px auto 190px;
+}
+
+.form {
+    font-weight: bold;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-medio);
+    padding: 15px 15px 0;
+    width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--cor-secundaria-claro);
+    margin: 5px auto 15px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.form label {
+    margin: 0 auto;
+}
+
+.form input {
+    margin: 0 auto;
+    width: 380px;
+    height: 35px;
+    padding: 0 3px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid #5b2b7556;
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+
+.form input:focus {
+    border:3px solid #5b2b75;
+}
+
+.form-btt {
+    display: flex;
+    padding: 15px;
+}
+
+.form-btt button{
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 120px;
+    height: 35px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: var(--estilo-fonte-1);
+    font-size: 16px;
+    line-height: 13px;
+    color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
+}
+
+.form-btt button:hover {
+    color: var(--cor-secundaria-claro);
+    background-color: var(--cor-primaria-claro);
+}
+
+/*---PROVISORIO----CADASTRO--------*/
 
 /* START- 'carrossel' da home usando Slick Slide */
 .carousel {

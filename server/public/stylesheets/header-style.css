@@ -49,6 +49,32 @@ header {
     gap: 16px;
 }
 
+.user-title {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+.usuario {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.usuario a {
+    color: var(--cor-texto-primario);
+    font-weight: bold;
+}
+
+.usuario a:nth-child(2) {
+    margin-right: 30px;
+}
+
+.usuario p {
+    font-size: var(--fonte-tamanho-pequeno);
+}
+
 .abrir-menu {
     display: none;
 }
