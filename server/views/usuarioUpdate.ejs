@@ -15,35 +15,36 @@
 
             <section class="form-box">
                 <div class="form-title">
-                    <h1>Cadastro</h1>
+                    <h2><%= titulo %></h2>
                 </div> 
     
-                <form action="" method="post" class="form">
+                <form action="" method="POST" class="form">
+                    
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" value="<%= usuario.nome %>">
                     
                     <label for="sobrenome">Sobrenome</label>
-                    <input type="text" name="sobrenome" id="sobrenome">
+                    <input type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %>">
 
                     <label for="nascimento">Nascimento</label>
-                    <input type="date" name="nascimento" id="nascimento">
+                    <input type="date" name="nascimento" id="nascimento" value="<%= usuario.nascimento %>">
 
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">    
+                    <input type="email" name="email" id="email" value="<%= usuario.email %>">    
 
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha"> 
+                    <input type="password" name="senha" id="senha" value="<%= usuario.senha %>"> 
 
                     <label for="cpf">CPF</label>
-                    <input type="number" name="cpf" id="cpf">
+                    <input type="number" name="cpf" id="cpf" value="<%= usuario.cpf %>">
 
                     <label for="telefone">Telefone</label>
-                    <input type="number" name="telefone" id="telefone">
-
+                    <input type="number" name="telefone" id="telefone" value="<%= usuario.telefone %>">
                     <div class="form-btt">
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">Atualizar</button>
                         <button type="reset">Limpar campos</button>
                     </div>
+                    
                 </form>
     
             </section>

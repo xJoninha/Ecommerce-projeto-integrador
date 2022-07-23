@@ -14,7 +14,7 @@ router.get('/vitrine-rose', IndexController.vitrineRose);
 router.get('/vitrine-espumante', IndexController.vitrineEspumante);
 router.get('/produto', IndexController.paginaProduto);
 
-router.get('/produto/:id', controllerBebidas.show);
+// router.get('/produto/:id', controllerBebidas.show);
 
 router.get('/adega', IndexController.adega);
 router.get('/sobre', IndexController.sobre);
