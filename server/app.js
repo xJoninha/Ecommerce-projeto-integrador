@@ -11,6 +11,7 @@ const session = require('express-session')
 //chamando rota 01
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/usersRouter");
+const productsRouter = require("./routes/productRouter");
 
 //esse é conhecido também, chamando as funções e métodos do express.
 const app = express();
@@ -40,7 +41,9 @@ app.use("/", indexRouter);
 app.use("/usuarios", usersRouter);
 // app.use("/cadastro", usersRouter);
 
-// catch 404 and forward to error handler
+app.use("/produtos", productsRouter);
+
+// catch 404 and forward to error handler 
 //PÁGINA DE ERRO
 app.use(function (req, res, next) {
   next(createError(404));
