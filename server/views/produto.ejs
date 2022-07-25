@@ -25,44 +25,44 @@
     <main>
       <div class="corpoTodo">
         <section class="flex-produto">
-          <div class="card mb-0 flex-produtos-corpo">
+          <div class="card mb-0 flex-produtos-corpo"> 
             <div class="row g-0 m-2">
               <div class="col-md-3 m-5">
                 <div class="imagenzinha">
-                  <img src="../images/garrafas/vinho-elegance-espumante.svg" class="img-fluid rounded-start imagem-card"
+                  <img src="<%= product.image %> " class="img-fluid rounded-start imagem-card"
                     alt="...">
                 </div>
               </div>
               <div class="col-md-7 cor-detalhes">
                 <div class="card-body">
                   <h5 class="card-title">
-                    <%= vinhoAdega.nome %>
+                    <%= product.nome %>
                   </h5>
                   <h6 class="card-title fw-bold my-5 ">Detalhes</h6>
                   <p class="card-text">
-                    <%= vinhoAdega.texto %>
+                    <%= product.descricao %>
                   </p>
                   <div class="row justify-content-center">
                     <div class="row produtos-descricao m-5">
                       <div class="col-6">
-                        <p><i class="fa-solid fa-earth-americas"></i>Origem: <%= vinhoAdega.origem %></p>
+                        <p><i class="fa-solid fa-earth-americas"></i>Origem: <%= product.origem %></p>
                       </div>
                       <div class="col-6">
-                        <p><i class="fa-solid fa-percent"></i>Teor alcoólico: <%= vinhoAdega.teor %> %
+                        <p><i class="fa-solid fa-percent"></i>Teor alcoólico: <%= product.teor_alcoolico %> %
                         </p>
                       </div>
                       <div class="col-6">
-                        <p><i class="fa-solid fa-temperature-full"></i>Temperatura Ideal: <%= vinhoAdega.temperatura %> °C</p>
+                        <p><i class="fa-solid fa-temperature-full"></i>Temperatura Ideal: <%= product.temperatura %> °C</p>
                       </div>
-                      <div class="col-6">
-                        <p><i class="fa-solid fa-beer-mug-empty"></i> Taça Ideal: <%= vinhoAdega.copo %></p>
-                      </div>
+                      <!--<div class="col-6">
+                        <p><i class="fa-solid fa-beer-mug-empty"></i> Taça Ideal: <%= product.copo %></p>
+                      </div> -->
                     </div>
                   </div>
                   <div class="row justify-content-center my-5">
                     <div class="row row-cols-3 fw-bold">
-                      <div class="col fs-5"><i class="fa-solid fa-coins"></i> R$ <%= vinhoAdega.preco %></div>
-                      <div class="col fs-5"><i class="fa-solid fa-credit-card"></i><%= vinhoAdega.parcelas %></div>
+                      <div class="col fs-5"><i class="fa-solid fa-coins"></i> R$ <%= product.preco %></div>
+                     <!-- <div class="col fs-5"><i class="fa-solid fa-credit-card"></i><%= product.parcelas %></div> -->
                     </div>
                   </div>
                 </div>
