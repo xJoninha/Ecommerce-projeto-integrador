@@ -47,4 +47,4 @@ const IndexController = {
 
 
 
-module.exports = {IndexController, controllerBebidas};
+module.exports = IndexController, controllerBebidas;

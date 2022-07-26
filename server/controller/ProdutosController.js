@@ -10,6 +10,9 @@ const controller = {};
 controller.allProducts = (req, res) => {
     Product.findAll()
         .then(produtos => {
+            for(let produto of produtos) {
+                console.log(produto)
+            }
             res.render('produtos.ejs', { produtos })
         })
 } 
@@ -17,7 +20,7 @@ controller.allProducts = (req, res) => {
 controller.getProduct = (req, res) => {
     let params = req.params.id
     Product.findByPk(params)
-        .then(product => {
+        .then(product => { 
             res.render('produto', { product, params })
         })
 
