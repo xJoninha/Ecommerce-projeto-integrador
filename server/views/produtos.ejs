@@ -21,20 +21,23 @@
             <br>
 
             <section class="content">
-            <% for( let produto of produtos) { %>
-                <div class="containerVinho">
-                    <section class="contentVinho">
+                <% for( let produto of produtos) { %>
+                    <section class="containerVinho">
+
                         <div class="contentImage">
-                            <a href=" /produtos/detail/<%= produto.id %> ">
+                            <a href=" /produtos/produto/<%= produto.id %> ">
                                 <img src="<%= produto.image %> " alt="">
                             </a>
                         </div>
-                        <h3><%= produto.nome %> </h3>
-                        <p>R$ <%= produto.preco %></p>
+                        <h3>
+                            <%= produto.nome %>
+                        </h3>
+                        <p>R$ <%= produto.preco %>
+                        </p>
                         <button>Adicionar à Adega</button>
+
                     </section>
-                </div>
-                <% } %>
+                    <% } %>
             </section>
 
         </main>

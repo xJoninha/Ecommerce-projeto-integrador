@@ -4,10 +4,11 @@ const controller = require('../controller/ProdutosController');
 const IndexController = require('../controller/IndexController');
 
 router.get('/', controller.allProducts);
-router.get('/detail/:id', controller.getProduct);
-router.get('/vitrine-tinto', IndexController.vitrineTinto);
-router.get('/vitrine-branco', IndexController.vitrineBranco);
-router.get('/vitrine-rose', IndexController.vitrineRose);
-router.get('/vitrine-espumante', IndexController.vitrineEspumante);
+router.get('/produto/:id', controller.getProduct);
+router.get('/adega', controller.adega);
+router.get('/vitrine-tinto', controller.vitrineTinto);
+router.get('/vitrine-branco', controller.vitrineBranco);
+router.get('/vitrine-rose', controller.vitrineRose);
+router.get('/vitrine-espumante', controller.vitrineEspumante);
 
 module.exports = router;  

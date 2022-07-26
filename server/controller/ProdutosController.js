@@ -26,4 +26,30 @@ controller.getProduct = (req, res) => {
 
 }
 
+controller.vitrineTinto = async (req, res) => {
+    let produtos = await Product.findAll();
+    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Tinto")
+    res.render('vitrine-tinto', {result})    
+}
+
+
+controller.vitrineBranco = async (req, res) => {
+    let produtos = await Product.findAll();
+    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Branco")
+    res.render('vitrine-branco', {result})    
+}
+
+controller.vitrineRose = async (req, res) => {
+    let produtos = await Product.findAll();
+    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Rosé")
+    res.render('vitrine-rose', {result})    
+}
+controller.vitrineEspumante = async (req, res) => {
+    let produtos = await Product.findAll();
+    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Espumante")
+    res.render('vitrine-espumante', {result})    
+}
+
+controller.adega = (req, res) => res.render('adega')
+
 module.exports = controller;

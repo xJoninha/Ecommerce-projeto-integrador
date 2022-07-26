@@ -15,136 +15,33 @@
     <h1 class="vitrine-text">Vinho Rosé</h1>
 
     <main>
-        <div class="container-vitrine">
-            <section>
-                <div> 
-                    <img src="./images/garrafas/vinhoTinto/Alisios-tinto.jpg" alt="">
-                </div>
-                <h3>Alisios</h3>
-                <p>R$ 78,99</p> 
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Armando-tinto.jpg" alt="">
-                </div>
-                <h3>Armando</h3>
-                <p>R$ 84,49</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Cainelli-cabernet-tinto.jpg" alt="">
-                </div>
-                <h3>Cainelli cabernet</h3>
-                <p>R$ 49,89</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Don-giovanni-tinto.jpg" alt="">
-                </div>
-                <h3>Don giovanni</h3>
-                <p>R$ 46,79</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/La-couleur-tinto.jpg" alt="">
-                </div>
-                <h3>La couleur</h3>
-                <p>R$ 84,49</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Las-falleras-tinto.jpg" alt="">
-                </div>
-                <h3>Las falleras</h3>
-                <p>R$ 78,99</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Los-andes-tinto.jpg" alt="">
-                </div>
-                <h3>Los andes</h3>
-                <p>R$ 45,59</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Maturo-tinto.jpg" alt="">
-                </div>
-                <h3>Maturo</h3>
-                <p>R$ 65,69</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Sintonia-tinto.jpg" alt="">
-                </div>
-                <h3>Sintonia</h3>
-                <p>R$ 46,79</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Solear-tinto.jpg" alt="">
-                </div>
-                <h3>Solear</h3>
-                <p>R$ 45,59</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Terra-alegre-tinto.jpg" alt="">
-                </div>
-                <h3>Terra alegre</h3>
-                <p>R$ 84,49</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Terras-tinto.jpg" alt="">
-                </div>
-                <h3>Terras</h3>
-                <p>R$ 78,99</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Verse-tinto.jpg" alt="">
-                </div>
-                <h3>Verse</h3>
-                <p>R$ 49,89</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Belhara-tinto.jpg" alt="">
-                </div>
-                <h3>Belhara</h3>
-                <p>R$ 46,79</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Travessia-tinto.jpg" alt="">
-                </div>
-                <h3>Travessia</h3>
-                <p>R$ 45,59</p>
-                <button>Adicionar a adega</button>
-            </section>
-            <section>
-                <div>
-                    <img src="./images/garrafas/vinhoTinto/Nube-tinto.jpg" alt="">
-                </div>
-                <h3>Nube</h3>
-                <p>R$ 65,69</p>
-                <button>Adicionar a adega</button>
-            </section>
-        </div>
+        <br>
+
+        <a class="botaoVoltar" href="/">Voltar à Página Inicial</a>
+
+
+        <br>
+
+        <section class="content">
+            <% for( let produto of result) { %>
+                <section class="containerVinho">
+
+                    <div class="contentImage">
+                        <a href=" /produtos/produto/<%= result.id %> ">
+                            <img src="<%= produto.image %> " alt="">
+                        </a>
+                    </div>
+                    <h3>
+                        <%= produto.nome %>
+                    </h3>
+                    <p>R$ <%= produto.preco %>
+                    </p>
+                    <button>Adicionar à Adega</button>
+
+                </section>
+                <% } %>
+        </section>
+
     </main>
 
     <%- include('../views/partials/footer'); -%>
