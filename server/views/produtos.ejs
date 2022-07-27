@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-        <link rel='stylesheet' href='./stylesheets/produtos.css'/>
-    </head>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel='stylesheet' href='./stylesheets/produtos.css' />
+</head>
 
 <body>
 
     <%- include('../views/partials/header'); %>
 
-    <main>
-        <h1>LISTA DE FILMES</h1>
-    <br>
-    
-    <a class="botaoVoltar" href="/">Voltar à Página Inicial</a>
+        <main>
+            <h1>NOSSOS PRODUTOS</h1>
+            <br>
 
-    
-    <br>
-    <ul class="filmes">
-        <% for( let i = 0; i < produtos.length; i++ ) { %>
-        <li>
-            <a class="listaFilmes" href="/produtos/detail/<%= produtos[i].id %>"><%= produtos[i].nome %></a>
-        </li>
-        <% } %>
-
-    </ul>
-    </main>
+            <a class="botaoVoltar" href="/">Voltar à Página Inicial</a>
 
 
-    <%- include('./partials/footer') %>
+            <br>
+
+            <section class="content">
+                <% for( let produto of produtos) { %>
+                    <section class="containerVinho">
+
+                        <div class="contentImage">
+                            <a href=" /produtos/produto/<%= produto.id %> ">
+                                <img src="<%= produto.image %> " alt="">
+                            </a>
+                        </div>
+                        <h3>
+                            <%= produto.nome %>
+                        </h3>
+                        <p>R$ <%= produto.preco %>
+                        </p>
+                        <button>Adicionar à Adega</button>
+
+                    </section>
+                    <% } %>
+            </section>
+
+        </main>
+
+
+        <%- include('./partials/footer') %>
 
 </body>
+
 </html>

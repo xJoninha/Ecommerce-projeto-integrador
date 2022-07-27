@@ -35,7 +35,7 @@
 
   main {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
   }
@@ -44,22 +44,63 @@
    font-size: var(--fonte-tamanho-extraGrande); 
   }
 
-  li {
-    margin: 10px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-height: 200px;
   }
 
   .botaoVoltar {
     font-size: var(--fonte-tamanho-grande);
   }
 
-  .filmes {
-    display: flex;
+  .vinhos {
+    display: flex; 
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
   }
 
-  .listaFilmes {
+  .listaVinhos {
     font-size: var(--fonte-tamanho-medio);
     color:#5b2b75;
   }
+
+  .containerVinho {
+    position: relative;
+    margin: 40px;
+    width: 25%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contentVinho {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
