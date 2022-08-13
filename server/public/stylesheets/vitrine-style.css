@@ -30,7 +30,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--estilo-fonte-2);
 }
 
 html, body, main{
@@ -41,7 +40,7 @@ html, body, main{
 .vitrine-text {
     border-top: 1px solid var(--cor-secundaria-escuro);
     color: var(--cor-primaria-claro);
-    margin: 20px auto 5px;
+    margin: 20px auto 15px;
     padding-top: 30px;
     width: 90vw;
     display: flex;
