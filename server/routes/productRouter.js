@@ -11,4 +11,4 @@ router.get('/vitrine-branco', controller.vitrineBranco);
 router.get('/vitrine-rose', controller.vitrineRose);
 router.get('/vitrine-espumante', controller.vitrineEspumante);
 
-module.exports = router;  
+module.exports = router;
