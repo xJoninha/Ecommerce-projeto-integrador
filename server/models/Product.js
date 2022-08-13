@@ -30,21 +30,6 @@ module.exports = (sequelize, dataTypes) => {
         temperatura: {
             type: dataTypes.INTEGER
         },
-        volume: {
-            type: dataTypes.STRING
-        },
-        safra: {
-            type: dataTypes.STRING
-        },
-        uvas: {
-            type: dataTypes.STRING
-        },
-        potencial_de_guarda: {
-            type: dataTypes.STRING
-        },
-        vinicola: {
-            type: dataTypes.STRING
-        },
         estoque: {
             type: dataTypes.INTEGER
         }
