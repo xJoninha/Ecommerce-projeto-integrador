@@ -14,7 +14,7 @@
     <main>
         <a href="/usuarios" class="link-usuarios">Todos Usuarios</a>
 
-        <h2 class="users-list-title"><%= titulo %> - id: <%= usuario.id %></h2>
+        <h2 class="users-list-title"><%= titulo %> <b><%= usuario.nome %></b> id: <b><%= usuario.id %></b></h2>
         <section class="users-list-box">
                 <% if (locals.usuario) { %>
                 <table class="users-list-table">

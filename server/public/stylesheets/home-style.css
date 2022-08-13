@@ -22,6 +22,7 @@
 
     --fonte-tamanho-extraPequeno: 0.9rem;
     --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-userList: 26px;
     --fonte-tamanho-medio: 1.8rem;
     --fonte-tamanho-grande: 2.0rem;
     --fonte-tamanho-extraGrande: 2.7rem;
@@ -89,6 +90,13 @@ html, body, main{
     background-color: var(--cor-secundaria-claro);
 }
 
+.users-list-title b {
+    font-size: 30px;
+    font-weight: 900;
+    color: #993bd0;
+    padding: 5px;
+}
+
 .users-list-title td{
     font-size: var(--fonte-tamanho-medio);
     padding: 0 5px;
@@ -101,7 +109,8 @@ html, body, main{
 .users-list-content td {
     height: 55px;
     padding: 0 10px;
-    font-size: var(--fonte-tamanho-pequeno);
+    font-family: system-ui;
+    font-size: var(--fonte-tamanho-userList);
     background-color: var(--cor-secundaria);
 }
 
@@ -130,25 +139,25 @@ html, body, main{
     padding: 2px 5px;
     color: var(--cor-primaria-claro);
     background-color: rgba(255, 0, 0, 0.275);
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
     border: 1px solid black;
 }
 
 .config-ver:hover {
     background-color: rgb(0, 128, 255);
-    border-radius: 8px;
+    border-radius: 4px;
     color: white;
 }
 
 .config-editar:hover {
     background-color: rgb(0, 255, 38);
-    border-radius: 8px;
+    border-radius: 4px;
     color: white;
 }
 
 .config-excluir:hover {
     background-color: rgb(255, 0, 0);
-    border-radius: 8px;
+    border-radius: 4px;
     color: white;
 }
 

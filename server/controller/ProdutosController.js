@@ -16,29 +16,23 @@ controller.allProducts = (req, res) => {
             res.render('produtos.ejs', { produtos })
         })
 } 
-
 controller.getProduct = (req, res) => {
     let params = req.params.id
     Product.findByPk(params)
         .then(product => { 
             res.render('produto', { product, params })
         })
-
 }
-
 controller.vitrineTinto = async (req, res) => {
     let produtos = await Product.findAll();
     let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Tinto")
     res.render('vitrine-tinto', {result})    
 }
-
-
 controller.vitrineBranco = async (req, res) => {
     let produtos = await Product.findAll();
     let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Branco")
     res.render('vitrine-branco', {result})    
 }
-
 controller.vitrineRose = async (req, res) => {
     let produtos = await Product.findAll();
     let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Rosé")

@@ -17,8 +17,6 @@ const validateRegister = [
     body('password').notEmpty().withMessage('O campo "Senha" é obrigatório.').bail().isLength({min: 7}).withMessage('A senha deve ter no mínimo 7 caracteres.'),
     body('confirm_password').notEmpty().withMessage('O campo "Confirmar Senha" é obrigatório.'),
     body('terms').notEmpty().withMessage('É necessário preencher este campo.')
-
-
-] 
+]
 
 module.exports = validateRegister
