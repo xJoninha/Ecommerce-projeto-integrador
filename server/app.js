@@ -8,10 +8,11 @@ const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require('express-session')
 
-// chamando rota 01
+// chamando rotas
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/usersRouter");
 const productsRouter = require("./routes/productRouter");
+const adminRouter = require("./routes/adminRouter")
 
 // esse é conhecido também, chamando as funções e métodos do express.
 const app = express();
@@ -42,6 +43,16 @@ app.use("/usuarios", usersRouter);
 // app.use("/cadastro", usersRouter);
 
 app.use("/produtos", productsRouter);
+
+
+// Apenas usuarios administradores
+app.use(adminMiddleware)
+
+app.use("/admin", adminRouter)
+
+
+
+
 
 // catch 404 and forward to error handler 
 // PÁGINA DE ERRO
