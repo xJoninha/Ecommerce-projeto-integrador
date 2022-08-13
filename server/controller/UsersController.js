@@ -13,22 +13,18 @@ controller.register = (req, res) => {
       titulo: 'Formulário de Registro'
   })
 };
-// OK  - warning
+// OK
 controller.add = async (req, res) => {   
-  const { nome, sobrenome, nascimento, email, senha, cpf, telefone } = req.body
+  const { nome, sobrenome, nascimento, email, senha, cpf, telefone } = req.body;
 
-  const emailVerified = User.findAll({ where: { email }})
-    .then(async verified => {
-      if(emailVerified) {
-        const usuario = await User.create({ nome, sobrenome, nascimento, email, senha, cpf, telefone })
-        if (usuario)
-          res.render('login')
-      }
-    })
-    .catch(error => {
-      res.render("errorPage")
-      console.log("Deu Erro Gente, Me Socorre !!!")
-    })
+  const userExists = await User.findAll({where: {email}})
+
+  if(userExists) {
+    res.render("errorPage",{title:"Erro...",message:"Email já cadastrado"})
+    return 
+  }
+  const usuario = await User.create({ nome, sobrenome, nascimento, email, senha, cpf, telefone })
+  res.render("login")
 };
 // OK - warning
 controller.login = (req, res) => {
