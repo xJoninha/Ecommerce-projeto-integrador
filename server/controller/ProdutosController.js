@@ -17,12 +17,41 @@ controller.allProducts = (req, res) => {
         })
 } 
 
+
+//Esse redireciona para a página do produto específico
 controller.getProduct = (req, res) => {
     let params = req.params.id
     Product.findByPk(params)
         .then(product => { 
             res.render('produto', { product, params })
         })
+
+}
+
+//********************* */
+//2º Retorna a busca feita para a página pagina-retorno-buscas
+controller.busca = async (req, res) => {
+
+    //6º colocar o name do formulario da página ejs de busca de parâmetro na url
+    let {key} = req.query;
+
+    let produtoPesquisado = await Product.findAll({
+
+        //7º dentro do where vai a condição com operadores sequelize like; tem que importar lá no começo da página
+        where: {
+
+            nome: {
+                [Op.like]: `%${key}%`
+            }
+
+        }
+
+
+    })
+    
+
+    res.render('pagina-retorno-buscas', {produtoPesquisado});
+
 
 }
 
@@ -50,6 +79,8 @@ controller.vitrineEspumante = async (req, res) => {
     res.render('vitrine-espumante', {result})    
 }
 
-controller.adega = (req, res) => res.render('adega')
+controller.adega = (req, res) => res.render('adega');
+
+
 
 module.exports = controller;

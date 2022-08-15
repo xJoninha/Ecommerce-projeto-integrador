@@ -15,10 +15,13 @@
 
     <main>
         <section class="content">
-            <% for( let produto of produtos) { %>
+            <!-- 3º O resultado já vem para essa página pela função de renderização. Agora usa ele para exibir a lista toda contendo todos
+            os objetos pesquisados -->
+            <% for( let produto of produtoPesquisado) { %>
                 <section class="containerVinho">
 
                     <div class="contentImage">
+                        <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
                         <a href=" /produtos/produto/<%= produto.id %> ">
                             <img src="<%= produto.image %> " alt="">
                         </a>
