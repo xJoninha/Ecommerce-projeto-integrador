@@ -24,6 +24,4 @@ router.post('/:id/editar', controller.edit);
 
 
 
-
-
 module.exports = router;   
