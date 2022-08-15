@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controller/ProdutosController');
-const IndexController = require('../controller/IndexController');
 
 router.get('/', controller.allProducts);
 router.get('/produto/:id', controller.getProduct);
@@ -11,4 +10,4 @@ router.get('/vitrine-branco', controller.vitrineBranco);
 router.get('/vitrine-rose', controller.vitrineRose);
 router.get('/vitrine-espumante', controller.vitrineEspumante);
 
-module.exports = router;  
+module.exports = router;

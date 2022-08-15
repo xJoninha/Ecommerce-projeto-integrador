@@ -14,6 +14,9 @@ const usersRouter = require("./routes/usersRouter");
 const productsRouter = require("./routes/productRouter");
 const adminRouter = require("./routes/adminRouter")
 
+// Importando arquivo de adminmiddleware
+const adminMiddleware = require('./middlewares/admin')
+
 // esse é conhecido também, chamando as funções e métodos do express.
 const app = express();
 
@@ -36,19 +39,18 @@ app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 // colocar o caminho até ela.
 app.use(express.static(path.join(__dirname, "public")));
 
+
+// chamando rota 2 para a pagina /users
+app.use("/usuario", usersRouter);
+app.use("/produtos", productsRouter);
 // chamando rota 1, para página geral onde uma barra é necessária
 app.use("/", indexRouter);
-// chamando rota 2 para a pagina /users
-app.use("/usuarios", usersRouter);
-// app.use("/cadastro", usersRouter);
-
-app.use("/produtos", productsRouter);
 
 
 // Apenas usuarios administradores
-app.use(adminMiddleware)
+app.use(adminMiddleware); 
 
-app.use("/admin", adminRouter)
+app.use("/admin", adminRouter);
 
 
 

@@ -33,48 +33,47 @@
                     </li>
                 </ul>
             </div>
-        </div>
         <!-- Desktop -->
-        <div class="padrao">
-            <div class="logo-padrao">
-                <a href="/" title="Adega Digital"><img src="/images/logo/logo-adega-frase.png" width="100" height="auto"></a>
-            </div>
-            <div class="busca-padrao">
-                <form class="busca-padrao-form" action="" method="get">
-                    <input type="text" id="busca-padrao-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital"/>
-                    <button class="busca-botao" type="submit" title="Buscar">
-                        <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
-                    </button>
-                </form>
-            </div>
-            <div class="usuario">
-                <div class="user-title">
-                    <img src="/images/svg/user.svg" width="40" height="40">
+            <div class="padrao">
+                <div class="logo-padrao">
+                    <a href="/" title="Adega Digital"><img src="/images/logo/logo-adega-frase.png" width="100" height="auto"></a>
+                </div>
+                <div class="busca-padrao">
+                    <form class="busca-padrao-form" action="" method="get">
+                        <input type="text" id="busca-padrao-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital"/>
+                        <button class="busca-botao" type="submit" title="Buscar">
+                            <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
+                        </button>
+                    </form>
+                </div>
+                <div class="usuario">
+                    <div class="user-title">
+                        <% if ( locals.usuarioLogado ) { %>
+                        <p>Bem vindo, <%= usuario.nome %></p>
+                        <% } %>
+                        <img src="/images/svg/user.svg" width="40" height="40">
+                    </div>
+                    <% if( !locals.usuarioLogado) { %>
+                    <a href="/usuario/login" title="Área de login"><p>Login</p></a>
+                    <% } %>
                     <% if ( locals.usuarioLogado ) { %>
-                    <p>Bem vindo, <%= usuario.nome %></p>
+                    <a href="/usuario/logout" title="Área de logout"><p>Logout</p></a>
+                    <% } %>
+                    <% if(!locals.usuarioLogado) { %>
+                    <a href="/usuario/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
                     <% } %>
                 </div>
-                <a href="/usuarios/login" title="Área de login"><p>Login</p></a>
-                <% if ( locals.usuarioLogado ) { %>
-                <a href="/usuarios/logout" title="Área de logout"><p>Logout</p></a>
-                <% } %>
-                <% if(!locals.usuarioLogado) { %>
-                <a href="/usuarios/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
-                <% } %>
+                <div class="adega">
+                    <a href="/produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
+                </div>
             </div>
-            <div class="adega">
-                <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
-            </div>
-        </div>
-        <nav class="menu-padrao">
-            <ul>
-                <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
-                <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
-                <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
-                <li><a href="/produtos/vitrine-espumante" title="Espumante">Espumante</a></li>
-            </ul>
-        </nav>
-    </header> 
-        </header>
-        <script src="/stylesheets/header-style.js"></script>
-</html>
+            <nav class="menu-padrao">
+                <ul>
+                    <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
+                    <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
+                    <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
+                    <li><a href="/produtos/vitrine-espumante" title="Espumante">Espumante</a></li>
+                </ul>
+            </nav>
+        </header> 
+<script src="/stylesheets/header-style.js"></script>
