@@ -118,20 +118,56 @@ header {
 .menu-padrao ul {
     display: flex;
     gap: 16px;
-    padding: 24px;
+    padding: 15px;
     list-style: none;
     text-decoration: none;
     justify-content: space-evenly;
+    position: static;
 }
 
 .menu-padrao li a {
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-medio);
+    font-size: var(--fonte-tamanho-pequeno);
     font-weight: bold;
     color: var(--cor-secundaria-escuro);
     list-style: none;
     text-decoration: none;
+    justify-content: space-around;
+    position: static;
 }
+
+.tinto {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.tinto:hover {
+    transform: scale(1.1);
+}
+
+.branco {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.branco:hover {
+    transform: scale(1.1);
+}
+
+.rose {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.rose:hover {
+    transform: scale(1.1);
+}
+
+.espumante {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.espumante:hover {
+    transform: scale(1.1);
+}
+
 
 .abrir-menu {
     display: none;
