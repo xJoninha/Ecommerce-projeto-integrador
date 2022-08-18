@@ -133,8 +133,6 @@ header {
     text-decoration: none;
 }
 
-
-
 .abrir-menu {
     display: none;
 }
@@ -146,8 +144,6 @@ header {
 .visivel {
     display: block;
 }
-
-
 
 @media (max-width: 768px) {
     .padrao, .menu-padrao, .usuario-mobile {
