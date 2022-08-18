@@ -65,6 +65,25 @@ header {
 /* Logo desktop */
 
 /* Form de busca desktop */
+.busca-botao {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.busca-padrao {
+    border: var(--cor-secundaria-escuro);
+}
+
+.busca-padrao-form {
+    display: flex;
+    flex-direction: row;
+    border: solid 2px var(--cor-secundaria-escuro);
+    border-radius: 5px;
+    padding: 2px;
+}
 
 /* Login e cadastro de usuário desktop */
 
@@ -110,25 +129,7 @@ header {
     display: block;
 }
 
-.busca-botao {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
 
-.busca-padrao {
-    border: var(--cor-secundaria-escuro);
-}
-
-.busca-padrao-form {
-    display: flex;
-    flex-direction: row;
-    border: solid 2px var(--cor-secundaria-escuro);
-    border-radius: 5px;
-    padding: 2px;
-}
  
 
 
