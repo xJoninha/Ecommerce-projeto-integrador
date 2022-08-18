@@ -86,11 +86,6 @@ header {
 }
 
 /* Login e cadastro de usuário desktop */
-
-/* Adega - carrinho de compras desktop */
-
-/* Navigation (v. tinto, v. branco, v. rose, espumante) desktop */
-
 .user-title {
     display: flex;
     align-items: flex-end;
@@ -117,22 +112,9 @@ header {
     font-size: var(--fonte-tamanho-pequeno);
 }
 
-.abrir-menu {
-    display: none;
-}
+/* Adega - carrinho de compras desktop */
 
-.mobile, .logo-mobile, .menu-mobile {
-    display: none;
-}
-
-.visivel {
-    display: block;
-}
-
-
- 
-
-
+/* Navigation (v. tinto, v. branco, v. rose, espumante) desktop */
 .menu-padrao ul {
     display: flex;
     gap: 16px;
@@ -150,6 +132,22 @@ header {
     list-style: none;
     text-decoration: none;
 }
+
+
+
+.abrir-menu {
+    display: none;
+}
+
+.mobile, .logo-mobile, .menu-mobile {
+    display: none;
+}
+
+.visivel {
+    display: block;
+}
+
+
 
 @media (max-width: 768px) {
     .padrao, .menu-padrao, .usuario-mobile {
