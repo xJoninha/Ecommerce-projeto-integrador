@@ -39,6 +39,17 @@ header {
     background-color: var(--cor-primaria);
 }
 
+/* Div pai logo, form de busca, login e adega desktop */
+.padrao {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 24px;
+}
+
 /* Logo desktop */
 
 /* Form de busca desktop */
@@ -87,15 +98,7 @@ header {
     display: block;
 }
 
-.padrao {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 24px;
-}
+
 
 .busca-botao {
     background-color: transparent;
