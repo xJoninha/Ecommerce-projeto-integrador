@@ -32,21 +32,11 @@
     padding: 0;
     box-sizing: border-box;
     /* border: solid 1px red; */
-    /* font-family: var(--estilo-fonte-2); */
 }/* --------------------------------------- */
 
 header {
     width: 100%;
     background-color: var(--cor-primaria);
-}
-
-.redes-sociais ul {
-    display: flex;
-    padding: 24px;
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 16px;
 }
 
 .user-title {
@@ -148,7 +138,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    .redes-sociais, .padrao, .menu-padrao, .usuario-mobile {
+    .padrao, .menu-padrao, .usuario-mobile {
         display: none;
     }
 
