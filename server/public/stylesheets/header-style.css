@@ -113,6 +113,13 @@ header {
 }
 
 /* Adega - carrinho de compras desktop */
+.adega {
+    transition: transform 0.3s ease-in-out;
+}
+
+.adega:hover {
+    transform: scale(1.1);
+}
 
 /* Navigation (v. tinto, v. branco, v. rose, espumante) desktop */
 .menu-padrao ul {
