@@ -5,39 +5,51 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/stylesheets/header-style.js"></script>
         <title>Adega Digital</title>
     </head>
     <body>        
         <header>
-            <div class="redes-sociais">
+        <!-- Início header mobile -->
+        <div class="mobile">
+            <!-- Menu hamburguer -->
+            <button class="abrir-menu"><img src="/images/svg/menu.svg" width="36" height="36"></button>
+            <nav class="menu-mobile">
                 <ul>
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Ir para o Instagram">
-                            <img src="/images/svg/instagram.svg" width="30" height="30">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Ir para o facebook">
-                            <img src="/images/svg/facebook.svg" width="30" height="30">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Ir para o YouTube">
-                            <img src="/images/svg/youtube.svg" width="30" height="30">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank" rel="noopener noreferrer" title="Abrir Whatsapp">
-                            <img src="/images/svg/Whatsapp.svg" width="30" height="30">
-                        </a>
-                    </li>
+                    <li><a href="/cadastro" title="Minha conta">Minha conta</a></li>
+                    <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
+                    <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
+                    <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
+                    <li><a href="/produtos/vitrine-espumante">Espumante</a></li>
                 </ul>
+            </nav>
+            <!-- Logo do menu mobile -->
+            <div class="logo-mobile">
+                <!-- <a href="/" title="Home | Adega Digital"><img src="/images/logo/adega_digital_logo.png" width="220px" height="220px"></a> -->
+            </div>
+            <!-- Div busca mobile -->
+            <div class="busca-mobile">
+                <form class="busca-mobile-form" action="/produtos/busca" method="get">
+                    <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
+                    <button class="busca-mobile-botao" type="submit" title="Buscar">
+                        <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
+                    </button>
+                </form>
+            </div>
+            <!-- Div adega mobile -->
+            <div class="adega-mobile">
+                <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
             </div>
         </div>
-        <!-- Desktop -->
+        <!-- Fim header mobile -->
+
+        <!-- Início header desktop -->
         <div class="padrao">
-            <div class="logo-padrao">
-                <a href="/" title="Adega Digital"><img src="/images/logo/logo-adega-frase.png" width="100" height="auto"></a>
+            <!-- Logo do menu desktop -->
+            <div class="logo-desktop-container">
+                <div class="logo-desktop-content">
+                    <a href="/" title="Adega Digital"><img src="/images/logo/adega_digital_logo.png" width="500" height="auto"></a>
+                </div>
             </div>
 
 
@@ -72,15 +84,14 @@
                 <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
             </div>
         </div>
+        <!-- Navigation do header para desktop -->
         <nav class="menu-padrao">
             <ul>
-                <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
-                <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
-                <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
-                <li><a href="/produtos/vitrine-espumante" title="Espumante">Espumante</a></li>
+                <li class="tinto"><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
+                <li class="branco"><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
+                <li class="rose"><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
+                <li class="espumante"><a href="/produtos/vitrine-espumante" title="Espumante">Espumante</a></li>
             </ul>
         </nav>
     </header> 
-        </header>
-        <script src="/stylesheets/header-style.js"></script>
 </html>
