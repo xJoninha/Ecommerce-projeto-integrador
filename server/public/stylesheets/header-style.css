@@ -60,6 +60,11 @@ header {
     color: var(--cor-secundaria-escuro);
 }
 
+.busca-padrao-form input {
+    border: none;
+    outline: none;
+}
+
 /* Logo desktop */
 .logo-desktop-container {
     background-color: #c0b3c2;
