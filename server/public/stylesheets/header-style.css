@@ -152,6 +152,14 @@ header {
     flex-direction: column;
 }
 
+.form-cadastro h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
 .form-cadastro label {
     font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
