@@ -65,7 +65,31 @@
             </div>
             <!-- ######################################### -->
 
+            <!--Nova div do usuário-->
+
             <div class="usuario">
+                <button class="abrir-usuario-cadastro" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
+            <nav class="nav-usuario-cadastro">
+                <ul>
+                    <li>
+                        <form class="form-cadastro">
+                            <h2>Login</h2>
+                            <label for="email-cadastrado">Usuário:</label>
+                            <input type="text" class="input-email-cadastrado" id="email-cadastrado" placeholder="E-mail" title="E-mail">
+                            <label for="senha-cadastrada">Senha:</label>
+                            <input type="password" class="input-senha-cadastrada" id="senha-cadastrada" placeholder="Senha" title="Senha">
+                            <button class="botao-entrar" type="submit">Entrar</button>
+                        </form>
+                    </li>
+                    <li><a href="/usuarios/cadastro">Cadastrar</a></li>
+                    <li><a href="">Recuperar senha</a></li>
+                </ul>
+            </nav>
+            </div>
+
+            <!--Div do usuário antiga-->
+
+            <!-- <div class="usuario">
                 <div class="user-title">
                     <img src="/images/svg/user.svg" width="40" height="40">
                     <% if ( locals.usuarioLogado ) { %>
@@ -79,7 +103,8 @@
                 <% if(!locals.usuarioLogado) { %>
                 <a href="/usuarios/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
                 <% } %>
-            </div>
+            </div> -->
+
             <div class="adega">
                 <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
             </div>
