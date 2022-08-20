@@ -32,7 +32,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: solid 1px red;
+    /* border: solid 1px red; */
 }
 
 body {
@@ -56,6 +56,8 @@ body {
 /* ***************************************************** */
 /* CARRINHO */
 
+/* Itens do pedido */
+
 .caixaItemCarrinho {
     margin: 10px auto 10px;
     width: 95vw;
@@ -63,12 +65,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    background-color: var(--cor-secundaria-dark);
 }
 
 .caixaItemCarrinho_sec-1 {
     border-radius: 2px;
-    width: 70%;
+    width: 80%;
     height: 220px;
     position: relative;
     display: flex;
@@ -77,14 +78,16 @@ body {
     align-self: center;
     background-color: #ffffff;
     border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
 }
 
 .imagem-produto-adega {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-around;
     width: 30%;
+    margin: 10px;
 }
 
 .imagem-produto-adega-imagem {
@@ -98,15 +101,44 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    padding: 5px;
 }
+
+/* .imagem-produto-input label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px 5px 0px 0px;
+    font-size: var(--fonte-tamanho-extrapequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+} */
 
 .imagem-produto-input input {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    font-size: var(--fonte-tamanho-extrapequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 0px 0px 0px 5px;
+}
+
+.imagem-produto-input a img {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
 }
 
 .info-produto-adega {
@@ -115,8 +147,76 @@ body {
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-between;
-    align-items: flex-start;
     width: 70%;
+    margin: 5px;
+}
+
+.info-produto-adega h3 {
+    font-size: var(--fonte-tamanho-medio);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.info-produto-adega p {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: normal;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.info-produto-adega span {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+/* Calculo frete e prazo de entrega */
+
+.totais {
+    margin: 10px auto 10px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.totais-calculo-frete {
+    border-radius: 2px;
+    width: 80%;
+    height: 220px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
+}
+
+.totais-resumo-compra {
+    border-radius: 2px;
+    width: 80%;
+    height: 220px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
 }
 
 /* .caixaItemCarrinho section div {
