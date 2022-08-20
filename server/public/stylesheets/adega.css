@@ -70,8 +70,7 @@ body {
 .caixaItemCarrinho_sec-1 {
     border-radius: 2px;
     width: 80%;
-    height: 220px;
-    position: relative;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -194,8 +193,19 @@ body {
 .totais-calculo-frete {
     border-radius: 2px;
     width: 80%;
-    height: 220px;
-    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.totais-resumo-compra {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -205,11 +215,19 @@ body {
     padding: 10px;
 }
 
-.totais-resumo-compra {
+.voltar-finalizar-compra {
+    margin: 10px auto 10px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.voltar-comprar {
     border-radius: 2px;
     width: 80%;
-    height: 220px;
-    position: relative;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
