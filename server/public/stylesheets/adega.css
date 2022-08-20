@@ -76,6 +76,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    background-color: #ffffff;
 }
 
 .caixaItemCarrinho section div {
