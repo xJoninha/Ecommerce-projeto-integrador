@@ -172,7 +172,9 @@ input[type=number] {
   /* ****************************************************************** */
 /* TOTAIS */
 
-.voltar{}
+.voltar{
+    font-family: var(--estilo-fonte-1);
+}
 
 a {
     color: #ffffff;
