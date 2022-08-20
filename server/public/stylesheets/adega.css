@@ -50,22 +50,32 @@ body {
     padding: 15px;
     font-family: var(--estilo-fonte-2);
     font-size: var(--fonte-tamanho-grande);
+    border-bottom: 2px solid var(--cor-primaria);
 }
 
 /* ***************************************************** */
 /* CARRINHO */
 
 .caixaItemCarrinho {
+    margin: 10px auto 10px;
     width: 95vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: var(--cor-secundaria-dark);
+    border-bottom: 2px solid var(--cor-primaria);
 }
-
 
 .caixaItemCarrinho section {
     border-radius: 3px;
     width: 70%;
     height: 220px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
 
 .caixaItemCarrinho section div {
