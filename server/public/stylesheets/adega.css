@@ -42,14 +42,15 @@ body {
 /* ***************************************************************************** */
 /* GERAIS */
 
-
 .tituloDaPagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 15px;
     font-family: var(--estilo-fonte-2);
     font-size: var(--fonte-tamanho-grande);
 }
-
 
 /* ***************************************************** */
 /* CARRINHO */
