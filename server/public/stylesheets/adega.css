@@ -4,7 +4,7 @@
 /* ***************************************************** */
 /* GERAIS */
 
-:root{
+:root {
     --cor-primaria: #2e0049;
     --cor-primaria-light: #5b2b75;
     --cor-primaria-dark: #130023;
@@ -18,43 +18,36 @@
     --cor-texto-primario: #fff;
     --cor-texto-secundaria: #000;
 
-    --font-famaly-1: 'Tinos', serif;
-    --font-famaly-2: 'Smooch Sans', sans-serif;
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
+
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Tinos', serif;
-    color: #000;
- 
+    border: solid 1px red;
 }
 
-body{
+body {
     background-color: var(--cor-secundaria-dark);
-}
-
-p{
-    --font-famaly-2: 'Smooch Sans', sans-serif;
 }
 
 /* ***************************************************************************** */
 /* GERAIS */
 
 
-header{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-}
-
 .tituloDaPagina {
     text-align: center;
-    padding-bottom: 15px;
-    font-family: var(--font-famaly-1);
+    padding: 15px;
+    font-family: var(--estilo-fonte-2);
+    font-size: var(--fonte-tamanho-grande);
 }
 
 
@@ -62,17 +55,13 @@ header{
 /* CARRINHO */
 
 .caixaItemCarrinho {
-    margin: 0 auto;
     width: 95vw;
     display: block;
 }
 
 
 .caixaItemCarrinho section {
-    margin: 0px auto 10px;
     border-radius: 3px;
-    background-color: var(--cor-primaria-light);
-    box-shadow: 0px 0px 3px 1px;
     width: 70%;
     height: 220px;
     position: relative;
@@ -89,8 +78,6 @@ header{
 .caixaItemCarrinho img {
     background-color: var(--cor-secundaria-light);
     border-radius: 4px;
-    border: 1px solid var(--cor-primaria-dark);
-    margin: 2px 5px 2px 5px;
     display: block;
     width: 100px;
     height: 100px;
@@ -115,7 +102,6 @@ header{
     bottom: 38px;
 }
 
-
 .containerBotoesAdc{
     height: 40px;
     width: 40px;
@@ -135,10 +121,8 @@ header{
 /* TOTAIS */
 
 .totais{
-    margin: 0 auto;
     width: 70%;
     display: block;
-    background-color: var(--cor-primaria-light);
 }
 
 .boxTotais{
@@ -146,21 +130,16 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    margin: 0px auto 10px;
     border-radius: 3px;
-   
     width: 100%;
     height: 100px;
     position: relative;
-
-    
 }
 
 
 
 .numeroTotais{
     font-weight: bold;
-    margin: 15px 15px 15px 15px;
 }
 
 
@@ -193,14 +172,10 @@ input[type=number] {
   /* ****************************************************************** */
 /* TOTAIS */
 
-.voltar{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+.voltar{}
 
 a {
     color: #ffffff;
-    padding: 10px 10px 10px 10px;
     border-radius: 5px;
     background-color: #2e0049;
     font-weight: bold;
@@ -214,7 +189,6 @@ a {
 .abaContinuarCompra{
     color: var(--cor-primaria-dark);
     background-color: var(--cor-secundaria-medio);
-    margin: 5px auto 5px;
     width: 95vw;
     justify-content: center;
     padding: 30px 0 15px 0;
@@ -234,17 +208,14 @@ a {
 
 .abaCompraBox{
     width: 95%;
-    margin: 0 auto;
 }
 
 .pagamentoBox{
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 .formularioCep{
-    margin: 10px 0;
     display: flex;
     gap: 10px;
 }
@@ -265,7 +236,6 @@ a {
     background-color: #2e0049;
     font-size: 25px;
     color: #ffffff;
-    margin: 40px auto;
     display: block;
     width: 95%;
     padding: 10px 0;
@@ -280,10 +250,3 @@ a {
 
 /* ************************************************************ */
 /* CONTINUAR COMPRA (CAIXA) */
-
-
-footer{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-}
