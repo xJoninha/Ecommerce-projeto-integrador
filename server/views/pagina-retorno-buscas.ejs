@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="./stylesheets/vitrine-style.css">
+    <link rel="stylesheet" href="../stylesheets/vitrine-style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +12,22 @@
 
 <body>
 
+    <h1 class="vitrine-text">Resultado da busca</h1>
 
     <main>
-        <section class="content">
+        <section class="container-vitrine">
             <!-- 3º O resultado já vem para essa página pela função de renderização. Agora usa ele para exibir a lista toda contendo todos
             os objetos pesquisados -->
             <% for( let produto of produtoPesquisado) { %>
-                <section class="containerVinho">
+                <section class="">
 
-                    <div class="contentImage">
+                    <div class="">
                         <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
-                        <a href=" /produtos/produto/<%= produto.id %> ">
+                        <!-- <a href=" /produtos/produto/<%= produto.id %> "></a> -->
                             <img src="<%= produto.image %> " alt="">
-                        </a>
                     </div>
-                    <h3>
-                        <%= produto.nome %>
-                    </h3>
-                    <p>R$ <%= produto.preco %>
-                    </p>
+                    <h3> <%= produto.nome %> </h3>
+                    <p> R$ <%= produto.preco %> </p>
                     <button>Adicionar à Adega</button>
 
                 </section>
