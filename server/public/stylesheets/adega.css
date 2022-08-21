@@ -201,6 +201,11 @@ body {
     padding: 10px;
 }
 
+.respostas-cep {
+    display: flex;
+    flex-direction: column;
+}
+
 .totais-resumo-compra {
     border-radius: 2px;
     width: 80%;
