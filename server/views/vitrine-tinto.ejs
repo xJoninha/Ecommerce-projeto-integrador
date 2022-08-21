@@ -15,36 +15,26 @@
     <h1 class="vitrine-text">Vinho Tinto</h1>
 
     <main>
-        <br>
-
-        <a class="botaoVoltar" href="/">Voltar à Página Inicial</a>
-
-
-        <br>
-
-        <section class="content">
+        <section class="container-vitrine">
             <% for( let produto of result) { %>
-                <section class="containerVinho">
+                <section class="">
 
-                    <div class="contentImage">
-                        <a href=" /produtos/produto/<%= result.id %> ">
-                            <img src="<%= produto.image %> " alt="">
-                        </a>
+                    <div class="">
+                        <img src="<%= produto.image %> " alt="">
                     </div>
                     <h3>
-                        <%= produto.nome %>
-                    </h3>
-                    <p>R$ <%= produto.preco %>
-                    </p>
+                        <%= produto.nome %></h3>
+                    <p>R$ <%= produto.preco %></p>
                     <button>Adicionar à Adega</button>
-
+                    
                 </section>
                 <% } %>
-        </section>
-
-    </main>
-
-
-    <%- include('../views/partials/footer'); -%>
-</body>
-</html>
+            </section>
+            
+            <a class="botaoVoltar" href="/">Voltar à Página Inicial</a>
+        </main>
+        
+        
+        <%- include('../views/partials/footer'); -%>
+    </body>
+    </html>
