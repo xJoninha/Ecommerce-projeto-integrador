@@ -4,7 +4,7 @@
 /* ***************************************************** */
 /* GERAIS */
 
-:root{
+:root {
     --cor-primaria: #2e0049;
     --cor-primaria-light: #5b2b75;
     --cor-primaria-dark: #130023;
@@ -18,80 +18,248 @@
     --cor-texto-primario: #fff;
     --cor-texto-secundaria: #000;
 
-    --font-famaly-1: 'Tinos', serif;
-    --font-famaly-2: 'Smooch Sans', sans-serif;
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
+
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Tinos', serif;
-    color: #000;
- 
+    /* border: solid 1px red; */
 }
 
-body{
+body {
     background-color: var(--cor-secundaria-dark);
-}
-
-p{
-    --font-famaly-2: 'Smooch Sans', sans-serif;
 }
 
 /* ***************************************************************************** */
 /* GERAIS */
 
-
-header{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-}
-
 .tituloDaPagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-bottom: 15px;
-    font-family: var(--font-famaly-1);
+    padding: 15px;
+    font-family: var(--estilo-fonte-2);
+    font-size: var(--fonte-tamanho-grande);
+    border-bottom: 2px solid var(--cor-primaria);
 }
-
 
 /* ***************************************************** */
 /* CARRINHO */
 
+/* Itens do pedido */
+
 .caixaItemCarrinho {
-    margin: 0 auto;
+    margin: 10px auto 10px;
     width: 95vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
 
+.caixaItemCarrinho_sec-1 {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
+}
 
-.caixaItemCarrinho section {
-    margin: 0px auto 10px;
-    border-radius: 3px;
-    background-color: var(--cor-primaria-light);
-    box-shadow: 0px 0px 3px 1px;
+.imagem-produto-adega {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 30%;
+    margin: 10px;
+}
+
+.imagem-produto-adega-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.imagem-produto-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+/* .imagem-produto-input label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px 5px 0px 0px;
+    font-size: var(--fonte-tamanho-extrapequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+} */
+
+.imagem-produto-input input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: var(--fonte-tamanho-extrapequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 0px 0px 0px 5px;
+}
+
+.imagem-produto-input a img {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
+}
+
+.info-produto-adega {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
     width: 70%;
-    height: 220px;
-    position: relative;
+    margin: 5px;
 }
 
-.caixaItemCarrinho section div {
+.info-produto-adega h3 {
+    font-size: var(--fonte-tamanho-medio);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.info-produto-adega p {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: normal;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.info-produto-adega span {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+/* Calculo frete e prazo de entrega */
+
+.totais {
+    margin: 10px auto 10px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.totais-calculo-frete {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.respostas-cep {
+    display: flex;
+    flex-direction: column;
+}
+
+.totais-resumo-compra {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
+}
+
+.resumo-compra-subtotal{
+    display: flex;
+}
+
+.resumo-compra-total {
+    display: flex;
+}
+
+.voltar-finalizar-compra {
+    margin: 10px auto 10px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.voltar-comprar {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 10px;
+}
+
+/* .caixaItemCarrinho section div {
     width: 100%;
     height: 120px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
-}
+} */
 
-.caixaItemCarrinho img {
+/* .caixaItemCarrinho img {
     background-color: var(--cor-secundaria-light);
     border-radius: 4px;
-    border: 1px solid var(--cor-primaria-dark);
-    margin: 2px 5px 2px 5px;
-    display: block;
     width: 100px;
     height: 100px;
 }
@@ -115,13 +283,12 @@ header{
     bottom: 38px;
 }
 
-
 .containerBotoesAdc{
     height: 40px;
     width: 40px;
     display: flex;
     flex-direction: row;
-}
+} */
 
 
   /* ****************************************************************** */
@@ -134,11 +301,9 @@ header{
   /* ****************************************************************** */
 /* TOTAIS */
 
-.totais{
-    margin: 0 auto;
+/* .totais{
     width: 70%;
     display: block;
-    background-color: var(--cor-primaria-light);
 }
 
 .boxTotais{
@@ -146,29 +311,24 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    margin: 0px auto 10px;
     border-radius: 3px;
-   
     width: 100%;
     height: 100px;
     position: relative;
-
-    
 }
 
 
 
 .numeroTotais{
     font-weight: bold;
-    margin: 15px 15px 15px 15px;
-}
+} */
 
 
 
 /* INPUT */
 
-input[type=number] {
-    /*for absolutely positioning spinners*/
+/* input[type=number] {
+    /*for absolutely positioning spinners*//*
     position: relative; 
     padding: 5px;
     padding-right: 25px;
@@ -187,34 +347,31 @@ input[type=number] {
     top: 0;
     right: 0;
     height: 100%;
-  }
+  } */
 
 
   /* ****************************************************************** */
 /* TOTAIS */
 
-.voltar{
-    margin-top: 30px;
-    margin-bottom: 30px;
+/* .voltar{
+    font-family: var(--estilo-fonte-1);
 }
 
 a {
     color: #ffffff;
-    padding: 10px 10px 10px 10px;
     border-radius: 5px;
     background-color: #2e0049;
     font-weight: bold;
-}
+} */
 
 
 
 /* ************************************************************ */
 /* CONTINUAR COMPRA (CAIXA) */
 
-.abaContinuarCompra{
+/* .abaContinuarCompra{
     color: var(--cor-primaria-dark);
     background-color: var(--cor-secundaria-medio);
-    margin: 5px auto 5px;
     width: 95vw;
     justify-content: center;
     padding: 30px 0 15px 0;
@@ -234,17 +391,14 @@ a {
 
 .abaCompraBox{
     width: 95%;
-    margin: 0 auto;
 }
 
 .pagamentoBox{
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 .formularioCep{
-    margin: 10px 0;
     display: flex;
     gap: 10px;
 }
@@ -265,7 +419,6 @@ a {
     background-color: #2e0049;
     font-size: 25px;
     color: #ffffff;
-    margin: 40px auto;
     display: block;
     width: 95%;
     padding: 10px 0;
@@ -275,15 +428,8 @@ a {
 
 .preco{
     font-weight: bold;
-}
+} */
 
 
 /* ************************************************************ */
 /* CONTINUAR COMPRA (CAIXA) */
-
-
-footer{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-}
