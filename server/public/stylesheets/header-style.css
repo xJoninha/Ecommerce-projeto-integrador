@@ -343,7 +343,8 @@ header {
     .padrao, .menu-padrao, .usuario-mobile {
         display: none;
     }
-
+    
+    /* Div inteira do header mobile */
     .mobile {
         display: flex;
         flex-direction: row;
@@ -355,12 +356,14 @@ header {
         height: 20vh;
     }
     
+    /* Botão menu haburguer */
     .abrir-menu  {
         display: block;
         background-color: transparent;
         border: none;
     }
 
+    /* Quando clica e aparece o nav */
     .menu-mobile.visivel {
         display: block;
         position: absolute;
@@ -407,37 +410,5 @@ header {
         text-decoration: none;
     }
 
-    .busca-mobile {
-        display: flex;
-        align-items: center;
-        border: var(--cor-secundaria-escuro);
-    }
-
-    .busca-mobile input {
-    background-color: none;
-    border: none;
-    outline: none;
-    height: 36px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
-    }
-
-    .busca-mobile-texto {
-        background-color: var(--cor-primaria);
-        border: none;
-        outline: none;
-        height: 36px;
-        width: 0px;
-        font-family: var(--estilo-fonte-1);
-        font-size: var(--fonte-tamanho-pequeno);
-        font-weight: bold;
-        color: var(--cor-secundaria-escuro);
-        transition: 0.5s;
-    }
-
-    .busca-mobile:hover > .busca-mobile-texto {
-        width: 200px;
-    }
+    
 }
