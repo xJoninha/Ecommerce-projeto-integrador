@@ -16,7 +16,14 @@
             <button class="abrir-menu"><img src="/images/svg/menu.svg" width="36" height="36"></button>
             <nav class="menu-mobile">
                 <ul>
-                    <li><a href="/cadastro" title="Minha conta">Minha conta</a></li>
+                    <li>
+                        <form class="busca-mobile-form" action="/produtos/busca" method="get">
+                            <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
+                            <button class="busca-mobile-botao" type="submit" title="Buscar">
+                                <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
+                            </button>
+                        </form>
+                    </li>
                     <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
                     <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
                     <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
@@ -27,15 +34,7 @@
             <div class="logo-mobile">
                 <!-- <a href="/" title="Home | Adega Digital"><img src="/images/logo/adega_digital_logo.png" width="220px" height="220px"></a> -->
             </div>
-            <!-- Div busca mobile -->
-            <div class="busca-mobile">
-                <form class="busca-mobile-form" action="/produtos/busca" method="get">
-                    <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
-                    <button class="busca-mobile-botao" type="submit" title="Buscar">
-                        <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
-                    </button>
-                </form>
-            </div>
+
             <!-- Div adega mobile -->
             <div class="adega-mobile">
                 <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
