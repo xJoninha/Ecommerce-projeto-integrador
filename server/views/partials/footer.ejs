@@ -79,9 +79,14 @@
                 <li>
                     <a href="/sobre" title="Sobre">Sobre</a>
                 </li>
+                <% if ( !locals.usuarioLogado ) { %>
                 <li>
-                    <a href="Entrar ou cadastrar">Entrar ou cadastrar</a>
+                    <a href="/usuario/login">Entrar</a>
                 </li>
+                <li>
+                    <a href="/usuario/cadastro">Cadastrar</a>
+                </li>
+                <% } %>
                 <li>
                     <a href="Rastrear entrega">Rastrear entrega</a>
                 </li>

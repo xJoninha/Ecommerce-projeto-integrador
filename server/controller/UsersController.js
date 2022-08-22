@@ -52,6 +52,8 @@ controller.allUsers = async (req, res) => {
     titulo: 'Usuários',
     subtitulo: `Listagem de Usuários, Total: ${usuarios.length}`,
     usuarios,
+    usuarioLogado: req.cookies.usuario,
+    usuarioAdmin: req.cookies.admin
   })
 };
 // OK
@@ -62,6 +64,8 @@ controller.userDetail = async (req, res) => {
       usuario,
       titulo: `Detalhes do usuario`,
       subtitulo: `Usuário id: ${id}`,
+      usuarioLogado: req.cookies.usuario,
+      usuarioAdmin: req.cookies.admin
     })
 };
 // OK

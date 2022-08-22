@@ -29,9 +29,18 @@ const controller = {
         usuarioAdmin: req.cookies.admin
       })
     },
-    sobre: (req, res) => res.render('sobre', { usuarioLogado: req.cookies.usuario, usuarioAdmin: req.cookies.admin}),
-    politicaPrivacidade: (req, res) => res.render('politica-privacidade', { usuarioLogado: req.cookies.usuario, usuarioAdmin: req.cookies.admin} ),
-    termosUso: (req, res) => res.render('termos-uso', { usuarioLogado: req.cookies.usuario, usuarioAdmin: req.cookies.admin})
+    sobre: (req, res) => res.render('sobre', {
+      usuarioLogado: req.cookies.usuario,
+      usuarioAdmin: req.cookies.admin
+    }),
+    politicaPrivacidade: (req, res) => res.render('politica-privacidade', {
+      usuarioLogado: req.cookies.usuario,
+      usuarioAdmin: req.cookies.admin
+    }),
+    termosUso: (req, res) => res.render('termos-uso', {
+      usuarioLogado: req.cookies.usuario,
+      usuarioAdmin: req.cookies.admin
+    })
 }
 
 module.exports = controller;
