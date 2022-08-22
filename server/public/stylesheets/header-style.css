@@ -68,14 +68,10 @@ header {
 /* Logo desktop */
 .logo-desktop-container {
     background-color: #c0b3c2;
-    width: 150px;
-    height: 100px;
-    overflow: hidden;
 }
 
 .logo-desktop-content {
-    background-color:#000;
-    width: fit-content;
+    background-color: var(--cor-primaria);
 }
 
 /* Form de busca desktop */
