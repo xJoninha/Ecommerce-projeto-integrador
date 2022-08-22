@@ -95,7 +95,124 @@ header {
 }
 
 /* Login e cadastro de usuário desktop */
-/* tirei usuário daqui */
+/* (tirei usuário daqui) */
+
+/* Usuário não logado */
+.usuario-desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.abrir-usuario-desktop {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.abrir-usuario-desktop:hover {
+    transform: scale(1.1);
+}
+
+.usuario-desktop-nao-logado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-usuario-desktop-nao-logado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario-desktop-nao-logado ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.usuario-desktop-nao-logado li a {
+    text-decoration: none;
+    list-style: none;
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+}
+
+.usuario-desktop-nao-logado a {
+    color: var(--cor-secundaria-escuro);
+    padding: 15px;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.usuario-desktop-nao-logado a:hover {
+    transform: scale(1.1);
+}
+
+/* Usuário logado */
+
+.usuario-desktop-logado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-usuario-desktop-logado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario-desktop-logado ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.usuario-desktop-logado li a {
+    text-decoration: none;
+    list-style: none;
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+}
+
+.usuario-desktop-logado a {
+    color: var(--cor-secundaria-escuro);
+    padding: 15px;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.usuario-desktop-logado a:hover {
+    transform: scale(1.1);
+}
 
 /* Código antigo */
 /* .user-title {
