@@ -8,10 +8,12 @@
     <link rel='stylesheet' href='./stylesheets/home-style.css'/>
   </head>
 
-    <%- include('../views/partials/header'); -%>
+    <%- include('./partials/header') -%>
 
     <main>
-        <a href="/usuarios" class="link-usuarios">Todos Usuarios</a>
+        <% if ( locals.usuarioLogado && usuarioLogado.userAdmin === 1) { %>
+            <a href="/admin/usuarios" class="link-usuarios">Todos Usuarios</a>
+        <% } %>
         <!-- Slick slide - carousel -->
         <div class="carousel">
             <div><img src="./images/carrocelHome/banner-amigos.png" alt=""></div>
@@ -162,7 +164,7 @@
         
     </main>
 
-  <%- include('../views/partials/footer'); -%>
+  <%- include('./partials/footer') -%>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -35,9 +35,9 @@
                         <td><%= usuario.sobrenome %></td>
                         <td><%= usuario.email %></td>
                         <td class="users-list-options">
-                            <a href="/usuarios/<%= usuario.id %>" class="config-ver">Ver</a>
-                            <a href="/usuarios/<%= usuario.id %>/editar" class="config-editar">Editar</a>
-                            <a href="/usuarios/<%= usuario.id %>/excluir" class="config-excluir">Excluir</a>
+                            <a href="/admin/usuarios/<%= usuario.id %>" class="config-ver">Ver</a>
+                            <a href="/admin/usuarios/<%= usuario.id %>/editar" class="config-editar">Editar</a>
+                            <a href="/admin/usuarios/<%= usuario.id %>/excluir" class="config-excluir">Excluir</a>
                         </td>
                     </tr>
                 </tbody>
@@ -54,6 +54,3 @@
     </main>
 
     <%- include('./partials/footer') %>
-    
-</body>
-</html>

@@ -92,10 +92,15 @@
             <!-- <div class="usuario">
                 <div class="user-title">
                     <img src="/images/svg/user.svg" width="40" height="40">
+
                     <% if ( locals.usuarioLogado ) { %>
-                    <p>Bem vindo, <%= usuario.nome %></p>
+                    <a href="/usuario/logout" title="Área de logout"><p>Logout</p></a>
+                    <% } %>
+                    <% if(!locals.usuarioLogado) { %>
+                    <a href="/usuario/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
                     <% } %>
                 </div>
+
                 <a href="/usuarios/login" title="Área de login"><p>Login</p></a>
                 <% if ( locals.usuarioLogado ) { %>
                 <a href="/usuarios/logout" title="Área de logout"><p>Logout</p></a>
