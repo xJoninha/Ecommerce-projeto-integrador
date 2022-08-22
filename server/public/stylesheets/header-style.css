@@ -32,7 +32,6 @@
     padding: 0;
     box-sizing: border-box;
     /* border: solid 1px red; */
-    /* font-family: var(--estilo-fonte-2); */
 }/* --------------------------------------- */
 
 header {
@@ -40,16 +39,205 @@ header {
     background-color: var(--cor-primaria);
 }
 
-.redes-sociais ul {
+/* Div pai logo, form de busca, login e adega desktop */
+.padrao {
     display: flex;
-    padding: 24px;
     flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 16px;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 24px;
 }
 
-.user-title {
+.padrao input {
+    background-color: var(--cor-primaria);
+    height: 36px;
+    width: 300px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    color: var(--cor-secundaria-escuro);
+}
+
+.busca-padrao-form input {
+    border: none;
+    outline: none;
+}
+
+/* Logo desktop */
+.logo-desktop-container {
+    background-color: #c0b3c2;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.logo-desktop-content {
+    background-color:#000;
+    width: fit-content;
+}
+
+/* Form de busca desktop */
+.busca-botao {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.busca-padrao {
+    border: var(--cor-secundaria-escuro);
+}
+
+.busca-padrao-form {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px var(--cor-secundaria-escuro);
+    padding: 2px;
+}
+
+/* Login e cadastro de usuário desktop */
+.usuario {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.usuario a {
+    color: var(--cor-secundaria-escuro);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+}
+
+.abrir-usuario-cadastro {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.abrir-usuario-cadastro:hover {
+    transform: scale(1.1);
+}
+
+.nav-usuario-cadastro {
+    display: none;
+    flex-direction: column;
+}
+
+.nav-usuario-cadastro li {
+    color: var(--cor-secundaria-escuro);
+    font-family: var(--estilo-fonte-1);
+    font-weight: var(--fonte-tamanho-medio);
+    padding: 10px;
+}
+
+.nav-usuario-cadastro li a {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-usuario-cadastro li a:hover {
+    transform: scale(1.1);
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-cadastro h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-cadastro label {
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    color: var(--cor-secundaria-escuro);
+    align-self: center;
+}
+
+.form-cadastro {
+    align-self: center;
+}
+
+.form-cadastro button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    left: 10px;
+    bottom: 10px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-Pequeno);
+    font-weight: bold;
+    line-height: 13px;
+    color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
+}
+
+.form-cadastro button:hover {
+    color: var(--cor-secundaria-claro);
+    background-color: var(--cor-primaria-claro);
+}
+
+.input-email-cadastrado {
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid var(--cor-secundaria-escuro);
+    height: 36px;
+    width: 300px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    color: var(--cor-secundaria-escuro);
+    align-self: center;
+    padding: 4px;
+    margin: 10px;
+}
+
+.input-senha-cadastrada {
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid var(--cor-secundaria-escuro);
+    height: 36px;
+    width: 300px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    color: var(--cor-secundaria-escuro);
+    align-self: center;
+    padding: 4px;
+    margin: 10px;
+}
+
+.visivel-usuario {
+    display: block !important;
+    position: absolute;
+    top: 16vh;
+    left: 0;
+    width: 100%;
+    height: 55vh;
+    background-color: var(--cor-primaria);
+    z-index: 2;
+}
+/* Código antigo */
+/* .user-title {
     display: flex;
     align-items: flex-end;
     color: white;
@@ -73,7 +261,71 @@ header {
 
 .usuario p {
     font-size: var(--fonte-tamanho-pequeno);
+} */
+
+/* Adega - carrinho de compras desktop */
+.adega {
+    transition: transform 0.3s ease-in-out;
 }
+
+.adega:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation (v. tinto, v. branco, v. rose, espumante) desktop */
+.menu-padrao ul {
+    display: flex;
+    gap: 16px;
+    padding: 15px;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    position: static;
+}
+
+.menu-padrao li a {
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
+    color: var(--cor-secundaria-escuro);
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-around;
+    position: static;
+}
+
+.tinto {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.tinto:hover {
+    transform: scale(1.1);
+}
+
+.branco {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.branco:hover {
+    transform: scale(1.1);
+}
+
+.rose {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.rose:hover {
+    transform: scale(1.1);
+}
+
+.espumante {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.espumante:hover {
+    transform: scale(1.1);
+}
+
 
 .abrir-menu {
     display: none;
@@ -87,68 +339,8 @@ header {
     display: block;
 }
 
-.padrao {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 24px;
-}
-
-.busca-botao {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.busca-padrao {
-    border: var(--cor-secundaria-escuro);
-}
-
-.busca-padrao-form {
-    display: flex;
-    flex-direction: row;
-    border: solid 2px var(--cor-secundaria-escuro);
-    border-radius: 5px;
-    padding: 2px;
-}
- 
-.padrao input {
-    background-color: var(--cor-primaria);
-    border: none;
-    outline: none;
-    height: 36px;
-    width: 300px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
-}
-
-.menu-padrao ul {
-    display: flex;
-    gap: 16px;
-    padding: 24px;
-    list-style: none;
-    text-decoration: none;
-    justify-content: space-evenly;
-}
-
-.menu-padrao li a {
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-medio);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
-    list-style: none;
-    text-decoration: none;
-}
-
 @media (max-width: 768px) {
-    .redes-sociais, .padrao, .menu-padrao, .usuario-mobile {
+    .padrao, .menu-padrao, .usuario-mobile {
         display: none;
     }
 
@@ -193,7 +385,6 @@ header {
 
     nav.menu-mobile.visivel li {
         text-align: center;
-        padding: 24px;
     }
 
     nav.menu-mobile.visivel a {

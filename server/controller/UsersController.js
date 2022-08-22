@@ -27,6 +27,7 @@ controller.add = async (req, res) => {
     User.create({ nome, sobrenome, nascimento, email, senha, cpf, telefone })
     res.render("login")
   }
+
 };
 // OK - warning
 controller.login = (req, res) => {

@@ -12,14 +12,18 @@
 
 <body>
 
-    <h1 class="vitrine-text">Vinho Rosé</h1>
+    <h1 class="vitrine-text">Resultado da busca</h1>
 
     <main>
         <section class="container-vitrine">
-            <% for( let produto of result) { %>
+            <!-- 3º O resultado já vem para essa página pela função de renderização. Agora usa ele para exibir a lista toda contendo todos
+            os objetos pesquisados -->
+            <% for( let produto of produtoPesquisado) { %>
                 <section class="">
+
                     <div class="">
-                        <!-- <a href=" /produtos/produto/<%= result.id %> "></a> -->
+                        <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
+                        <!-- <a href=" /produtos/produto/<%= produto.id %> "></a> -->
                             <img src="<%= produto.image %> " alt="">
                     </div>
                     <h3> <%= produto.nome %> </h3>
@@ -29,9 +33,6 @@
                 </section>
                 <% } %>
         </section>
-
-        <!-- <a class="botaoVoltar" href="/">Voltar à Página Inicial</a> -->
-    
     </main>
 
     <%- include('../views/partials/footer'); -%>
