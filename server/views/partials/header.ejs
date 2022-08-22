@@ -89,25 +89,31 @@
 
             <!--Nova div do usuário-->
 
-            <!-- <div class="usuario">
-                <button class="abrir-usuario-cadastro" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
-            <nav class="nav-usuario-cadastro">
-                <ul>
-                    <li>
-                        <form class="form-cadastro">
-                            <h2>Login</h2>
-                            <label for="email-cadastrado">Usuário:</label>
-                            <input type="text" class="input-email-cadastrado" id="email-cadastrado" placeholder="E-mail" title="E-mail">
-                            <label for="senha-cadastrada">Senha:</label>
-                            <input type="password" class="input-senha-cadastrada" id="senha-cadastrada" placeholder="Senha" title="Senha">
-                            <button class="botao-entrar" type="submit">Entrar</button>
-                        </form>
-                    </li>
-                    <li><a href="/usuarios/cadastro">Cadastrar</a></li>
-                    <li><a href="">Recuperar senha</a></li>
-                </ul>
-            </nav>
-            </div> -->
+            <div class="usuario-desktop">
+                <div class="usuario-desktop-nao-logado">
+                    <!-- aqui vai o menu que abre quando clicado, vai aparecer opções para logar e cadastrar -->
+                    <nav class="usuario-desktop-nao-logado">
+                        <ul>
+                            <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
+                            <li><a href="/usuarios/cadastro" title="Realizar cadastro">Cadastrar</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="usuario-desktop-logado">
+                    <!-- aqui vai link para pedidos e opção para sair do site -->
+                    <div class="usuario-desktop-logado">
+                        <nav class="usuario-desktop-logado">
+                            <ul>
+                                <li><a href="" title="Entrar">Pedidos</a></li>
+                                <li><a href="" title="Realizar cadastro">Sair</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <button class="abrir-usuario-desktop" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
+            </div>
 
             <!--Div do usuário antiga-->
 
