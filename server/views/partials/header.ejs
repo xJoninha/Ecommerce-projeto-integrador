@@ -16,7 +16,14 @@
             <button class="abrir-menu"><img src="/images/svg/menu.svg" width="36" height="36"></button>
             <nav class="menu-mobile">
                 <ul>
-                    <li><a href="/cadastro" title="Minha conta">Minha conta</a></li>
+                    <li>
+                        <form class="busca-mobile-form" action="/produtos/busca" method="get">
+                            <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
+                            <button class="busca-mobile-botao" type="submit" title="Buscar">
+                                <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
+                            </button>
+                        </form>
+                    </li>
                     <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
                     <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
                     <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
@@ -25,17 +32,31 @@
             </nav>
             <!-- Logo do menu mobile -->
             <div class="logo-mobile">
-                <!-- <a href="/" title="Home | Adega Digital"><img src="/images/logo/adega_digital_logo.png" width="220px" height="220px"></a> -->
+                <a href="/" title="Home | Adega Digital"><img src="/images/logo/adega_digital_logonova.png" width="auto" height="100px"></a>
             </div>
-            <!-- Div busca mobile -->
-            <div class="busca-mobile">
-                <form class="busca-mobile-form" action="/produtos/busca" method="get">
-                    <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
-                    <button class="busca-mobile-botao" type="submit" title="Buscar">
-                        <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
-                    </button>
-                </form>
+
+            <!-- Div usuário mobile -->
+            
+            <div class="usuario">
+                <button class="abrir-usuario-cadastro" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
+            <nav class="nav-usuario-cadastro">
+                <ul>
+                    <li>
+                        <form class="form-cadastro">
+                            <h2>Login</h2>
+                            <label for="email-cadastrado">Usuário:</label>
+                            <input type="text" class="input-email-cadastrado" id="email-cadastrado" placeholder="E-mail" title="E-mail">
+                            <label for="senha-cadastrada">Senha:</label>
+                            <input type="password" class="input-senha-cadastrada" id="senha-cadastrada" placeholder="Senha" title="Senha">
+                            <button class="botao-entrar" type="submit">Entrar</button>
+                        </form>
+                    </li>
+                    <li><a href="/usuarios/cadastro">Cadastrar</a></li>
+                    <li><a href="">Recuperar senha</a></li>
+                </ul>
+            </nav>
             </div>
+
             <!-- Div adega mobile -->
             <div class="adega-mobile">
                 <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
@@ -44,11 +65,14 @@
         <!-- Fim header mobile -->
 
         <!-- Início header desktop -->
+       
         <div class="padrao">
             <!-- Logo do menu desktop -->
             <div class="logo-desktop-container">
                 <div class="logo-desktop-content">
-                    <a href="/" title="Adega Digital"><img src="/images/logo/adega_digital_logo.png" width="200" height="auto"></a>
+
+                    <a href="/" title="Adega Digital"><img src="/images/logo/adega_digital_logonova.png" width="150px" height="auto"></a>
+
                 </div>
             </div>
 
@@ -67,25 +91,30 @@
 
             <!--Nova div do usuário-->
 
-            <div class="usuario">
-                <button class="abrir-usuario-cadastro" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
-            <nav class="nav-usuario-cadastro">
-                <ul>
-                    <li>
-                        <form class="form-cadastro">
-                            <h2>Login</h2>
-                            <label for="email-cadastrado">Usuário:</label>
-                            <input type="text" class="input-email-cadastrado" id="email-cadastrado" placeholder="E-mail" title="E-mail">
-                            <label for="senha-cadastrada">Senha:</label>
-                            <input type="password" class="input-senha-cadastrada" id="senha-cadastrada" placeholder="Senha" title="Senha">
-                            <button class="botao-entrar" type="submit">Entrar</button>
-                        </form>
-                    </li>
-                    <li><a href="/usuario/cadastro">Cadastrar</a></li>
-                    <li><a href="">Recuperar senha</a></li>
-                </ul>
-            </nav>
-            </div>
+
+            <div class="usuario-desktop">
+                <button class="abrir-usuario-desktop" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
+                
+                <nav class="nav-abrir-usuario-desktop">
+                    <!-- aqui vai o menu que abre quando clicado, vai aparecer opções para logar e cadastrar -->
+                    <div class="usuario-desktop-nao-logado">
+                            <ul>
+                                <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
+                                <li><a href="/usuarios/cadastro" title="Realizar cadastro">Cadastrar</a></li>
+                            </ul>
+                    </div>
+    
+                    <!-- aqui vai link para pedidos e opção para sair do site -->
+                    
+                    <div class="usuario-desktop-logado">
+                        <ul>
+                            <li><a href="" title="Entrar">Pedidos</a></li>
+                            <li><a href="" title="Realizar cadastro">Sair</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                </nav>
 
             <!--Div do usuário antiga-->
 
