@@ -51,7 +51,7 @@
                             <button class="botao-entrar" type="submit">Entrar</button>
                         </form>
                     </li>
-                    <li><a href="/usuarios/cadastro">Cadastrar</a></li>
+                    <li><a href="/usuario/cadastro">Cadastrar</a></li>
                     <li><a href="">Recuperar senha</a></li>
                 </ul>
             </nav>
@@ -101,8 +101,6 @@
                             <ul>
                                 <% if( !locals.usuarioLogado ) { %>
                                 <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
-                                <% } %>
-                                <% if( !locals.usuarioLogado ) { %>
                                 <li><a href="/usuario/cadastro" title="Realizar cadastro">Cadastrar</a></li>
                                 <% } %>
                             </ul>
@@ -113,7 +111,7 @@
                     <div class="usuario-desktop-logado">
                         <ul>
                             <% if ( locals.usuarioLogado ) { %>
-                            <li><a href="" title="Entrar">Pedidos</a></li>
+                            <li><a href="" title="Pedidos">Pedidos</a></li>
                             <li><a href="/usuario/logout" title="Área de logout">Sair</a></li>
                             <% } %>
                         </ul>
