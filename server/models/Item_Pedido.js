@@ -11,7 +11,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         valor: {
             type: dataTypes.DECIMAL
-        }              
+        },
+        produtos_id: {
+            type: dataTypes.INTEGER
+        }
+
     };
     let config = {
         tableName: 'item_pedido',
