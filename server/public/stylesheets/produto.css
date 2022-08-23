@@ -29,37 +29,45 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: var(--estilo-fonte-1);
-  color: var(--cor-texto-secundaria);
-
 }
 
 
-main{
+body {
+  background-color: var(--cor-secundaria-dark);
+}
+
+.corpoTodo {
   background-color:  var(--cor-secundaria-escuro);
+  margin: 10px auto 10px;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
-
-.corpoTodo{
-background-color:  var(--cor-secundaria-escuro);
-}
-
 
 /* é o card do produto todo */
 .flex-produto{
-  margin: 0 auto;
-  width: 90%;
-  justify-content: center;
-  
+  border-radius: 2px;
+  /* width: 80%; */
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--cor-primaria);
+  padding: 10px;
 }
 
 /* Corpo REAL */
-.flex-produtos-corpo{
+/* .flex-produtos-corpo{
   margin-bottom: 0px;
 }
 
 .flex-produtos-corpo.card {
   background-color: var(--cor-primaria-claro);
-}
+} */
 
 /* Caixa no torno da descrição */
 .produtos-descricao{
@@ -68,13 +76,10 @@ background-color:  var(--cor-secundaria-escuro);
   color: #000;
 }
 
-
-
 /* **************************** IMAGEM ****************************************** */
 
 .imagem-card{
   border-radius: 10px;
-  
 }
 
 /* **************************** TEXTOS ****************************************** */
@@ -90,8 +95,6 @@ h1 {
   border-radius: 4px;
   
 }
-
-
 
 .card-text{
   font-size: var(--fonte-tamanho-medio);
@@ -111,47 +114,31 @@ h1 {
   font-weight: bold;
 }
 
-
 .box-button {
   color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 20px;
   font-weight: bold;
 }
+
 .box-button:hover {
   color: var(--cor-primaria);
 }
-
-
-
 
 .cor-detalhes{
     padding:20px;
     border: 2px solid var(--cor-texto-secundaria);
 }
 
-
-
-
 .produtos-descricao svg{
     margin-right: 1%;
 }
+
 div .botoes-produtos{
     background-color: var(--primary-color);
 }
+
 .botoes-produtos button{
     background-color: var(--secondary-color);
     border: 1px solid black;
 }
-
-
-
-
-/* @media (max-width: 1025px){
-  .imagem-card{
-    display: none;
-  }
-} */
-
-
-
