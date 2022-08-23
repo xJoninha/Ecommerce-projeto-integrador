@@ -227,6 +227,39 @@ body {
     display: flex;
 }
 
+.condicoes-pgto {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.escolha-forma-pagamento {
+    display: flex;
+}
+
+.condicoes-pagamento-opcoes {
+    display: flex;
+}
+
+.dados-cartao-credito {
+    display: flex;
+}
+
+.dados-endereco-entrega {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
 .voltar-finalizar-compra {
     margin: 10px auto 10px;
     width: 95vw;

@@ -55,7 +55,7 @@
             </section>
             
             <section class="totais-resumo-compra">
-                <h3>Resumo</h3>
+                <h4>Resumo</h4>
                 
                 <div class="resumo-compra-subtotal">
                     <div class="resumo-compra-subtotal-conteudo">
@@ -69,10 +69,13 @@
                         <h4>Total</h4>
                         <span class="valor-itens">R$(aqui)</span>
                     </div>
-                </div>
+                </div>           
+            </section>
 
-                <div class="condicoes-pgto">
-                    <label>Condições de pagamento</label>
+            <section class="condicoes-pgto">
+                <div class="escolha-forma-pagamento">
+                    <h4>Forma de pagamento</h4>
+                    <label>Opções de pagamento</label>
                     <form class="condicoes-pagamento-opcoes">
                         <select required>
                             <option>Boleto</option>
@@ -80,9 +83,36 @@
                         </select>
                     </form>
                 </div>
-            
+                <div class="dados-cartao-credito">
+                    <h4>Dados cartão de crédito</h4>
+                    <form>
+                        <label>Número do cartão</label>
+                        <input>
+                        <label>Nome</label>
+                        <input>
+                        <label>Validade</label>
+                        <input>
+                        <label>Código de segurança</label>
+                        <input>
+                    </form>
+                </div>
             </section>
-        
+
+            <section class="dados-endereco-entrega">
+                <form>
+                    <label>Endereço de entrega</label>
+                    <input>
+                    <label>Número</label>
+                    <input>
+                    <label>Bairro</label>
+                    <input>
+                    <label>Cidade</label>
+                    <input>
+                    <label>Estado</label>
+                    <input>
+                    <label>Referências</label>
+                </form>
+            </section>
         </div>
 
         <div class="voltar-finalizar-compra">
