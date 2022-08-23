@@ -1,6 +1,6 @@
 const config = {
     username: 'root',
-    password: '1234',
+    password: '',
     database: 'adega_digital',
     host: 'localhost',
     dialect: 'mysql'

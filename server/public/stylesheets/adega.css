@@ -227,6 +227,66 @@ body {
     display: flex;
 }
 
+.condicoes-pgto {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.escolha-forma-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.condicoes-pagamento-opcoes {
+    display: flex;
+}
+
+.dados-cartao-credito {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dados-cartao-credito form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dados-endereco-entrega {
+    border-radius: 2px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.dados-endereco-entrega form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .voltar-finalizar-compra {
     margin: 10px auto 10px;
     width: 95vw;
