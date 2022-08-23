@@ -97,7 +97,7 @@ header {
 /* Login e cadastro de usuário desktop */
 /* (tirei usuário daqui) */
 
-/* Usuário não logado */
+/* Usuário */
 .usuario-desktop {
     display: flex;
     flex-direction: column;
@@ -107,8 +107,10 @@ header {
     align-items: center;
 }
 
+/* Botão */
 .abrir-usuario-desktop {
     display: flex;
+    cursor: pointer;
     background-color: transparent;
     border: none;
     transition: transform 0.3s ease-in-out;
@@ -118,16 +120,24 @@ header {
     transform: scale(1.1);
 }
 
-.usuario-desktop-nao-logado {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+.nav-abrir-usuario-desktop {
+    display: none;
 }
 
-.nav-usuario-desktop-nao-logado {
+.visivel-usuario-desktop {
+    display: block;
+        position: absolute;
+        top: 236px;
+        left: 0;
+        width: 100vw;
+        height: 85vh;
+        background-color: var(--cor-primaria);
+        z-index: 2;
+}
+
+/* Div do usuário não logado */
+
+.usuario-desktop-nao-logado {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -167,16 +177,10 @@ header {
 
 /* Usuário logado */
 
-.usuario-desktop-logado {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
+/* Div usuário logado */
 
-.nav-usuario-desktop-logado {
+
+.usuario-desktop-logado {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -304,7 +308,6 @@ header {
     transform: scale(1.1);
 }
 
-
 .abrir-menu {
     display: none;
 }
@@ -353,7 +356,7 @@ header {
     }
 
     nav.menu-mobile.visivel {
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
