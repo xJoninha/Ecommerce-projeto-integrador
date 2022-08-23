@@ -74,6 +74,7 @@ footer {
 }
 
 .footer-central-atendimento a {
+    margin: 0 auto;
     padding-top: 5px;
     text-align: center;
     text-decoration: none;
@@ -83,7 +84,6 @@ footer {
 }
 
 .footer-redes-sociais {
-    /* padding-top: 5px; */
     margin-top: 10px;
 }
 

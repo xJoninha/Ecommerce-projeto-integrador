@@ -99,8 +99,12 @@
                     <!-- aqui vai o menu que abre quando clicado, vai aparecer opções para logar e cadastrar -->
                     <div class="usuario-desktop-nao-logado">
                             <ul>
+                                <% if( !locals.usuarioLogado ) { %>
                                 <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
-                                <li><a href="/usuarios/cadastro" title="Realizar cadastro">Cadastrar</a></li>
+                                <% } %>
+                                <% if( !locals.usuarioLogado ) { %>
+                                <li><a href="/usuario/cadastro" title="Realizar cadastro">Cadastrar</a></li>
+                                <% } %>
                             </ul>
                     </div>
     
@@ -108,8 +112,10 @@
                     
                     <div class="usuario-desktop-logado">
                         <ul>
+                            <% if ( locals.usuarioLogado ) { %>
                             <li><a href="" title="Entrar">Pedidos</a></li>
-                            <li><a href="" title="Realizar cadastro">Sair</a></li>
+                            <li><a href="/usuario/logout" title="Área de logout">Sair</a></li>
+                            <% } %>
                         </ul>
                     </div>
                     
