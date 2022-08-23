@@ -86,31 +86,46 @@
                 <div class="dados-cartao-credito">
                     <h4>Dados cartão de crédito</h4>
                     <form>
-                        <label>Número do cartão</label>
-                        <input>
-                        <label>Nome</label>
-                        <input>
-                        <label>Validade</label>
-                        <input>
-                        <label>Código de segurança</label>
-                        <input>
+                        <label for="nun-cartao">Número do cartão</label>
+                        <input name="nun-cartao" id="nun-cartao" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                        
+                        <label for="nome">Nome</label>
+                        <input name="nome" id="nome" type="text" placeholder="NOME SOBRENOME">
+                        
+                        <label for="validade">Validade</label>
+                        <input name="validade" id="validade" type="text" placeholder="MÊS/ANO" required>
+                        
+                        <label for="cv">Código de segurança</label>
+                        <input name="cv" id="cv" type="text" placeholder="XXX" minlength="3" maxlength="3" required>
+                    
                     </form>
                 </div>
             </section>
 
             <section class="dados-endereco-entrega">
-                <form>
-                    <label>Endereço de entrega</label>
-                    <input>
-                    <label>Número</label>
-                    <input>
-                    <label>Bairro</label>
-                    <input>
-                    <label>Cidade</label>
-                    <input>
-                    <label>Estado</label>
-                    <input>
-                    <label>Referências</label>
+                <h4>Endereço de entrega</h4>
+                <form actio="" method="" class="form-end-entrega">
+                    <label for="endereco">Endereço</label>
+                    <input name="endereco" id="endereco" type="text" placeholder="Rua, Avenida, Acesso..." required>
+                    
+                    <label for="nun">Número</label>
+                    <input name="nun" id="nun" type="text" placeholder="Número" required>
+                    
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" type="text" placeholder="Complemento">
+                    
+                    <label for="bairro">Bairro</label>
+                    <input name="bairro" id="bairro" type="text" placeholder="Bairro" required>
+                    
+                    <label for="cidade">Cidade</label>
+                    <input name="cidade" id="cidade" type="text" placeholder="Cidade" required>
+                   
+                    <label for="estado">Estado</label>
+                    <input name="estado" id="estado" type="text" placeholder="Estado" required>
+                   
+                    <label for="ref">Referências ou observações</label> 
+                    <input name="ref" id="ref" type="text" placeholder="Referências">
+
                 </form>
             </section>
         </div>
@@ -118,7 +133,7 @@
         <div class="voltar-finalizar-compra">
             <section class="voltar-comprar">
                 <div class="voltar">
-                    <button class="botao-voltar" type="">Continuar comprando</button>
+                    <a href="/"><button class="botao-voltar" type="">Continuar comprando</button></a>
                 </div>
         
                 <div class="aba-compra-box">
