@@ -108,7 +108,12 @@
 
 
             <div class="usuario-desktop">
-                <button class="abrir-usuario-desktop" title="Entrar ou cadastrar"><img src="/images/svg/user.svg" width="40" height="40"></button>
+                <button class="abrir-usuario-desktop" title="Entrar ou cadastrar">
+                    <% if( locals.usuarioLogado ) { %>
+                        <p class="usuario-nome-p">Olá <b><%= usuarioLogado.nome %></b>, seja bem vindo(a)</p>
+                    <% } %>
+                    <img src="/images/svg/user.svg" width="40" height="40">
+                </button>
                 
                 <nav class="nav-abrir-usuario-desktop">
                     <!-- aqui vai o menu que abre quando clicado, vai aparecer opções para logar e cadastrar -->
@@ -159,7 +164,7 @@
             </div> -->
 
             <div class="adega">
-                <a href="produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
+                <a href="/produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
             </div>
         </div>
         <!-- Navigation do header para desktop -->

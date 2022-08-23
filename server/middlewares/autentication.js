@@ -15,7 +15,7 @@ const autentication = async (req, res, next) => {
 
     if(usuarioLogado) {
         res.cookie('usuario', usuarioLogado)
-        res.cookie('admin', `${(usuarioLogado.userAdmin === 1)}`)
+        res.cookie('admin', usuarioLogado.userAdmin === 1)
         
         next()
     } else {

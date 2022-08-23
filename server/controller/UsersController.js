@@ -31,14 +31,23 @@ controller.add = async (req, res) => {
 };
 // OK - warning
 controller.login = (req, res) => {
-  const usuario = User.findAll()
-  res.render("login", {
-    usuario,
-    titulo: "Login",
-    subtitulo: "Preencha os campos para acessar seu perfil!",
-    usuarioLogado: req.cookies.usuario,
-    usuarioAdmin: req.cookies.admin
-  })
+  let { email, senha } = req.body
+  const usuario = User.findOne({where: email, senha})
+  if(usuario) {
+    res.render("login", {
+        usuario,
+        titulo: "Login",
+        subtitulo: "Preencha os campos para acessar seu perfil!",
+        usuarioLogado: req.cookies.usuario,
+        usuarioAdmin: req.cookies.admin
+      })
+  } else {
+    res.render('errorPage', {
+      title: 'Solicitação negada!',
+      message: 'Usuario não cadastrado | email e/ou senha incorretos!',
+    })
+  }
+  
 };
 controller.autentication = (req, res, next) => {
   res.redirect('../../')

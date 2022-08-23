@@ -1,7 +1,12 @@
+<head>
+    <link rel='stylesheet' href='./stylesheets/home-style.css'/>
+</head>
 <%- include('./partials/header'); -%>
 
-    <main>
-        <h1><%= title %> <%= message %></h1>
+    <main class="error-body">
+        <div class="error-container">
+            <h1 class="error-message"><%= title %> <%= message %></h1>
+        </div>
     </main>
 
 <%- include('./partials/footer'); -%>
