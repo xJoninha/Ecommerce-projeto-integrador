@@ -12,7 +12,8 @@ const session = require('express-session')
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/usersRouter");
 const productsRouter = require("./routes/productRouter");
-const adminRouter = require("./routes/adminRouter")
+const pedidosRouter = require("./routes/pedidosRouter");
+const adminRouter = require("./routes/adminRouter");
 
 // Importando arquivo de adminmiddleware
 const adminMiddleware = require('./middlewares/admin')
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // chamando rota 2 para a pagina /users
 app.use("/usuario", usersRouter);
 app.use("/produtos", productsRouter);
+app.use("/pedidos", pedidosRouter);
 // chamando rota 1, para página geral onde uma barra é necessária
 app.use("/", indexRouter);
 

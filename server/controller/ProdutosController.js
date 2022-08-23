@@ -88,7 +88,7 @@ controller.vitrineBranco = async (req, res) => {
 controller.vitrineRose = async (req, res) => {
     let produtos = await Product.findAll();
 
-    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Rosé")
+    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Rose")
     res.render('vitrine-rose', {
         result,
         usuarioLogado: req.cookies.usuario,
