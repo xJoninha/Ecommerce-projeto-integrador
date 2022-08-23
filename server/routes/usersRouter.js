@@ -14,13 +14,5 @@ router.get('/login', userController.login)
 router.post('/login', autenticationMiddleware, userController.autentication)
 router.get('/logout', userController.logout)
 
-// router.get('/', adminMiddleware, userController.allUsers);
-// router.get('/:id', adminMiddleware, userController.userDetail)
-
-// router.get('/:id/editar', adminMiddleware, userController.update);
-// router.post('/:id/editar', adminMiddleware, userController.edit);
-
-// router.get('/:id/excluir', adminMiddleware, userController.destroy)
-
 
 module.exports = router;   

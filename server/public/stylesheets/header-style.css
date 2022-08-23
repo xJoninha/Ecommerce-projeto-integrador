@@ -113,11 +113,13 @@ header {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
+    padding-bottom: 5px;
 }
 
 .abrir-usuario-desktop:hover {
     transform: scale(1.1);
+    border-bottom: 2px solid white;
 }
 
 .nav-abrir-usuario-desktop {
@@ -130,7 +132,7 @@ header {
         top: 236px;
         left: 0;
         width: 100vw;
-        height: 85vh;
+        height: auto;
         background-color: var(--cor-primaria);
         z-index: 2;
 }
@@ -177,8 +179,36 @@ header {
 
 /* Usuário logado */
 
+/*---PROVISORIO--ERROR-PAGE---*/
+.error-body {
+    background-color: var(--cor-secundaria);
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+    margin: 166px 45px;
+    text-align: center;
+    border: 5px solid var(--cor-primaria-escuro);
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #ffcfcf;
+}
+
+.error-message {
+    font-family: var(--estilo-fonte-1);
+    font-size: 40px;
+}
+/*---PROVISORIO--ERROR-PAGE---*/
+
 /* Div usuário logado */
 
+.usuario-nome-p {
+    color: var(--cor-texto-primario);
+    margin: auto;
+    margin-right: 5px;
+    font-size: 18px;
+}
 
 .usuario-desktop-logado {
     display: flex;
