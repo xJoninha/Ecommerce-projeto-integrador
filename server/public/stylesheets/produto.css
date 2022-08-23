@@ -33,11 +33,10 @@
 
 
 body {
-  background-color: var(--cor-secundaria-dark);
+  background-color: var(--cor-secundaria);
 }
 
 .corpoTodo {
-  background-color:  var(--cor-secundaria-escuro);
   margin: 10px auto 10px;
   width: 95vw;
   display: flex;
