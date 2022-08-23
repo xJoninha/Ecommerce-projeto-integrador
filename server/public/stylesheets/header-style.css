@@ -126,13 +126,13 @@ header {
 
 .visivel-usuario-desktop {
     display: block;
-        position: absolute;
-        top: 236px;
-        left: 0;
-        width: 100vw;
-        height: 85vh;
-        background-color: var(--cor-primaria);
-        z-index: 2;
+    position: absolute;
+    top: 114px;
+    left: inherit;
+    width: auto;
+    height: auto;
+    background-color: var(--cor-primaria);
+    z-index: 2;
 }
 
 /* Div do usuário não logado */
