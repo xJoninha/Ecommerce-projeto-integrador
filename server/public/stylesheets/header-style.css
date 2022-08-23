@@ -47,7 +47,7 @@ header {
     justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    padding: 24px;
+    padding: 15px;
 }
 
 .padrao input {
@@ -68,14 +68,10 @@ header {
 /* Logo desktop */
 .logo-desktop-container {
     background-color: #c0b3c2;
-    width: 150px;
-    height: 100px;
-    overflow: hidden;
 }
 
 .logo-desktop-content {
-    background-color:#000;
-    width: fit-content;
+    background-color: var(--cor-primaria);
 }
 
 /* Form de busca desktop */
@@ -99,143 +95,129 @@ header {
 }
 
 /* Login e cadastro de usuário desktop */
-.usuario {
+/* (tirei usuário daqui) */
+
+/* Usuário */
+.usuario-desktop {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.usuario a {
-    color: var(--cor-secundaria-escuro);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-}
-
-.abrir-usuario-cadastro {
+/* Botão */
+.abrir-usuario-desktop {
+    display: flex;
+    cursor: pointer;
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
     transition: transform 0.3s ease-in-out;
 }
 
-.abrir-usuario-cadastro:hover {
+.abrir-usuario-desktop:hover {
     transform: scale(1.1);
 }
 
-.nav-usuario-cadastro {
+.nav-abrir-usuario-desktop {
     display: none;
-    flex-direction: column;
 }
 
-.nav-usuario-cadastro li {
-    color: var(--cor-secundaria-escuro);
-    font-family: var(--estilo-fonte-1);
-    font-weight: var(--fonte-tamanho-medio);
-    padding: 10px;
+.visivel-usuario-desktop {
+    display: block;
+        position: absolute;
+        top: 236px;
+        left: 0;
+        width: 100vw;
+        height: 85vh;
+        background-color: var(--cor-primaria);
+        z-index: 2;
 }
 
-.nav-usuario-cadastro li a {
+/* Div do usuário não logado */
+
+.usuario-desktop-nao-logado {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
     justify-content: center;
+    align-items: center;
+}
+
+.usuario-desktop-nao-logado ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.usuario-desktop-nao-logado li a {
+    text-decoration: none;
+    list-style: none;
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+}
+
+.usuario-desktop-nao-logado a {
+    color: var(--cor-secundaria-escuro);
+    padding: 15px;
+    display: flex;
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-usuario-cadastro li a:hover {
+.usuario-desktop-nao-logado a:hover {
     transform: scale(1.1);
 }
 
-.form-cadastro {
+/* Usuário logado */
+
+/* Div usuário logado */
+
+
+.usuario-desktop-logado {
     display: flex;
     flex-direction: column;
-}
-
-.form-cadastro h2 {
-    display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
     justify-content: center;
+    align-items: center;
+}
+
+.usuario-desktop-logado ul {
+    display: flex;
     flex-direction: column;
-    padding: 10px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.form-cadastro label {
-    font-family: var(--estilo-fonte-1);
+.usuario-desktop-logado li a {
+    text-decoration: none;
+    list-style: none;
     font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
-    align-self: center;
-}
-
-.form-cadastro {
-    align-self: center;
-}
-
-.form-cadastro button {
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    width: 100px;
-    height: 35px;
-    margin: 0 auto;
-    left: 10px;
-    bottom: 10px;
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-Pequeno);
     font-weight: bold;
-    line-height: 13px;
-    color: var(--cor-texto-secundaria);
-    transition: 0.2s ease-in-out;
 }
 
-.form-cadastro button:hover {
-    color: var(--cor-secundaria-claro);
-    background-color: var(--cor-primaria-claro);
-}
-
-.input-email-cadastrado {
-    background-color: transparent;
-    border: none;
-    border-radius: 2px;
-    outline: 2px solid var(--cor-secundaria-escuro);
-    height: 36px;
-    width: 300px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
+.usuario-desktop-logado a {
     color: var(--cor-secundaria-escuro);
-    align-self: center;
-    padding: 4px;
-    margin: 10px;
+    padding: 15px;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
-.input-senha-cadastrada {
-    background-color: transparent;
-    border: none;
-    border-radius: 2px;
-    outline: 2px solid var(--cor-secundaria-escuro);
-    height: 36px;
-    width: 300px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
-    align-self: center;
-    padding: 4px;
-    margin: 10px;
+.usuario-desktop-logado a:hover {
+    transform: scale(1.1);
 }
 
-.visivel-usuario {
-    display: block !important;
-    position: absolute;
-    top: 16vh;
-    left: 0;
-    width: 100%;
-    height: 55vh;
-    background-color: var(--cor-primaria);
-    z-index: 2;
-}
 /* Código antigo */
 /* .user-title {
     display: flex;
@@ -326,7 +308,6 @@ header {
     transform: scale(1.1);
 }
 
-
 .abrir-menu {
     display: none;
 }
@@ -343,7 +324,8 @@ header {
     .padrao, .menu-padrao, .usuario-mobile {
         display: none;
     }
-
+    
+    /* Div inteira do header mobile */
     .mobile {
         display: flex;
         flex-direction: row;
@@ -352,9 +334,10 @@ header {
         justify-content: space-evenly;
         align-items: center;
         width: 100vw;
-        height: 20vh;
+        height: 15vh;
     }
     
+    /* Botão menu haburguer */
     .abrir-menu  {
         display: block;
         background-color: transparent;
@@ -364,16 +347,16 @@ header {
     .menu-mobile.visivel {
         display: block;
         position: absolute;
-        top: 20vh;
+        top: 15vh;
         left: 0;
         width: 100vw;
-        height: 80vh;
+        height: 85vh;
         background-color: var(--cor-primaria);
         z-index: 2;
     }
 
     nav.menu-mobile.visivel {
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -385,6 +368,7 @@ header {
 
     nav.menu-mobile.visivel li {
         text-align: center;
+        padding: 15px;
     }
 
     nav.menu-mobile.visivel a {
@@ -393,6 +377,28 @@ header {
         text-decoration: none;
         color: var(--cor-secundaria-escuro);
         font-weight: bold;
+    }
+
+    .busca-mobile-form {
+        display: flex;
+        border-bottom: 2px solid var(--cor-secundaria-escuro);
+    }
+
+    .busca-mobile-form input {
+        background-color: transparent;
+        border: none;
+        font-family: var(--estilo-fonte-1);
+        font-size: var(--fonte-tamanho-pequeno);
+        font-weight: bold;
+        color: var(--cor-secundaria-escuro);
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+    }
+
+    .busca-mobile-botao {
+        background-color: transparent;
+        border: none;
+        padding: 0px 0px 0px 10px;
     }
 
     .logo-mobile {
@@ -406,38 +412,141 @@ header {
         color: var(--cor-secundaria-escuro);
         text-decoration: none;
     }
-
-    .busca-mobile {
+    .usuario {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .usuario a {
+        color: var(--cor-secundaria-escuro);
+        font-size: var(--fonte-tamanho-pequeno);
+        font-weight: bold;
+    }
+    
+    .abrir-usuario-cadastro {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
         display: flex;
         align-items: center;
-        border: var(--cor-secundaria-escuro);
+        transition: transform 0.3s ease-in-out;
     }
-
-    .busca-mobile input {
-    background-color: none;
-    border: none;
-    outline: none;
-    height: 36px;
-    font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
-    font-weight: bold;
-    color: var(--cor-secundaria-escuro);
+    
+    .abrir-usuario-cadastro:hover {
+        transform: scale(1.1);
     }
-
-    .busca-mobile-texto {
-        background-color: var(--cor-primaria);
-        border: none;
-        outline: none;
-        height: 36px;
-        width: 0px;
+    
+    .nav-usuario-cadastro {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .nav-usuario-cadastro li {
+        color: var(--cor-secundaria-escuro);
+        font-family: var(--estilo-fonte-1);
+        font-weight: var(--fonte-tamanho-medio);
+        padding: 10px;
+    }
+    
+    .nav-usuario-cadastro li a {
+        display: flex;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .nav-usuario-cadastro li a:hover {
+        transform: scale(1.1);
+    }
+    
+    .form-cadastro {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-cadastro h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .form-cadastro label {
         font-family: var(--estilo-fonte-1);
         font-size: var(--fonte-tamanho-pequeno);
         font-weight: bold;
         color: var(--cor-secundaria-escuro);
-        transition: 0.5s;
+        align-self: center;
     }
-
-    .busca-mobile:hover > .busca-mobile-texto {
-        width: 200px;
+    
+    .form-cadastro {
+        align-self: center;
+    }
+    
+    .form-cadastro button {
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        width: 100px;
+        height: 35px;
+        margin: 0 auto;
+        left: 10px;
+        bottom: 10px;
+        font-family: var(--estilo-fonte-1);
+        font-size: var(--fonte-tamanho-Pequeno);
+        font-weight: bold;
+        line-height: 13px;
+        color: var(--cor-texto-secundaria);
+        transition: 0.2s ease-in-out;
+    }
+    
+    .form-cadastro button:hover {
+        color: var(--cor-secundaria-claro);
+        background-color: var(--cor-primaria-claro);
+    }
+    
+    .input-email-cadastrado {
+        background-color: transparent;
+        border: none;
+        border-radius: 2px;
+        outline: 2px solid var(--cor-secundaria-escuro);
+        height: 36px;
+        width: 300px;
+        font-family: var(--estilo-fonte-1);
+        font-size: var(--fonte-tamanho-pequeno);
+        font-weight: bold;
+        color: var(--cor-secundaria-escuro);
+        align-self: center;
+        padding: 4px;
+        margin: 10px;
+    }
+    
+    .input-senha-cadastrada {
+        background-color: transparent;
+        border: none;
+        border-radius: 2px;
+        outline: 2px solid var(--cor-secundaria-escuro);
+        height: 36px;
+        width: 300px;
+        font-family: var(--estilo-fonte-1);
+        font-size: var(--fonte-tamanho-pequeno);
+        font-weight: bold;
+        color: var(--cor-secundaria-escuro);
+        align-self: center;
+        padding: 4px;
+        margin: 10px;
+    }
+    
+    .visivel-usuario {
+        display: block !important;
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        width: 100vw;
+        height: 85vh;
+        background-color: var(--cor-primaria);
+        z-index: 2;
     }
 }
