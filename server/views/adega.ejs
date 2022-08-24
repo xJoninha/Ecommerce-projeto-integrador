@@ -51,7 +51,7 @@
             <section class="totais-calculo-frete">
                 <h4>Calcular o frete</h4>
                 <form class="formularioCep">
-                    <input class="inputCep" type="text" id="CEP" name="CEP" placeholder="Informe seu CEP" required>
+                    <input class="inputCep" type="text" id="CEP" name="CEP" placeholder="Informe seu CEP" minlength="9" maxlength="9" required>
                     <input type="submit" class="botaoSimular" value="Simular">
                     <div class="respostas-cep">
                         <span class="resposta-valor-frete">Valor do frete R$(aqui)</span>
@@ -64,6 +64,7 @@
             <section class="totais-resumo-compra">
                 <h4>Resumo</h4>
                 
+                <!-- Subtotal sem frete -->
                 <div class="resumo-compra-subtotal">
                     <div class="resumo-compra-subtotal-conteudo">
                         <span class="quantidade-itens">Quantidade de itens (aqui)</span>
@@ -71,9 +72,10 @@
                     </div>
                 </div>
                 
+                <!-- Total com frete -->
+                <h4>Total</h4>
                 <div class="resumo-compra-total">
                     <div class="resumo-compra-total-conteudo">
-                        <h4>Total</h4>
                         <span class="valor-itens">R$(aqui)</span>
                     </div>
                 </div>           

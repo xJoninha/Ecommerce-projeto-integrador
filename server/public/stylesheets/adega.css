@@ -209,9 +209,37 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
+.formularioCep {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.formularioCep input {
+    height: auto;
+    width: auto;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bold;
+    color: var(--cor-texto-secundaria);
+    padding: 5px;
+}
+
 .respostas-cep {
     display: flex;
     flex-direction: column;
+}
+
+.respostas-cep span {
+    height: auto;
+    width: auto;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bolder;
+    color: var(--cor-texto-secundaria);
+    padding: 5px;
 }
 
 .totais-resumo-compra {
@@ -226,14 +254,69 @@ body {
     padding: 10px;
 }
 
-.resumo-compra-subtotal{
+.totais-resumo-compra h4 {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bolder;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
+.resumo-compra-subtotal {
     display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.resumo-compra-subtotal-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.resumo-compra-subtotal-conteudo span {
+    height: auto;
+    width: auto;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bolder;
+    color: var(--cor-texto-secundaria);
+    padding: 5px;
 }
 
 .resumo-compra-total {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+.resumo-compra-total-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.resumo-compra-total-conteudo span {
+    height: auto;
+    width: auto;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bolder;
+    color: var(--cor-texto-secundaria);
+    padding: 5px;
+}
 .condicoes-pgto {
     border-radius: 2px;
     width: 80%;
@@ -319,7 +402,7 @@ body {
 @media (max-width: 768px) {
     .caixaItemCarrinho_sec-1 {
         border-radius: 2px;
-        width: 90%;
+        width: 80%;
         height: auto;
         display: flex;
         flex-direction: row;
@@ -331,188 +414,3 @@ body {
         padding: 10px;
     }
 }
-
-/* .caixaItemCarrinho section div {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-} */
-
-/* .caixaItemCarrinho img {
-    background-color: var(--cor-secundaria-light);
-    border-radius: 4px;
-    width: 100px;
-    height: 100px;
-}
-
-.caixaItemCarrinho section h3 {
-    padding: 0 5px;
-    height: 40px;
-    color: var(--cor-texto-primario);
-    text-align: center;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.caixaItemCarrinho section p {
-    padding-right: 17px;
-    color: var(--cor-texto-primario);
-    position: absolute;
-    right: 0;
-    bottom: 38px;
-}
-
-.containerBotoesAdc{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    flex-direction: row;
-} */
-
-
-  /* ****************************************************************** */
-/* CARRINHO */
-
-
-
-
-
-  /* ****************************************************************** */
-/* TOTAIS */
-
-/* .totais{
-    width: 70%;
-    display: block;
-}
-
-.boxTotais{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    border-radius: 3px;
-    width: 100%;
-    height: 100px;
-    position: relative;
-}
-
-
-
-.numeroTotais{
-    font-weight: bold;
-} */
-
-
-
-/* INPUT */
-
-/* input[type=number] {
-    /*for absolutely positioning spinners*//*
-    position: relative; 
-    padding: 5px;
-    padding-right: 25px;
-  }
-
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    opacity: 1;
-  }
-
-  input[type=number]::-webkit-outer-spin-button, 
-  input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: inner-spin-button !important;
-    width: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-  } */
-
-
-  /* ****************************************************************** */
-/* TOTAIS */
-
-/* .voltar{
-    font-family: var(--estilo-fonte-1);
-}
-
-a {
-    color: #ffffff;
-    border-radius: 5px;
-    background-color: #2e0049;
-    font-weight: bold;
-} */
-
-
-
-/* ************************************************************ */
-/* CONTINUAR COMPRA (CAIXA) */
-
-/* .abaContinuarCompra{
-    color: var(--cor-primaria-dark);
-    background-color: var(--cor-secundaria-medio);
-    width: 95vw;
-    justify-content: center;
-    padding: 30px 0 15px 0;
-}
-
-.botaoSimular{
-    color: white;
-    display: block;
-    border-radius: 5px;
-    width: 200px;
-    padding: 10px 0;
-    border: none;
-    background-color: #2e0049;
-    font-weight: bold;
-}
-
-
-.abaCompraBox{
-    width: 95%;
-}
-
-.pagamentoBox{
-    display: flex;
-    align-items: center;
-}
-
-.formularioCep{
-    display: flex;
-    gap: 10px;
-}
-
-.tituloSecao{
-    font-size: 25px;
-}
-
-.inputCep{
-    padding-left: 4px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #b5b5b5;
-    width: 100%;
-}
-
-.botaoFimCompra{
-    background-color: #2e0049;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    width: 95%;
-    padding: 10px 0;
-    border-radius: 5px;
-    
-}
-
-.preco{
-    font-weight: bold;
-} */
-
-
-/* ************************************************************ */
-/* CONTINUAR COMPRA (CAIXA) */
