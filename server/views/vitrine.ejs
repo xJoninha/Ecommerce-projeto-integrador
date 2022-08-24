@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/home-style.css">
+</head>
+    
+<%- include('../views/partials/header'); -%>
+
+    <main>
+        <!-- novo card -->
+        <h1 class="container-title"> <%= tipo %></h1>
+        <div class="container-produtos">
+            <% for( let vinho of produto) { %>
+            <section>
+                <div>
+                    <a href="/produtos/produto/<%= vinho.id %>">
+                        <img src="<%= vinho.image %>" alt="">
+                    </a>
+                </div>
+                <h3><%= vinho.nome %></h3></a>
+                <p>R$ <%= vinho.preco %></p>
+                <button>Adicionar a adega</button>
+            </section>
+            <% } %>
+        </div>
+        <!-- novo card -->
+    </main>
+          
+<%- include('../views/partials/footer'); -%>

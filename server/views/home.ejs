@@ -1,7 +1,5 @@
 
 <!DOCTYPE html>
-<html>
-
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
@@ -11,9 +9,9 @@
     <%- include('./partials/header') -%>
 
     <main>
-        <% if ( locals.usuarioLogado && usuarioLogado.userAdmin === 1) { %>
+        <!-- <% if ( locals.usuarioLogado && usuarioLogado.userAdmin === 1) { %>
             <a href="/admin/usuarios" class="link-usuarios">Todos Usuarios</a>
-        <% } %>
+        <% } %> -->
         <!-- Slick slide - carousel -->
         <div class="carousel">
             <div><img src="./images/carrocelHome/banner-amigos.png" alt=""></div>
@@ -30,7 +28,7 @@
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Tinto</h3>
                 </div>
-                <a href="/produtos/vitrine-tinto">
+                <a href="/produtos/vitrine/Tinto">
                     <img src="./images/categoria-destaque/tinto.svg" alt="Figura de vinho branco">
                 </a>
             </section>
@@ -38,7 +36,7 @@
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Branco</h3>
                 </div>
-                <a href="/produtos/vitrine-branco">
+                <a href="/produtos/vitrine/Branco">
                     <img src="./images/categoria-destaque/branco.svg" alt="Figura de vinho tinto">
                 </a>
             </section>
@@ -46,7 +44,7 @@
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Rosé</h3>
                 </div>
-                <a href="/produtos/vitrine-rose">
+                <a href="/produtos/vitrine/Rose">
                     <img src="./images/categoria-destaque/rose.svg" alt="Figura de vinho rosé">
                 </a>
             </section>
@@ -54,7 +52,7 @@
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Espumante</h3>
                 </div>
-                <a href="/produtos/vitrine-espumante">
+                <a href="/produtos/vitrine/Espumante">
                     <img src="./images/categoria-destaque/espumante.svg" alt="Figura de vinho espumante">
                 </a>
             </section>
@@ -258,6 +256,3 @@
             ]
         });
     </script>
-
-  </body>
-</html>

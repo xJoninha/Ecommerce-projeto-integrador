@@ -1,8 +1,6 @@
 /* importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@200&display=swap');
 
-
-
 /* criação das variaveis para cores e fontes */
 :root {
     --cor-primaria: #2e0049;
@@ -28,8 +26,6 @@
     --fonte-tamanho-extraGrande: 2.7rem;
 }
 
-
-
 /* aplicação da formatação do corpo do html */
 * {
     margin: 0;
@@ -41,28 +37,38 @@ html, body, main{
     background-color: var(--cor-secundaria);
 }/* --------------------------------------- */
 
-/*---PROVISORIO----BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
-.link-usuarios {
-    padding: 0 5px;
-    position: relative;
-    top: 8px;
-    margin-left: 50px;
-    font-size: var(--fonte-tamanho-medio);
-    color: var(--cor-texto-secundaria);
-    font-weight: bold;
-    width: 220px;
-    height: 36px;
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    border-radius: 8px;
-    background-color: #9e59c34a;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+/* BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+.admin-btn-container {
+    width: 100%;
+    height: auto;
+    display: flex;
 }
 
-.link-usuarios:hover {
+.left-btn {
+    margin: 20px 10px 0 auto;
+}
+
+.right-btn {
+    margin: 20px auto 0 10px;
+}
+
+.btn-admin {
+    width: auto;
+    height: auto;
+    padding: 0 5px;
+    font-size: 24px;
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    border-radius: 4px;
+    background-color: #ae85c4;
+}
+
+.btn-admin:hover {
     background-color: #5b2b758d;
     color: var(--cor-secundaria-claro);
+    box-shadow: 0px 0px 6px 1px white;
 }
 
 .users-list-title {
@@ -161,10 +167,10 @@ html, body, main{
     color: white;
 }
 
-/*---PROVISORIO----BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+/*-BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
 
 
-/*---PROVISORIO----CADASTRO--------*/
+/*-CADASTRO--------*/
 
 .form-title {
     text-align: center;
@@ -237,7 +243,7 @@ html, body, main{
     background-color: var(--cor-primaria-claro);
 }
 
-/*---PROVISORIO----CADASTRO--------*/
+/*-CADASTRO--------*/
 
 /* START- 'carrossel' da home usando Slick Slide */
 .carousel {
@@ -277,7 +283,6 @@ html, body, main{
     height: auto;
     object-fit: cover;
 }/* --------------------------------------- */
-
 
 
 /* START- 'categorias-destaques' */
@@ -346,6 +351,97 @@ html, body, main{
     filter: grayscale(0%);
 }/* --------------------------------------- */
 
+/* Container produtos */
+.container-title {
+    margin: 2% 0 2% 7%;
+    font-size: 50px;
+    font-family: var(--estilo-fonte-1);
+    color: var(--cor-primaria);
+}
+
+.container-produtos {
+    margin: 5px auto 20px;
+    width: 95vw;
+    min-height: 562px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container-produtos section {    
+    background-color: var(--cor-texto-primario);
+    margin: 5px auto;
+    width: 90%;
+    height: 250px;
+    max-width: 190px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.container-produtos section:hover {
+    box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
+}
+
+.container-produtos section div {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-produtos img {
+    background-color: var(--cor-secundaria-claro);
+    margin: 0 auto;
+    height: 90%;
+}
+
+.container-produtos section h3 {
+    margin: 0 auto;
+    border-top: 1px solid var(--cor-primaria-escuro);
+    width: 90%;
+    padding: 2px 0;
+    color: var(--cor-primaria-escuro);
+    text-align: center;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-produtos p {
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-pequeno);
+    position: absolute;
+    right: 20px;
+    bottom: 46px;
+}
+
+.container-produtos section button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 85%;
+    height: 35px;
+    margin: 0 auto;
+    position: absolute;
+    left: 7%;
+    bottom: 10px;
+    font-family: var(--estilo-fonte-1);
+    font-size: var(--fonte-tamanho-extraPequeno);
+    font-weight: bold;
+    line-height: 13px;
+    color: var(--cor-texto-secundaria);
+    transition: 0.2s ease-in-out;
+}
+
+.container-produtos section:hover button{
+    color: var(--cor-secundaria-claro);
+    background-color: var(--cor-primaria-claro);
+}
+/* Container produtos */
 
 
 /* START- 'container-promocoes' */
@@ -461,7 +557,6 @@ html, body, main{
     background-color: var(--cor-primaria-claro);
 }/* --------------------------------------- */
 
-
 .container-promocoes_sec-1 input{
     align-items: center;
 }
@@ -478,7 +573,6 @@ html, body, main{
     text-align: center;
     width: 70%;
 }
-
 
 /* START- 'container-mais-vendidos' */
 .container-mais-vendidos-text {

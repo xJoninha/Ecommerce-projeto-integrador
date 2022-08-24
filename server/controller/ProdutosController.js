@@ -67,6 +67,16 @@ controller.busca = async (req, res) => {
 }
 
 
+controller.vitrine = async (req, res) => {
+    let {id} = req.params
+    let produto = await Product.findAll({where: {tipo: id}})
+    res.render("vitrine", {
+        produto,
+        tipo: id,
+        usuarioLogado: req.cookies.usuario,
+        usuarioAdmin: req.cookies.admin
+    })
+}
 controller.vitrineTinto = async (req, res) => {
     let produtos = await Product.findAll();
     let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Tinto")
@@ -104,7 +114,6 @@ controller.vitrineEspumante = async (req, res) => {
         usuarioAdmin: req.cookies.admin
     })    
 }
-
 controller.adega = (req, res) => res.render('adega', {
     usuarioLogado: req.cookies.usuario,
     usuarioAdmin: req.cookies.admin
