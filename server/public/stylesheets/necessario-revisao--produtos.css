@@ -1,3 +1,6 @@
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+
 :root {
     --cor-primaria: #2e0049;
     --cor-primaria-claro: #5b2b75;
@@ -20,8 +23,7 @@
     --fonte-tamanho-grande: 2.0rem;
     --fonte-tamanho-extraGrande: 2.7rem;
   }
-  
-  
+    
   * {
     margin: 0;
     padding: 0;
@@ -30,7 +32,6 @@
     list-style: none;
     font-family: var(--estilo-fonte-1);
     color: var(--cor-texto-secundaria);
-  
   }
 
   main {
