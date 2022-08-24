@@ -29,7 +29,7 @@ controller.add = async (req, res) => {
   }
 
 };
-// OK - warning
+// OK
 controller.login = (req, res) => {
   let { email, senha } = req.body
   const usuario = User.findOne({where: email, senha})
@@ -45,11 +45,12 @@ controller.login = (req, res) => {
       message: 'Usuario não cadastrado | email e/ou senha incorretos!',
     })
   }
-  
 };
+// OK
 controller.autentication = (req, res, next) => {
   res.redirect('../../')
 };
+// OK
 controller.logout = (req, res) => {
   res.clearCookie('usuario').clearCookie('admin').redirect('../../')
 };

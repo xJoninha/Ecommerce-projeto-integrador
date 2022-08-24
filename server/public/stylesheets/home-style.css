@@ -38,39 +38,6 @@ html, body, main{
 }/* --------------------------------------- */
 
 /* BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
-.admin-btn-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-}
-
-.left-btn {
-    margin: 20px 10px 0 auto;
-}
-
-.right-btn {
-    margin: 20px auto 0 10px;
-}
-
-.btn-admin {
-    width: auto;
-    height: auto;
-    padding: 0 5px;
-    font-size: 24px;
-    color: var(--cor-texto-secundaria);
-    font-weight: bold;
-    text-align: center;
-    transition: 0.2s ease-in-out;
-    border-radius: 4px;
-    background-color: #ae85c4;
-}
-
-.btn-admin:hover {
-    background-color: #5b2b758d;
-    color: var(--cor-secundaria-claro);
-    box-shadow: 0px 0px 6px 1px white;
-}
-
 .users-list-title {
     margin: 10px auto 0px;
     font-family: var(--estilo-fonte-1);

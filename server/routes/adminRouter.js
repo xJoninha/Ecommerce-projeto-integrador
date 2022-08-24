@@ -4,6 +4,9 @@ const express = require('express'),
     productsController = require('../controller/ProdutosController'),
     adminMiddleware = require('../middlewares/admin')
 
+router.get('/produtos', adminMiddleware, productsController.allProductsAdmin)
+
+
 router.get('/usuarios', adminMiddleware, userController.allUsers)
 router.get('/usuarios/:id', adminMiddleware, userController.userDetail)
 

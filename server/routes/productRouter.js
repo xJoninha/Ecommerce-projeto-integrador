@@ -10,9 +10,5 @@ router.get('/adega', controller.adega);
 router.get('/busca', controller.busca);
 
 router.get("/vitrine/:id", controller.vitrine);
-router.get('/vitrine-tinto', controller.vitrineTinto);
-router.get('/vitrine-branco', controller.vitrineBranco);
-router.get('/vitrine-rose', controller.vitrineRose);
-router.get('/vitrine-espumante', controller.vitrineEspumante);
 
 module.exports = router;
