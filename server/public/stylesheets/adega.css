@@ -201,6 +201,14 @@ body {
     padding: 10px;
 }
 
+.totais-calculo-frete h4 {
+    font-size: var(--fonte-tamanho-pequeno);
+    font-family: var(--estilo-fonte-1);
+    font-weight: bolder;
+    color: var(--cor-texto-secundaria);
+    padding: 10px 10px 10px 10px;
+}
+
 .respostas-cep {
     display: flex;
     flex-direction: column;
@@ -215,7 +223,6 @@ body {
     justify-content: space-between;
     align-self: center;
     background-color: #ffffff;
-    border-bottom: 2px solid var(--cor-primaria);
     padding: 10px;
 }
 
@@ -307,6 +314,22 @@ body {
     background-color: #ffffff;
     border-bottom: 2px solid var(--cor-primaria);
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .caixaItemCarrinho_sec-1 {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        background-color: #ffffff;
+        border-bottom: 2px solid var(--cor-primaria);
+        padding: 10px;
+    }
 }
 
 /* .caixaItemCarrinho section div {
