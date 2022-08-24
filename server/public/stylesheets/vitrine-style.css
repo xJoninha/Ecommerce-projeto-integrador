@@ -69,6 +69,7 @@ main {
     border-radius: 3px;
     width: 45%;
     max-width: 190px;
+    justify-content: center;
 }
 
 .container-vitrine section div {
@@ -78,7 +79,7 @@ main {
 
 
 .container-vitrine img {
-    max-height: 180px;
+    max-height: 160px;
     max-width: 180px;
 }
 
@@ -121,15 +122,18 @@ main {
     box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);
 }
 
-/* .container-vitrine section div {
+.container-vitrine section div {
     width: 100%;
-    height: 120px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
 } */
 
-/* .container-vitrine img {
+
+/* ---------------------------------------------------------------------- */
+
+.container-vitrine img {
     background-color: var(--cor-secundaria-claro);
     margin: 0 auto;
     height: 90%;
@@ -150,16 +154,17 @@ main {
     width: 90%;
 } */
 
-/* .container-vitrine section p {
+ .container-vitrine section p {
+    
     padding-right: 17px;
     color: var(--cor-texto-secundaria);
     font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
     font-weight: bold;
-    position: absolute;
+    /* position: absolute; */
     right: 3px;
     bottom: 50px;
-} */
+}
 
 .container-vitrine section button {
     cursor: pointer;
@@ -182,7 +187,7 @@ main {
     background-color: var(--cor-primaria-claro);
 }
 
-/* --------------------------------------- */
+/* ---------------------------------------*/
 
 @media screen and (min-width: 600px) {
     .container-vitrine {
