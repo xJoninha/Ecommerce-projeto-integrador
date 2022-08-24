@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="/stylesheets/home-style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
-</head>
-<body>
-
     <%- include('./partials/header') %>
+    <link rel="stylesheet" href="/stylesheets/home-style.css">
 
     <main>
         <h1 class="users-list-title"><%= subtitulo %></h1>
@@ -23,6 +13,7 @@
                         <td>Nome</td>
                         <td>Sobrenome</td>
                         <td>Email</td>
+                        <td>Admin</td>
                         <td>Configurações</td>
                     </tr>
                 </thead>
@@ -34,6 +25,13 @@
                         <td><%= usuario.nome %></td>
                         <td><%= usuario.sobrenome %></td>
                         <td><%= usuario.email %></td>
+                        <td>
+                            <% if ( usuario.userAdmin === 1 ) { %>
+                                Sim
+                            <% } else { %>
+                                Não
+                            <% } %>
+                        </td>
                         <td class="users-list-options">
                             <a href="/admin/usuarios/<%= usuario.id %>" class="config-ver">Ver</a>
                             <a href="/admin/usuarios/<%= usuario.id %>/editar" class="config-editar">Editar</a>
@@ -47,7 +45,7 @@
 
                 <% } else { %>
                 <div>
-                    <h3>Não há usuários cadastrados ainda.</h3>
+                    <h3>Não há usuários cadastrados.</h3>
                 </div>
             <% } %>
         </section>

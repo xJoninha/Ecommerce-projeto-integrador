@@ -83,5 +83,22 @@ controller.allProductsAdmin = async (req, res) => {
         usuarioAdmin: req.cookies.admin
     })
 }
+controller.ProductAdmin = async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findByPk(id)
+        res.render("productAdminDetailed", {
+            produto: product,
+            usuarioLogado: req.cookies.usuario,
+        usuarioAdmin: req.cookies.admin
+        })
+}
+controller.productDestroy = async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.destroy({where: {id}});
+    if(product)
+        res.redirect("/admin/produtos")
+    else
+        res.json({ status: 500, msg: "Solicitação negada!"})
+}
 
 module.exports = controller;

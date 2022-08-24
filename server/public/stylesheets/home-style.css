@@ -37,7 +37,7 @@ html, body, main{
     background-color: var(--cor-secundaria);
 }/* --------------------------------------- */
 
-/* BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+/* -PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
 .users-list-title {
     margin: 10px auto 0px;
     font-family: var(--estilo-fonte-1);
@@ -134,7 +134,7 @@ html, body, main{
     color: white;
 }
 
-/*-BOTÃO-TODOS-USUARIOS-----E-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
+/*-PAGINAS-'USUÁRIOS'-E-'USUÁRIO'---*/
 
 
 /*-CADASTRO--------*/

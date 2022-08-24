@@ -1,0 +1,51 @@
+  <%- include('../views/partials/header'); -%>
+  <link rel="stylesheet" href="/stylesheets/produtos-admin-style.css" />
+
+    <main>
+
+      <div class="corpo-todo">
+
+        <section class="detalhes-produto-unitario">
+          <div class="imagem-detalhes-preco">
+            <!-- Div imagem -->
+            <div class="imagem-produto">
+              <img src="<%= produto.image %> ">
+              <p>id: <%= produto.id %></p>
+            </div>
+                
+            <!-- Div detalhes/informações produto -->
+            <div class="detalhes-produto">
+              
+              <div class="titulo-detalhes-produto">
+                <h5><%= produto.nome %></h5>
+                <div class="product-detailed-description">
+                    <h6>Descrição</h6>
+                    <p> <%= produto.descricao %> </p>
+                </div>
+                    <div class="outros-detalhes">
+                        <p>Tipo: <%= produto.tipo %></p>
+                        <p>Pais: <b><%= produto.pais %></b></p>
+                        <p>Teor alcoólico: <%= produto.teor_alcoolico %> </p>
+                        <p>Temperatura: <%= produto.temperatura %>°C </p>
+                        <p>estoque: <%= produto.estoque %></p>
+                    </div>
+              </div>
+  
+              <div class="produto-preco-produto">
+                <p>Preço: R$ <%= produto.preco %><p>
+              </div>
+  
+            </div>
+          </div> <!-- imagem-detalhes-preco -->
+
+          <!-- opções -->
+          <div class="product-options-btn">
+            <a href="/admin/produtos/<%= produto.id %>/editar" class="product-detailed-btn-edit">Editar</a>
+            <a href="/admin/produtos/<%= produto.id %>/excluir" class="product-detailed-btn-exclud">Excluir</a>
+          </div>
+
+        </section>
+      </div>
+    </main>
+
+    <%- include('../views/partials/footer'); -%>
