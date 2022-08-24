@@ -122,7 +122,6 @@ body {
 
 .abrir-usuario-desktop:hover {
     transform: scale(1.01);
-    border-bottom: 1px solid white;
 }
 
 .nav-abrir-usuario-desktop {
@@ -207,16 +206,16 @@ body {
 /* Div usuário logado */
 
 .usuario-nome-p {
-    color: var(--cor-texto-primario);
+    color: var(--cor-secundaria-escuro);
     margin-top: 14px;
     margin-right: 5px;
-    font-size: 18px;
+    font-size: var(--fonte-tamanho-pequeno);
 }
 
 .usuario-nome-p b {
-    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0px 0px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-    color: #8100bb;
-    font-size: 24px;
+    color: var(--cor-secundaria-escuro);
+    font-size: var(--fonte-tamanho-pequeno);
+    font-weight: bold;
 }
 
 .usuario-desktop-logado {
@@ -250,6 +249,7 @@ body {
     color: var(--cor-secundaria-escuro);
     padding: 15px;
     display: flex;
+    position: static;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -278,19 +278,44 @@ body {
 
 .menu-padrao li a {
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-medio);
+    font-size: var(--fonte-tamanho-pequeno);
     font-weight: bold;
     color: var(--cor-secundaria-escuro);
     list-style: none;
     text-decoration: none;
     justify-content: space-around;
     position: static;
-    transition: 0.2s ease-in-out;
 }
 
-.menu-padrao li:hover a {
-    color: black;
-    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0px 0px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;;
+.tinto {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.tinto:hover {
+    transform: scale(1.1);
+}
+.branco {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.branco:hover {
+    transform: scale(1.1);
+}
+
+.rose {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.rose:hover {
+    transform: scale(1.1);
+}
+
+.espumante {
+    transition: transform 0.3s ease-in-out;  
+}
+
+.espumante:hover {
+    transform: scale(1.1);
 }
 
 .abrir-menu {
