@@ -239,7 +239,7 @@ body {
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bolder;
     color: var(--cor-texto-secundaria);
-    padding: 5px;
+    padding: 5px 5px 5px 0px;
 }
 
 .totais-resumo-compra {
@@ -286,7 +286,7 @@ body {
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bolder;
     color: var(--cor-texto-secundaria);
-    padding: 5px;
+    padding: 5px 5px 5px 0px;
 }
 
 .resumo-compra-total {
@@ -315,7 +315,7 @@ body {
     font-size: var(--fonte-tamanho-extraPequeno);
     font-weight: bolder;
     color: var(--cor-texto-secundaria);
-    padding: 5px;
+    padding: 5px 5px 5px 0px;
 }
 
 .condicoes-pgto {
