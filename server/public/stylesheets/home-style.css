@@ -462,6 +462,23 @@ html, body, main{
 }/* --------------------------------------- */
 
 
+.container-promocoes_sec-1 input{
+    align-items: center;
+}
+
+
+.forme {
+    text-align: center;
+    margin-top: 10px;
+    
+
+}
+
+.inpute {
+    text-align: center;
+    width: 70%;
+}
+
 
 /* START- 'container-mais-vendidos' */
 .container-mais-vendidos-text {

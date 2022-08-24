@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="stylesheet" href="../stylesheets/vitrine-style.css">
     <meta charset="UTF-8">
@@ -7,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitrine</title>
 </head>
-    
+
 <%- include('../views/partials/header'); -%>
 
 <body>
-
     <h1 class="vitrine-text">Resultado da busca</h1>
 
     <main>
@@ -19,22 +19,64 @@
             <!-- 3º O resultado já vem para essa página pela função de renderização. Agora usa ele para exibir a lista toda contendo todos
             os objetos pesquisados -->
             <% for( let produto of produtoPesquisado) { %>
-                <section class="">
+            <section class="container-vitrine">
 
-                    <div class="">
-                        <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
-                        <a href=" /produtos/produto/<%= produto.id %> ">
-                            <img src="<%= produto.image %> " alt=""></a>
-                    </div>
-                    <h3> <%= produto.nome %> </h3>
-                    <p> R$ <%= produto.preco %> </p>
-                    <button>Adicionar à Adega</button>
+                <div class="">
+                    <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
+                    <a href=" /produtos/produto/<%= produto.id %> ">
+                        <img src="<%= produto.image %> " alt=""></a>
+                </div>
+                <h3> <%= produto.nome %> </h3>
+                <p> R$ <%= produto.preco %> </p>
 
-                </section>
-                <% } %>
+
+                <!-- Botão de adicionar a Adega -->
+                <form id="formulario_do_botao" method="post" action="/pedidos">
+                    <input type="hidden" name="produtos_id" id="produtos_id" value="<%= produto.id %>" />
+                    <input min="1" type="number" id="quantidade" name="quantidade" value="1" />
+                    <button onclick="postPedido()" id="form_pedido_btn" type="submit">Adicionar a Adega</button>
+                </form>
+
+
+
+            </section>
+            <% } %>
         </section>
     </main>
 
+
+    <script>
+        function postPedido() {
+            event.preventDefault();
+
+            // URL que será usada para o controller saber redirecionar para a página correta
+            const urlDeOrigem = `${location.pathname}${location.search}`;
+
+            // Criando corpo da requisição que irá para o controller
+            const reqBody = {
+                produtos_id: Number(document.querySelector("#produtos_id").value),
+                quantidade: Number(document.querySelector("#quantidade").value),
+                urlDeOrigem
+            };
+
+            console.log(reqBody);
+
+            const settings = {
+                method: 'POST',
+                body: JSON.stringify(reqBody),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+
+            fetch("/pedidos", settings).then(data => {
+                console.log(data)
+            }).catch(err => console.log(err));
+
+        }
+    </script>
+
     <%- include('../views/partials/footer'); -%>
 </body>
+
 </html>
