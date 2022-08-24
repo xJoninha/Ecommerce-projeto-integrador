@@ -1,5 +1,5 @@
 /* importação das fontes */
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap'); */
 
 /* ***************************************************** */
 /* GERAIS */
@@ -34,138 +34,150 @@
     box-sizing: border-box;
 }
 
-body {
-  background-color: var(--cor-secundaria);
-}
-
-
-
-/* Código antigo */
-
-/* .corpoTodo {
+.corpo-todo {
   margin: 10px auto 10px;
   width: 95vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-self: center;
-} */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
 
-/* é o card do produto todo */
-/* .flex-produto {
-  height: auto;
+.imagem-detalhes-preco {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
 }
 
-.card {
-  position: relative;
+.detalhes-produto-unitario {
+  border-radius: 2px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: #ffffff;
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.imagem-produto {
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: none !important;
-} */
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 25%;
+  margin: 10px;
+}
 
-/* Caixa no torno da descrição */
-/* .produtos-descricao {
+.imagem-produto img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.detalhes-produto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.titulo-detalhes-produto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.titulo-detalhes-produto h5 {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-grande);
   font-weight: bolder;
   color: var(--cor-texto-secundaria);
-} */
+  padding: 10px;
+}
 
-/* **************************** IMAGEM ****************************************** */
-/* .row, .col-md {
-  width: 100%;
-  max-width: 100%;
-} */
+.titulo-detalhes-produto h6 {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-pequeno);
+  font-weight: bold;
+  color: var(--cor-texto-secundaria);
+  padding: 10px;
+}
 
-/* .imagenzinha {
+.titulo-detalhes-produto p {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-pequeno);
+  font-weight: normal;
+  color: var(--cor-texto-secundaria);
+  padding: 10px;
+}
+
+.outros-detalhes {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px
+}
+
+.outros-detalhes p {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-pequeno);
+  font-weight: bold;
+  color: var(--cor-texto-secundaria);
+  padding: 0px 10px 5px 0px;
+}
+
+.produto-preco-produto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-content: center;
-  padding-top: 20px;
-} */
+  justify-content: flex-end;
+  align-items: center;
+}
 
-/* .imagem-card {
-  border-radius: 10px;
-} */
-
-/* **************************** TEXTOS ****************************************** */
-
-/* .card-body h5 {
-  font-family: var(--estilo-fonte-1);
-  font-size: var(--fonte-tamanho-medio);
-  font-weight: bold;
-} */
-
-/* .card-body h6 {
+.produto-preco-produto p {
   font-family: var(--estilo-fonte-1);
   font-size: var(--fonte-tamanho-pequeno);
   font-weight: bold;
-}
-
-.card-text {
-  font-size: var(--fonte-tamanho-pequeno);
-  font-family: var(--estilo-fonte-1);
-  text-align: justify;
-}
-
-.card-title {
-  font-size: var(--fonte-tamanho-medio);
-  font-weight: bold;
-  font-family: var(--estilo-fonte-1);
-}
-
-.col-6 {
-  font-size: var(--fonte-tamanho-extrapequeno);
-  font-family: var(--estilo-fonte-1);
-  font-weight: bold;
-}
-
-.justify-content-center {
-  justify-content: center !important;
-}
-
-.preco-produto {
-  font-family: var(--estilo-fonte-1);
-  font-size: var(--fonte-tamanho-pequeno);
-  font-weight: bolder;
+  color: var(--cor-texto-secundaria);
+  padding: 10px;
 }
 
 .adicionar-adega {
-  background-color: var(--cor-texto-primario);
-  margin: 5px auto;
-  width: 90%;
-  height: auto;
-  max-width: 190px;
-  border-radius: 3px;
-  position: relative;
+  display: flex;
 }
 
-.botao-adicionar-adega {
+.adicionar-adega button {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  width: 85%;
+  width: auto;
   height: 35px;
   margin: 0 auto;
-  position: absolute;
-  left: 7%;
-  bottom: 10px;
-  font-family: var(--estilo-fonte-1);
-  font-size: var(--fonte-tamanho-extraPequeno);
   font-weight: bold;
+  font-family: var(--estilo-fonte-1);
+  font-size: 16px;
   line-height: 13px;
   color: var(--cor-texto-secundaria);
   transition: 0.2s ease-in-out;
+  padding: 10px;
 }
 
-.botao-adicionar-adega:hover {
-  color: var(--cor-secundaria-claro);
-  background-color: var(--cor-primaria-claro);
-} */
+.adicionar-adega button:hover {
+    color: var(--cor-secundaria-claro);
+    background-color: var(--cor-primaria-claro);
+}
