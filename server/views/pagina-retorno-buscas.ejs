@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="stylesheet" href="../stylesheets/vitrine-style.css">
+    <link rel="stylesheet" href="/stylesheets/vitrine-style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,11 @@
                 <div class="">
                     <!-- 4º Coloca na imagem o link para o próprio produto caso o usuário deseje ver detalhamento do produto que está buscando -->
                     <a href=" /produtos/produto/<%= produto.id %> ">
-                        <img src="<%= produto.image %> " alt=""></a>
+                        <img src="<%= produto.image %> " alt="">
+                    </a>
                 </div>
                 <h3> <%= produto.nome %> </h3>
                 <p> R$ <%= produto.preco %> </p>
-
 
                 <!-- Botão de adicionar a Adega -->
                 <form id="formulario_do_botao" method="post" action="/pedidos">
@@ -36,14 +36,10 @@
                     <input min="1" type="number" id="quantidade" name="quantidade" value="1" />
                     <button onclick="postPedido()" id="form_pedido_btn" type="submit">Adicionar a Adega</button>
                 </form>
-
-
-
             </section>
             <% } %>
         </section>
     </main>
-
 
     <script>
         function postPedido() {
@@ -72,11 +68,7 @@
             fetch("/pedidos", settings).then(data => {
                 console.log(data)
             }).catch(err => console.log(err));
-
         }
     </script>
 
     <%- include('../views/partials/footer'); -%>
-</body>
-
-</html>

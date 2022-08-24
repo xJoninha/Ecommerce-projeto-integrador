@@ -1,0 +1,107 @@
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+
+:root {
+    --cor-primaria: #2e0049;
+    --cor-primaria-claro: #5b2b75;
+    --cor-primaria-claro-opaco: #5b2b7548;
+    --cor-primaria-escuro: #130023;
+  
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-claro: #ffffff;
+    --cor-secundaria-escuro: #c0b3c2;
+  
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
+  
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
+  
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
+  }
+    
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--estilo-fonte-1);
+    color: var(--cor-texto-secundaria);
+  }
+
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+   font-size: var(--fonte-tamanho-extraGrande); 
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-height: 200px;
+  }
+
+  .botaoVoltar {
+    font-size: var(--fonte-tamanho-grande);
+  }
+
+  .vinhos {
+    display: flex; 
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .listaVinhos {
+    font-size: var(--fonte-tamanho-medio);
+    color:#5b2b75;
+  }
+
+  .containerVinho {
+    position: relative;
+    margin: 40px;
+    width: 25%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contentVinho {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

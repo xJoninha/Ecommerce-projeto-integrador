@@ -10,30 +10,49 @@
 
     <main>
 
+        <!-- Títula da página -->
         <div class="tituloDaPagina">
             <h2>Minha Adega</h2>
         </div>
 
+        <!-- Item adicionado ao carrinho -->
         <div class="caixaItemCarrinho">
 
             <section class="caixaItemCarrinho_sec-1">
                 
-                <section class="container-vitrine">
+                <!-- Imagem do produto e input para adicionar remover -->
+                <div class="imagem-produto-adega">
                     
-                   
-                </section>
-
-
+                    <!-- Imagem -->
+                    <div class="imagem-produto-adega-imagem">
+                        <img src="/images/garrafas/antonio.webp" alt="" width="auto" height="150px">
+                    </div>
+                    
+                    <!-- Intut adicionar e apagar -->
+                    <div class="imagem-produto-input">
+                        <input type="number" value="1" step="1"/>
+                        <a class="excluir-produto-adega-botao" title="Excluir da minha adega"><img src="/images/svg/trash-svg.svg" width="30px" height="auto"></a>
+                    </div>  
+                </div>
+                
+                <!-- Informações do produto - nome, descrição e preço -->
+                <div class="info-produto-adega">
+                    <h3 class="info-produto-adega-titulo"> (Nome do vinho aqui) </h3>
+                    <p class="info-produto-adega-descricao"> (Descrição aqui) Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quae sed cumque laborum sequi cupiditate deserunt!</p>
+                    <span class="info-produto-adega-preco">R$ (preço)</span>
+                </div>
             </section>
 
         </div>
 
+        <!-- Div para finalização do pedido -->
         <div class="totais">
 
+            <!-- Calculo frete -->
             <section class="totais-calculo-frete">
                 <h4>Calcular o frete</h4>
                 <form class="formularioCep">
-                    <input class="inputCep" type="text" id="CEP" name="CEP" placeholder="Informe seu CEP" required>
+                    <input class="inputCep" type="text" id="CEP" name="CEP" placeholder="Informe seu CEP" minlength="9" maxlength="9" required>
                     <input type="submit" class="botaoSimular" value="Simular">
                     <div class="respostas-cep">
                         <span class="resposta-valor-frete">Valor do frete R$(aqui)</span>
@@ -42,9 +61,11 @@
                 </form>
             </section>
             
+            <!-- Resumo do pedido -->
             <section class="totais-resumo-compra">
                 <h4>Resumo</h4>
                 
+                <!-- Subtotal sem frete -->
                 <div class="resumo-compra-subtotal">
                     <div class="resumo-compra-subtotal-conteudo">
                         <span class="quantidade-itens">Quantidade de itens (aqui)</span>
@@ -52,25 +73,30 @@
                     </div>
                 </div>
                 
+                <!-- Total com frete -->
+                <h4>Total</h4>
                 <div class="resumo-compra-total">
                     <div class="resumo-compra-total-conteudo">
-                        <h4>Total</h4>
                         <span class="valor-itens">R$(aqui)</span>
                     </div>
                 </div>           
             </section>
 
+            <!-- Forma de pagamento -->
             <section class="condicoes-pgto">
                 <div class="escolha-forma-pagamento">
                     <h4>Forma de pagamento</h4>
                     <label>Opções de pagamento</label>
                     <form class="condicoes-pagamento-opcoes">
                         <select required>
+                            <option selected disabled>Selecione</option>
                             <option>Boleto</option>
                             <option>Cartão de crédito</option>
                         </select>
                     </form>
                 </div>
+
+                <!-- Cartão de crédito -->
                 <div class="dados-cartao-credito">
                     <h4>Dados cartão de crédito</h4>
                     <form>
@@ -90,9 +116,10 @@
                 </div>
             </section>
 
+            <!-- Endereço de entrega -->
             <section class="dados-endereco-entrega">
                 <h4>Endereço de entrega</h4>
-                <form actio="" method="" class="form-end-entrega">
+                <form action="" method="" class="form-end-entrega">
                     <label for="endereco">Endereço</label>
                     <input name="endereco" id="endereco" type="text" placeholder="Rua, Avenida, Acesso..." required>
                     
@@ -118,12 +145,17 @@
             </section>
         </div>
 
+        <!-- Botões continuar compra e finalizar -->
         <div class="voltar-finalizar-compra">
+
             <section class="voltar-comprar">
+
+                <!-- Volta para home -->
                 <div class="voltar">
                     <a href="/"><button class="botao-voltar" type="">Continuar comprando</button></a>
                 </div>
         
+                <!-- Finalizar compra -->
                 <div class="aba-compra-box">
                     <button class="botao-finalizar-compra" type="">Finalizar Compra</button>
                 </div>

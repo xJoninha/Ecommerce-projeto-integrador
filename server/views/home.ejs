@@ -3,15 +3,13 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel='stylesheet' href='./stylesheets/home-style.css'/>
+    <link rel='stylesheet' href='/stylesheets/home-style.css'/>
   </head>
 
     <%- include('./partials/header') -%>
 
     <main>
-        <!-- <% if ( locals.usuarioLogado && usuarioLogado.userAdmin === 1) { %>
-            <a href="/admin/usuarios" class="link-usuarios">Todos Usuarios</a>
-        <% } %> -->
+      
         <!-- Slick slide - carousel -->
         <div class="carousel">
             <div><img src="./images/carrocelHome/banner-amigos.png" alt=""></div>
@@ -32,6 +30,7 @@
                     <img src="./images/categoria-destaque/tinto.svg" alt="Figura de vinho branco">
                 </a>
             </section>
+            
             <section class="categorias-destaques_sec-2">
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Branco</h3>
@@ -40,6 +39,7 @@
                     <img src="./images/categoria-destaque/branco.svg" alt="Figura de vinho tinto">
                 </a>
             </section>
+
             <section class="categorias-destaques_sec-3">
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Rosé</h3>
@@ -48,6 +48,7 @@
                     <img src="./images/categoria-destaque/rose.svg" alt="Figura de vinho rosé">
                 </a>
             </section>
+
             <section class="categorias-destaques_sec-4">
                 <div class="categorias-destaques-titulo-cards">
                     <h3>Espumante</h3>
@@ -87,15 +88,12 @@
                 <p class="preco-antigo">R$ 58,79</p>
                 <p class="preco-novo">R$ 43,49</p>
 
-
                 <form class="forme" method="post" action="/pedidos">
                     <input type="hidden" name="produtos_id" value="10" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
-
 
             <section class="container-promocoes_sec-3">
                 <div>
@@ -109,9 +107,10 @@
                     <input type="hidden" name="produtos_id" value="22" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
+                </form>
 
             </section>
+
             <section class="container-promocoes_sec-4">
                 <div>
                     <img src="./images/garrafas/vinhoTinto/Las-falleras-tinto.webp" alt="">
@@ -124,8 +123,7 @@
                     <input type="hidden" name="produtos_id" value="12" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
         </div>
         <!-- Promoções -->
@@ -136,21 +134,20 @@
             <section>
                 <a href="./produto"></a>
                 <div>
-                    
                     <img src="./images/garrafas/vinho-elegance-espumante.webp" alt="">
                 </div>
-            </a>
+                </a>
            
-            <a href="/produtos/produto/24" title=""><h3>Vinho Elegance</h3></a>
+                <a href="/produtos/produto/24" title=""><h3>Vinho Elegance</h3></a>
                 <p>R$ 46,79</p>
                 
                 <form class="forme" method="post" action="/pedidos">
                     <input type="hidden" name="produtos_id" value="24" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
+
             <section>
                 <div>
                     <img src="./images/garrafas/vinho-manolo-rose.svg" alt="">
@@ -162,9 +159,9 @@
                     <input type="hidden" name="produtos_id" value="25" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
+
             <section>
                 <div>
                     <img src="./images/garrafas/vinho-presence-espumante.svg" alt="">
@@ -176,9 +173,9 @@
                     <input type="hidden" name="produtos_id" value="26" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
+
             <section>
                 <div>
                     <img src="./images/garrafas/vinho-tantehue-branco.svg" alt="">
@@ -190,10 +187,9 @@
                     <input type="hidden" name="produtos_id" value="27" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
-
+                </form>
             </section>
+
             <section>
                 <div>
                     <img src="./images/garrafas/vinhoTinto/Los-andes-tinto.jpg" alt="">
@@ -205,9 +201,9 @@
                     <input type="hidden" name="produtos_id" value="13" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
+
             <section>
                 <div>
                     <img src="./images/garrafas/vinho-terras-rose.svg" alt="">
@@ -219,13 +215,10 @@
                     <input type="hidden" name="produtos_id" value="28" />
                     <input class="inpute" min="1" type="number" id="quantidade" name="quantidade" value="1"/>
                     <button type="submit" >Adicionar a Adega</button>
-                  </form>
-
+                </form>
             </section>
-        </div>
-        <!-- Mais Vendidos -->
 
-        
+        </div>
     </main>
 
   <%- include('./partials/footer') -%>
