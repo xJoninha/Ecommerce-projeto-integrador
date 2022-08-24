@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require('../controller/pedidosController');
 
 //router.get('/', controller.allProducts);
-// router.post('/home', controller.salvaProduto);
+router.post('/', controller.createPedido);
 
 
 

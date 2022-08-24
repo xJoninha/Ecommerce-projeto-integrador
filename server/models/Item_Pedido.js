@@ -12,6 +12,9 @@ module.exports = (sequelize, dataTypes) => {
         valor: {
             type: dataTypes.DECIMAL
         },
+        pedidos_id: {
+            type: dataTypes.INTEGER
+        },
         produtos_id: {
             type: dataTypes.INTEGER
         }

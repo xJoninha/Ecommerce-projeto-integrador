@@ -18,24 +18,34 @@
 
             <section class="caixaItemCarrinho_sec-1">
                 
-                <div class="imagem-produto-adega">
+                <section class="container-vitrine">
                     
-                    <div class="imagem-produto-adega-imagem">
-                        <img src="/images/garrafas/antonio.webp" alt="" width="auto" height="150px">
-                    </div>
-                    
-                    <div class="imagem-produto-input">
-                        <!-- <label>Quantidade</label> -->
-                        <input type="number" value="1" step="1"/>
-                        <a class="excluir-produto-adega-botao" title="Excluir da minha adega"><img src="/images/svg/trash-svg.svg" width="30px" height="auto"></a>
-                    </div>  
-                </div>
-                
-                <div class="info-produto-adega">
-                    <h3 class="info-produto-adega-titulo">Vinho Faruna - Tinto</h3>
-                    <p class="info-produto-adega-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quae sed cumque laborum sequi cupiditate deserunt!</p>
-                    <span class="info-produto-adega-preco">R$ 227,60</span>
-                </div>
+                    <% for( let produto of produtoPesquisado) { %>
+                    <section class="">
+        
+                        <div class="">
+                            
+                            <a href=" /produtos/produto/<%= produto.id %> ">
+                                <img src="<%= produto.image %> " alt=""></a>
+                        </div>
+                        <h3> <%= produto.nome %> </h3>
+                        <p> R$ <%= produto.preco %> </p>
+        
+        
+                        <!-- Botão de adicionar a Adega -->
+                        <form id="formulario_do_botao" method="post" action="/pedidos">
+                            <input type="hidden" name="produtos_id" id="produtos_id" value="<%= produto.id %>" />
+                            <input min="1" type="number" id="quantidade" name="quantidade" value="1" />
+                            <button onclick="postPedido()" id="form_pedido_btn" type="submit">Adicionar a Adega</button>
+                        </form>
+        
+        
+        
+                    </section>
+                    <% } %>
+                </section>
+
+
             </section>
 
         </div>
