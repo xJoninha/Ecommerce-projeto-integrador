@@ -41,17 +41,12 @@ controller.busca = async (req, res) => {
     let {key} = req.query;
 
     let produtoPesquisado = await Product.findAll({
-
         //7º dentro do where vai a condição com operadores sequelize like; tem que importar lá no começo da página
         where: {
-
             nome: {
                 [Op.like]: `%${key}%`
             }
-
         }
-
-
     })
     
 
@@ -69,12 +64,7 @@ controller.vitrine = async (req, res) => {
         usuarioAdmin: req.cookies.admin
     })
 }
-controller.adega = (req, res) => {
-    res.render('adega', {
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-    })
-}
+
 controller.allProductsAdmin = async (req, res) => {
     const products = await Product.findAll();
     res.render('productsAdmin', {

@@ -16,5 +16,18 @@ controller.createPedido = async (req, res) => {
 
 //mostra a lista na página da ADEGA depois
 
+controller.leiaPedido = async (req, res) => {
+
+    const pedidos = await Pedido.findAll();
+    res.render('adega', {
+        pedidos:
+        produtos_id,
+        quantidade
+    })
+
+}
+
+
+
 
 module.exports = controller;

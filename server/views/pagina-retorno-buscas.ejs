@@ -32,13 +32,11 @@
 
                 <!-- Botão de adicionar a Adega -->
                 <form id="formulario_do_botao" method="post" action="/pedidos">
-                    <input type="hidden" name="produtos_id" id="produtos_id" value="<%= produto.id %>" />
-                    <input min="1" type="number" id="quantidade" name="quantidade" value="1" />
-                    <button onclick="postPedido()" id="form_pedido_btn" type="submit">Adicionar a Adega</button>
+                    <!-- <input type="hidden" name="produtos_id" value="<%= produto.id %>" /> -->
+                    <input min="1" type="number" id="<%= produto.id %>" name="quantidade" value="1" />
+                    <button data-id="<%= produto.id %>" onclick="postPedido()" id="form_pedido_btn">Adicionar a
+                        Adega</button>
                 </form>
-
-
-
             </section>
             <% } %>
         </section>
@@ -49,17 +47,19 @@
         function postPedido() {
             event.preventDefault();
 
+            // Pegando id do produto
+            const idDoProduto = Number(event.target.getAttribute("data-id"));
+
             // URL que será usada para o controller saber redirecionar para a página correta
             const urlDeOrigem = `${location.pathname}${location.search}`;
 
             // Criando corpo da requisição que irá para o controller
             const reqBody = {
-                produtos_id: Number(document.querySelector("#produtos_id").value),
-                quantidade: Number(document.querySelector("#quantidade").value),
+                produtos_id: idDoProduto,
+                quantidade: Number(document.getElementById(`${idDoProduto}`).value),
                 urlDeOrigem
             };
 
-            console.log(reqBody);
 
             const settings = {
                 method: 'POST',
@@ -72,7 +72,6 @@
             fetch("/pedidos", settings).then(data => {
                 console.log(data)
             }).catch(err => console.log(err));
-
         }
     </script>
 
