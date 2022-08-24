@@ -86,6 +86,7 @@ main {
     font-family: var(--estilo-fonte-1);
     text-align: center;
     position: relative;
+    padding: 0 5px 15px;
 }
 
 .container-vitrine section h3::before {
@@ -103,7 +104,8 @@ main {
     font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
     font-weight: bold;
-    text-align: center;
+    text-align: right;
+    padding: 0 10px;
 }
 
 /* .container-vitrine section {

@@ -50,9 +50,8 @@ app.use("/", indexRouter);
 
 
 // Apenas usuarios administradores
-app.use(adminMiddleware);
 
-app.use("/admin", adminRouter);
+app.use("/admin",adminMiddleware ,adminRouter);
 
 
 

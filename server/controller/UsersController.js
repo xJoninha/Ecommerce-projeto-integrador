@@ -36,8 +36,6 @@ controller.login = (req, res) => {
   if(usuario) {
     res.render("login", {
         usuario,
-        titulo: "Login",
-        subtitulo: "Preencha os campos para acessar seu perfil!",
         usuarioLogado: req.cookies.usuario,
         usuarioAdmin: req.cookies.admin
       })

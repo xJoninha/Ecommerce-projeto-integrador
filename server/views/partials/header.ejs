@@ -8,7 +8,6 @@
         <script src="/stylesheets/header-style.js"></script>
         <title>Adega Digital</title>
     </head>
-    <body>        
         <header>
         <!-- Início header mobile -->
         <div class="mobile">
@@ -18,16 +17,16 @@
                 <ul>
                     <li>
                         <form class="busca-mobile-form" action="/produtos/busca" method="get">
-                            <input type="text" id="busca-mobile-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name = "mobile-key"/>
+                            <input type="text" id="busca-padrao-texto" placeholder="Buscar na Adega Digital..." title="Buscar na Adega Digital" name="key">
                             <button class="busca-mobile-botao" type="submit" title="Buscar">
                                 <img src="/images/svg/magnifying-glass.svg" width="36" height="36">
                             </button>
                         </form>
                     </li>
-                    <li><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
-                    <li><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
-                    <li><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
-                    <li><a href="/produtos/vitrine-espumante">Espumante</a></li>
+                    <li><a href="/produtos/vitrine/Tinto" title="Vinho Tinto">Vinho Tinto</a></li>
+                    <li><a href="/produtos/vitrine/Branco" title="Vinho Branco">Vinho Branco</a></li>
+                    <li><a href="/produtos/vitrine/Rose" title="Vinho Rose">Vinho Rose</a></li>
+                    <li><a href="/produtos/vitrine/Espumante">Espumante</a></li>
                 </ul>
             </nav>
             <!-- Logo do menu mobile -->
@@ -55,20 +54,6 @@
                     <li><a href="" title="Realizar cadastro">Sair</a></li>
                 </ul>
             </div>
-                <!-- <ul>
-                    <li>
-                        <form class="form-cadastro">
-                            <h2>Login</h2>
-                            <label for="email-cadastrado">Usuário:</label>
-                            <input type="text" class="input-email-cadastrado" id="email-cadastrado" placeholder="E-mail" title="E-mail">
-                            <label for="senha-cadastrada">Senha:</label>
-                            <input type="password" class="input-senha-cadastrada" id="senha-cadastrada" placeholder="Senha" title="Senha">
-                            <button class="botao-entrar" type="submit">Entrar</button>
-                        </form>
-                    </li>
-                    <li><a href="/usuario/cadastro">Cadastrar</a></li>
-                    <li><a href="">Recuperar senha</a></li>
-                </ul> -->
             </nav>
             </div>
 
@@ -80,6 +65,12 @@
         <!-- Fim header mobile -->
 
         <!-- Início header desktop -->
+        <div class="admin-btn-container">
+            <% if ( locals.usuarioLogado && usuarioLogado.userAdmin === 1) { %>
+                <a href="/admin/usuarios" class="btn-admin left-btn">Gerenciamento de Usuarios</a>
+                <a href="/admin/produtos" class="btn-admin right-btn">Gerenciamento de Produtos</a>
+            <% } %>
+        </div>
        
         <div class="padrao">
             <!-- Logo do menu desktop -->
@@ -111,6 +102,8 @@
                 <button class="abrir-usuario-desktop" title="Entrar ou cadastrar">
                     <% if( locals.usuarioLogado ) { %>
                         <p class="usuario-nome-p">Olá <b><%= usuarioLogado.nome %></b>, seja bem vindo(a)</p>
+                    <% } else { %>
+                        <p class="usuario-nome-p">Olá Visitante</p>
                     <% } %>
                     <img src="/images/svg/user.svg" width="40" height="40">
                 </button>
@@ -118,50 +111,27 @@
                 <nav class="nav-abrir-usuario-desktop">
                     <!-- aqui vai o menu que abre quando clicado, vai aparecer opções para logar e cadastrar -->
                     <div class="usuario-desktop-nao-logado">
-                            <ul>
-                                <% if( !locals.usuarioLogado ) { %>
-                                <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
-                                <li><a href="/usuario/cadastro" title="Realizar cadastro">Cadastrar</a></li>
-                                <% } %>
-                            </ul>
+                        <% if( !locals.usuarioLogado ) { %>
+                        <ul>
+                            <li><a href="/usuario/login" title="Entrar">Entrar</a></li>
+                            <li><a href="/usuario/cadastro" title="Realizar cadastro">Cadastrar</a></li>
+                        </ul>
+                        <% } %>
                     </div>
     
                     <!-- aqui vai link para pedidos e opção para sair do site -->
                     
                     <div class="usuario-desktop-logado">
+                        <% if ( locals.usuarioLogado ) { %>
                         <ul>
-                            <% if ( locals.usuarioLogado ) { %>
                             <li><a href="" title="Pedidos">Pedidos</a></li>
                             <li><a href="/usuario/logout" title="Área de logout">Sair</a></li>
-                            <% } %>
                         </ul>
+                        <% } %>
                     </div>
                     
                 </div>
                 </nav>
-
-            <!--Div do usuário antiga-->
-
-            <!-- <div class="usuario">
-                <div class="user-title">
-                    <img src="/images/svg/user.svg" width="40" height="40">
-
-                    <% if ( locals.usuarioLogado ) { %>
-                    <a href="/usuario/logout" title="Área de logout"><p>Logout</p></a>
-                    <% } %>
-                    <% if(!locals.usuarioLogado) { %>
-                    <a href="/usuario/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
-                    <% } %>
-                </div>
-
-                <a href="/usuarios/login" title="Área de login"><p>Login</p></a>
-                <% if ( locals.usuarioLogado ) { %>
-                <a href="/usuarios/logout" title="Área de logout"><p>Logout</p></a>
-                <% } %>
-                <% if(!locals.usuarioLogado) { %>
-                <a href="/usuarios/cadastro" title="Área de cadastro"><p>Cadastro</p></a>
-                <% } %>
-            </div> -->
 
             <div class="adega">
                 <a href="/produtos/adega" title="Ver adega"><img src="/images/svg/wine-rack.svg" width="60" height="60"></a>
@@ -170,11 +140,10 @@
         <!-- Navigation do header para desktop -->
         <nav class="menu-padrao">
             <ul>
-                <li class="tinto"><a href="/produtos/vitrine-tinto" title="Vinho Tinto">Vinho Tinto</a></li>
-                <li class="branco"><a href="/produtos/vitrine-branco" title="Vinho Branco">Vinho Branco</a></li>
-                <li class="rose"><a href="/produtos/vitrine-rose" title="Vinho Rose">Vinho Rose</a></li>
-                <li class="espumante"><a href="/produtos/vitrine-espumante" title="Espumante">Espumante</a></li>
+                <li class="tinto"><a href="/produtos/vitrine/Tinto" title="Vinho Tinto">Vinho Tinto</a></li>
+                <li class="branco"><a href="/produtos/vitrine/Branco" title="Vinho Branco">Vinho Branco</a></li>
+                <li class="rose"><a href="/produtos/vitrine/Rose" title="Vinho Rose">Vinho Rose</a></li>
+                <li class="espumante"><a href="/produtos/vitrine/Espumante" title="Espumante">Espumante</a></li>
             </ul>
         </nav>
     </header> 
-</html>

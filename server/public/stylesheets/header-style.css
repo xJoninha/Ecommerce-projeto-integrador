@@ -39,6 +39,10 @@ header {
     background-color: var(--cor-primaria);
 }
 
+body {
+    background-color: var(--cor-secundaria);
+}
+
 /* Div pai logo, form de busca, login e adega desktop */
 .padrao {
     display: flex;
@@ -118,8 +122,8 @@ header {
 }
 
 .abrir-usuario-desktop:hover {
-    transform: scale(1.1);
-    border-bottom: 2px solid white;
+    transform: scale(1.01);
+    border-bottom: 1px solid white;
 }
 
 .nav-abrir-usuario-desktop {
@@ -129,12 +133,16 @@ header {
 .visivel-usuario-desktop {
     display: block;
     position: absolute;
-    top: 114px;
+    top: 170px;
     left: inherit;
     width: auto;
     height: auto;
     background-color: var(--cor-primaria);
     z-index: 2;
+    border-bottom: 1px solid var(--cor-primaria-escuro);
+    border-left: 1px solid var(--cor-primaria-escuro);
+    border-right: 1px solid var(--cor-primaria-escuro);
+    border-radius: 5px;
 }
 
 /* Div do usuário não logado */
@@ -179,11 +187,7 @@ header {
 
 /* Usuário logado */
 
-/*---PROVISORIO--ERROR-PAGE---*/
-.error-body {
-    background-color: var(--cor-secundaria);
-}
-
+/*-ERROR-PAGE---*/
 .error-container {
     display: flex;
     align-items: center;
@@ -199,15 +203,21 @@ header {
     font-family: var(--estilo-fonte-1);
     font-size: 40px;
 }
-/*---PROVISORIO--ERROR-PAGE---*/
+/*-ERROR-PAGE---*/
 
 /* Div usuário logado */
 
 .usuario-nome-p {
     color: var(--cor-texto-primario);
-    margin: auto;
+    margin-top: 14px;
     margin-right: 5px;
     font-size: 18px;
+}
+
+.usuario-nome-p b {
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0px 0px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    color: #8100bb;
+    font-size: 24px;
 }
 
 .usuario-desktop-logado {
@@ -248,34 +258,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Código antigo */
-/* .user-title {
-    display: flex;
-    align-items: flex-end;
-    color: white;
-}
-
-.usuario {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.usuario a {
-    color: var(--cor-texto-primario);
-    font-weight: bold;
-}
-
-.usuario a:nth-child(2) {
-    margin-right: 30px;
-}
-
-.usuario p {
-    font-size: var(--fonte-tamanho-pequeno);
-} */
-
-/* Adega - carrinho de compras desktop */
 .adega {
     transition: transform 0.3s ease-in-out;
 }
@@ -297,45 +279,19 @@ header {
 
 .menu-padrao li a {
     font-family: var(--estilo-fonte-1);
-    font-size: var(--fonte-tamanho-pequeno);
+    font-size: var(--fonte-tamanho-medio);
     font-weight: bold;
     color: var(--cor-secundaria-escuro);
     list-style: none;
     text-decoration: none;
     justify-content: space-around;
     position: static;
+    transition: 0.2s ease-in-out;
 }
 
-.tinto {
-    transition: transform 0.3s ease-in-out;  
-}
-
-.tinto:hover {
-    transform: scale(1.1);
-}
-
-.branco {
-    transition: transform 0.3s ease-in-out;  
-}
-
-.branco:hover {
-    transform: scale(1.1);
-}
-
-.rose {
-    transition: transform 0.3s ease-in-out;  
-}
-
-.rose:hover {
-    transform: scale(1.1);
-}
-
-.espumante {
-    transition: transform 0.3s ease-in-out;  
-}
-
-.espumante:hover {
-    transform: scale(1.1);
+.menu-padrao li:hover a {
+    color: black;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0px 0px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;;
 }
 
 .abrir-menu {
