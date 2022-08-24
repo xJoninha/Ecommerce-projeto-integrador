@@ -106,15 +106,16 @@ main {
     text-align: center;
 }
 
-/* .container-vitrine section {
-    margin: 0px auto 10px;
-    border-radius: 3px;
-    background-color: var(--cor-secundaria-claro);
-    width: 45%;
-    height: 250px;
-    max-width: 190px;
-    position: relative;
-} */
+.container-vitrine form {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.container-vitrine input {
+    text-align: center;
+    width: 70%;
+}
 
 .container-vitrine section:hover {
     box-shadow: 0px 0px 3px 0px var(--cor-primaria-escuro);

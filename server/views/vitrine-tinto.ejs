@@ -26,7 +26,13 @@
                     <h3>
                         <%= produto.nome %></h3>
                     <p>R$ <%= produto.preco %></p>
-                    <button>Adicionar à Adega</button>
+                    
+                    <!-- Botão de adicionar a Adega -->
+                    <form method="post" action="/pedidos">
+                    <input type="hidden" name="produtos_id" value="<%= produto.id %>" />
+                    <input min="1" type="number" id="quantidade" name="quantidade" value="1"/>
+                    <button type="submit" >Adicionar a Adega</button>
+                    </form>
                     
                 </section>
                 <% } %>

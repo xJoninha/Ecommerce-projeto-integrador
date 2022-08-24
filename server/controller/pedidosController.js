@@ -1,11 +1,20 @@
+const sequelize = require('sequelize')
+const db = require('../models')
+
+const Pedido = db.Item_Pedido;
+const controller = {};
 
 
-// const db = require('../models')
+controller.createPedido = async (req, res) => {
+
+    const {produtos_id, quantidade, urlDeOrigem} = req.body;
+    await Pedido.create({ produtos_id, quantidade});
+
+    res.redirect(301, urlDeOrigem);
+};
 
 
-// controller.addPedido = async (req, res) => {   
+//mostra a lista na página da ADEGA depois
 
-// const { quantidade, valor, produtos_id} = req.body;
-  
 
-//   };
+module.exports = controller;
