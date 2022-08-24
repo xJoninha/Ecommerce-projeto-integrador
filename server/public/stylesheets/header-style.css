@@ -142,7 +142,6 @@ body {
     border-right: 1px solid var(--cor-primaria-escuro);
     border-radius: 5px;
 }
-
 /* Div do usuário não logado */
 
 .usuario-desktop-nao-logado {
@@ -182,7 +181,6 @@ body {
 .usuario-desktop-nao-logado a:hover {
     transform: scale(1.1);
 }
-
 /* Usuário logado */
 
 /*-ERROR-PAGE---*/
@@ -202,6 +200,46 @@ body {
     font-size: 40px;
 }
 /*-ERROR-PAGE---*/
+
+/* Botões de gerenciamento administrador */
+.admin-btn-container {
+    font-family: var(--estilo-fonte-1);
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.admin-btn-container a {
+    text-decoration: none;
+}
+
+.left-btn {
+    margin: 20px 10px 0 auto;
+}
+
+.right-btn {
+    margin: 20px auto 0 10px;
+}
+
+.btn-admin {
+    width: auto;
+    height: auto;
+    padding: 0 5px;
+    font-size: 24px;
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    border-radius: 4px;
+    background-color: #ae85c4;
+}
+
+.btn-admin:hover {
+    background-color: var(--cor-primaria-escuro);
+    color: var(--cor-secundaria-claro);
+    box-shadow: 0px 0px 3px white;
+}
+/* Botões de gerenciamento administrador */
 
 /* Div usuário logado */
 

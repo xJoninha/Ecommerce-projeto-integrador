@@ -20,11 +20,7 @@ controller.allProducts = (req, res) => {
             })
         })
 } 
-
-
-
 //Esse redireciona para a página do produto específico
-
 controller.getProduct = (req, res) => {
     let params = req.params.id
     Product.findByPk(params)
@@ -37,8 +33,6 @@ controller.getProduct = (req, res) => {
             })
         })
 }
-
-
 //********************* */
 //2º Retorna a busca feita para a página pagina-retorno-buscas
 controller.busca = async (req, res) => {
@@ -65,8 +59,6 @@ controller.busca = async (req, res) => {
 
 
 }
-
-
 controller.vitrine = async (req, res) => {
     let {id} = req.params
     let produto = await Product.findAll({where: {tipo: id}})
@@ -77,46 +69,19 @@ controller.vitrine = async (req, res) => {
         usuarioAdmin: req.cookies.admin
     })
 }
-controller.vitrineTinto = async (req, res) => {
-    let produtos = await Product.findAll();
-    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Tinto")
-    res.render('vitrine-tinto', {
-        result,
+controller.adega = (req, res) => {
+    res.render('adega', {
         usuarioLogado: req.cookies.usuario,
         usuarioAdmin: req.cookies.admin
-    })    
+    })
 }
-controller.vitrineBranco = async (req, res) => {
-    let produtos = await Product.findAll();
-    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Branco")
-    res.render('vitrine-branco', {
-        result,
+controller.allProductsAdmin = async (req, res) => {
+    const products = await Product.findAll();
+    res.render('productsAdmin', {
+        produtos: products,
         usuarioLogado: req.cookies.usuario,
         usuarioAdmin: req.cookies.admin
-    })    
+    })
 }
-controller.vitrineRose = async (req, res) => {
-    let produtos = await Product.findAll();
-
-    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Rose")
-    res.render('vitrine-rose', {
-        result,
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-    })    
-}
-controller.vitrineEspumante = async (req, res) => {
-    let produtos = await Product.findAll();
-    let result = produtos.filter(produtosFiltrados => produtosFiltrados.tipo === "Espumante")
-    res.render('vitrine-espumante', {
-        result,
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-    })    
-}
-controller.adega = (req, res) => res.render('adega', {
-    usuarioLogado: req.cookies.usuario,
-    usuarioAdmin: req.cookies.admin
-})
 
 module.exports = controller;
