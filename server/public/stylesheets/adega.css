@@ -32,7 +32,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: solid 1px red; */
 }
 
 body {
@@ -104,19 +103,6 @@ body {
     width: 100%;
     padding: 5px;
 }
-
-/* .imagem-produto-input label {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0px 5px 0px 0px;
-    font-size: var(--fonte-tamanho-extrapequeno);
-    font-family: var(--estilo-fonte-1);
-    font-weight: bold;
-    color: var(--cor-texto-secundaria);
-} */
 
 .imagem-produto-input input {
     display: flex;
@@ -531,12 +517,71 @@ body {
 @media (max-width: 768px) {
     .caixaItemCarrinho_sec-1 {
         border-radius: 2px;
-        width: 80%;
+        width: 90%;
         height: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-self: center;
+        background-color: #ffffff;
+        border-bottom: 2px solid var(--cor-primaria);
+        padding: 10px;
+    }
+
+    .totais-calculo-frete {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .totais-resumo-compra {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .condicoes-pgto {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .dados-endereco-entrega {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color: #ffffff;
+        padding: 10px;
+        border-bottom: 2px solid var(--cor-primaria);
+    }
+
+    .voltar-comprar {
+        border-radius: 2px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-self: center;
         background-color: #ffffff;
         border-bottom: 2px solid var(--cor-primaria);
