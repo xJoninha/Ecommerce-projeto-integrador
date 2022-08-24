@@ -32,11 +32,6 @@
     list-style: none;
 }/* --------------------------------------- */
 
-/* ol,
-ul {
-    padding: 0px !important;
-} */
-
 a:link {
     text-decoration: none;
     list-style: none;
@@ -47,7 +42,6 @@ footer {
     width: 100%;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-primario);
-    /* padding: 5px; */
     margin: 0;
     bottom: 0;
 }
@@ -188,7 +182,6 @@ footer {
     height: auto;
     font-family: var(--estilo-fonte-1);
     font-size: var(--fonte-tamanho-pequeno);
-    /* border-top: 1px solid var(--cor-secundaria); */
     background-color: var(--cor-primaria-dark);
     margin-top: 10px;
 }

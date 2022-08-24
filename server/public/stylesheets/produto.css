@@ -1,36 +1,38 @@
-/* criação das variaveis para cores e fontes */
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&family=Tinos&display=swap');
+
+/* ***************************************************** */
+/* GERAIS */
+
 :root {
-  --cor-primaria: #2e0049;
-  --cor-primaria-claro: #5b2b75;
-  --cor-primaria-claro-opaco: #5b2b7548;
-  --cor-primaria-escuro: #130023;
+    --cor-primaria: #2e0049;
+    --cor-primaria-light: #5b2b75;
+    --cor-primaria-dark: #130023;
 
-  --cor-secundaria: #f3e5f5;
-  --cor-secundaria-claro: #ffffff;
-  --cor-secundaria-escuro: #c0b3c2;
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-light: #ffffff;
+    --cor-secundaria-dark: #c0b3c2;
+    --cor-secundaria-medio: #bc97c2;
 
-  --cor-texto-primario: #fff;
-  --cor-texto-secundaria: #000;
 
-  --estilo-fonte-1: 'Raleway', sans-serif;
-  --estilo-fonte-2: 'Dancing Script', 'cursive';
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
 
-  --fonte-tamanho-extraPequeno: 0.9rem;
-  --fonte-tamanho-pequeno: 1.2rem;
-  --fonte-tamanho-medio: 1.8rem;
-  --fonte-tamanho-grande: 2.0rem;
-  --fonte-tamanho-extraGrande: 2.7rem;
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
+
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
 }
-
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 body {
   background-color: var(--cor-secundaria);
@@ -46,98 +48,120 @@ body {
 }
 
 /* é o card do produto todo */
-.flex-produto{
-  border-radius: 2px;
-  /* width: 80%; */
+.flex-produto {
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
-  background-color: #ffffff;
-  border-bottom: 2px solid var(--cor-primaria);
-  padding: 10px;
 }
 
-/* Corpo REAL */
-/* .flex-produtos-corpo{
-  margin-bottom: 0px;
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: none !important;
 }
-
-.flex-produtos-corpo.card {
-  background-color: var(--cor-primaria-claro);
-} */
 
 /* Caixa no torno da descrição */
-.produtos-descricao{
-  /* align-items: center; */
+.produtos-descricao {
   font-weight: bolder;
-  color: #000;
+  color: var(--cor-texto-secundaria);
 }
 
 /* **************************** IMAGEM ****************************************** */
+.row, .col-md {
+  width: 100%;
+  max-width: 100%;
+}
 
-.imagem-card{
+.imagenzinha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
+.imagem-card {
   border-radius: 10px;
 }
 
 /* **************************** TEXTOS ****************************************** */
 
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 80px;
-  font-size: var(--fonte-tamanho-grande);
-  background-color: var(--cor-texto-secundaria);
-  border-radius: 4px;
-  
+.card-body h5 {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-medio);
+  font-weight: bold;
 }
 
-.card-text{
-  font-size: var(--fonte-tamanho-medio);
+.card-body h6 {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-pequeno);
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: var(--fonte-tamanho-pequeno);
   font-family: var(--estilo-fonte-1);
   text-align: justify;
 }
 
-.card-title{
-  font-size: var(--fonte-tamanho-extraGrande);
-  font-weight: bold;
-  font-family: var(--estilo-fonte-1);
-}
-
-.col-6{
+.card-title {
   font-size: var(--fonte-tamanho-medio);
+  font-weight: bold;
+  font-family: var(--estilo-fonte-1);
+}
+
+.col-6 {
+  font-size: var(--fonte-tamanho-extrapequeno);
   font-family: var(--estilo-fonte-1);
   font-weight: bold;
 }
 
-.box-button {
-  color: rgba(255, 255, 255, 0);
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.preco-produto {
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-pequeno);
+  font-weight: bolder;
+}
+
+.adicionar-adega {
+  background-color: var(--cor-texto-primario);
+  margin: 5px auto;
+  width: 90%;
+  height: auto;
+  max-width: 190px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.botao-adicionar-adega {
+  cursor: pointer;
   border: none;
-  font-size: 20px;
+  border-radius: 4px;
+  width: 85%;
+  height: 35px;
+  margin: 0 auto;
+  position: absolute;
+  left: 7%;
+  bottom: 10px;
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-extraPequeno);
   font-weight: bold;
+  line-height: 13px;
+  color: var(--cor-texto-secundaria);
+  transition: 0.2s ease-in-out;
 }
 
-.box-button:hover {
-  color: var(--cor-primaria);
-}
-
-.cor-detalhes{
-    padding:20px;
-    border: 2px solid var(--cor-texto-secundaria);
-}
-
-.produtos-descricao svg{
-    margin-right: 1%;
-}
-
-div .botoes-produtos{
-    background-color: var(--primary-color);
-}
-
-.botoes-produtos button{
-    background-color: var(--secondary-color);
-    border: 1px solid black;
+.botao-adicionar-adega:hover {
+  color: var(--cor-secundaria-claro);
+  background-color: var(--cor-primaria-claro);
 }
