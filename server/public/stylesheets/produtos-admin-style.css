@@ -1,0 +1,403 @@
+/* importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@200&display=swap');
+
+/* criação das variaveis para cores e fontes */
+:root {
+    --cor-primaria: #2e0049;
+    --cor-primaria-claro: #5b2b75;
+    --cor-primaria-claro-opaco: #5b2b7548;
+    --cor-primaria-escuro: #130023;
+
+    --cor-secundaria: #f3e5f5;
+    --cor-secundaria-claro: #ffffff;
+    --cor-secundaria-escuro: #c0b3c2;
+
+    --cor-texto-primario: #fff;
+    --cor-texto-secundaria: #000;
+
+    --estilo-fonte-1: 'Raleway', sans-serif;
+    --estilo-fonte-2: 'Dancing Script', 'cursive';
+
+    --fonte-tamanho-extraPequeno: 0.9rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-tamanho-userList: 26px;
+    --fonte-tamanho-medio: 1.8rem;
+    --fonte-tamanho-grande: 2.0rem;
+    --fonte-tamanho-extraGrande: 2.7rem;
+}
+
+/* aplicação da formatação do corpo do html */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, main{
+  background-color: var(--cor-secundaria);
+}/* --------------------------------------- */
+
+/* Registro de Produtos */
+.form-title {
+  text-align: center;
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-grande);
+}
+
+.form-box {
+  margin: 50px auto 190px;
+}
+
+.form {
+  font-weight: bold;
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-medio);
+  padding: 15px 15px 0;
+  width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--cor-secundaria-claro);
+  margin: 5px auto 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.form label {
+  margin: 0 auto;
+}
+
+.form input {
+  margin: 0 auto;
+  width: 380px;
+  height: 35px;
+  padding: 0 3px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid #5b2b7556;
+  transition: 0.2s ease-in-out;
+  outline: none;
+}
+
+.form input:focus {
+  border:3px solid #5b2b75;
+}
+
+.form-btt {
+  display: flex;
+  padding: 15px;
+}
+
+.form-btt button{
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+  height: 35px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: var(--estilo-fonte-1);
+  font-size: 16px;
+  line-height: 13px;
+  color: var(--cor-texto-secundaria);
+  transition: 0.2s ease-in-out;
+}
+
+.form-btt button:hover {
+  color: var(--cor-secundaria-claro);
+  background-color: var(--cor-primaria-claro);
+}
+/* Registro de Produtos */
+
+.product-admin-title {
+  margin: 10px auto 0px;
+  font-family: var(--estilo-fonte-1);
+  text-align: center;
+}
+
+.products-admin-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.products-admin-table {
+  border: 1px solid var(--cor-primaria-escuro);
+  background-color: var(--cor-secundaria-claro);
+}
+
+.products-table-title {
+  position: sticky;
+  top: 0;
+}
+
+.products-table-title td{
+  font-size: 25px;
+  font-family: var(--estilo-fonte-1);
+  padding: 0 5px;
+  height: 40px;
+  text-align: center;
+  background-color: var(--cor-primaria-escuro);
+  color: var(--cor-secundaria-claro);
+}
+
+.products-table-content td {
+  text-align: center;
+  height: 55px;
+  padding: 0 10px;
+  font-family: system-ui;
+  font-size: var(--fonte-tamanho-userList);
+  background-color: var(--cor-secundaria);
+}
+
+.products-table-content img {
+  height: 100px;
+}
+
+.product-table-options {
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-table-options a {
+  font-size: 18px;
+}
+
+.config-ver {
+  padding: 2px 5px;
+  color: var(--cor-primaria-claro);
+  background-color: rgba(0, 128, 255, 0.274);
+  transition: 0.2s ease-in-out;
+  border: 1px solid black;
+}
+
+.config-editar {
+  padding: 2px 5px;
+  color: var(--cor-primaria-claro);
+  background-color: rgba(0, 255, 38, 0.274);
+  transition: 0.2s ease-in-out;
+  border: 1px solid black;
+}
+
+.config-excluir {
+  padding: 2px 5px;
+  color: var(--cor-primaria-claro);
+  background-color: rgba(255, 0, 0, 0.275);
+  transition: 0.4s ease-in-out;
+  border: 1px solid black;
+}
+
+.config-ver:hover {
+  background-color: rgb(0, 128, 255);
+  border-radius: 4px;
+  color: white;
+}
+
+.config-editar:hover {
+  background-color: rgb(0, 255, 38);
+  border-radius: 4px;
+  color: white;
+}
+
+.config-excluir:hover {
+  background-color: rgb(255, 0, 0);
+  border-radius: 4px;
+  color: white;
+}
+
+/* produto detalhado */
+.product-detailed-container{
+  display: flex;
+}
+
+.product-detailed-img {
+  width: 300px;
+}
+
+.product-detailed-img img{
+  width: 100%;
+  height: 100%;
+}
+/* produto detalhado */
+
+/* config da bia */
+.product-detailed-description {
+  border: 1px solid black;
+}
+
+.product-detailed-description h6 {
+  border-bottom: 1px solid black;
+}
+
+.corpo-todo {
+margin: 10px auto 10px;
+width: 95vw;
+display: flex;
+justify-content: center;
+align-self: center;
+align-content: center;
+align-items: center;
+}
+
+.imagem-detalhes-preco {
+display: flex;
+flex-direction: row;
+}
+
+.detalhes-produto-unitario {
+  border: 2px solid black;
+border-radius: 2px;
+max-width: 900px;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: center;
+background-color: #ffffff;
+padding: 10px;
+align-content: center;
+align-items: center;
+}
+
+.imagem-produto {
+  width: 500px;
+  margin: auto 10px;
+}
+
+.imagem-produto img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  object-fit: contain;
+  padding: 10px;
+  width: 100%;
+}
+
+.imagem-produto p {
+  font-size: 28px;
+}
+
+.detalhes-produto {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+padding: 10px;
+}
+
+.titulo-detalhes-produto {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: flex-start;
+justify-content: center;
+align-items: flex-start;
+}
+
+.titulo-detalhes-produto h5 {
+font-family: var(--estilo-fonte-1);
+font-size: var(--fonte-tamanho-grande);
+font-weight: bolder;
+color: var(--cor-texto-secundaria);
+padding: 10px;
+}
+
+.titulo-detalhes-produto h6 {
+font-family: var(--estilo-fonte-1);
+font-size: var(--fonte-tamanho-pequeno);
+font-weight: bold;
+color: var(--cor-texto-secundaria);
+padding: 10px;
+}
+
+.titulo-detalhes-produto p {
+font-family: var(--estilo-fonte-1);
+font-size: var(--fonte-tamanho-pequeno);
+font-weight: bold;
+text-align: justify;
+color: var(--cor-texto-secundaria);
+padding: 10px;
+}
+
+.outros-detalhes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+
+.outros-detalhes p {
+  width: auto;
+  font-family: var(--estilo-fonte-1);
+  font-size: var(--fonte-tamanho-medio);
+  font-weight: bold;
+  color: var(--cor-texto-secundaria);
+  padding: 2px 5px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.produto-preco-produto {
+  font-size: var(--fonte-tamanho-medio);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.produto-preco-produto p {
+font-family: var(--estilo-fonte-1);
+font-size: var(--fonte-tamanho-pequeno);
+font-weight: bold;
+color: var(--cor-texto-secundaria);
+padding: 10px;
+}
+
+.adicionar-adega {
+display: flex;
+}
+
+.product-options-btn a {
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  padding:5px 10px;
+  margin: 5px 10px;
+  font-weight: bold;
+  font-family: var(--estilo-fonte-1);
+  font-size: 16px;
+  line-height: 13px;
+  color: var(--cor-texto-secundaria);
+  transition: 0.2s ease-in-out;
+}
+
+.product-detailed-btn-edit:hover {
+  color: var(--cor-texto-primario);
+  background-color: rgb(0, 128, 255);
+}
+
+.product-detailed-btn-exclud:hover {
+  color: var(--cor-texto-primario);
+  background-color: rgb(255, 0, 0);
+}
+
+@media (max-width: 768px) {
+
+.imagem-detalhes-preco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+/* config da bia */
+

@@ -4,9 +4,14 @@ const express = require('express'),
     productsController = require('../controller/ProdutosController'),
     adminMiddleware = require('../middlewares/admin')
 
+// administração de PRODUTOS
 router.get('/produtos', adminMiddleware, productsController.allProductsAdmin)
+router.get('/produtos/:id', adminMiddleware, productsController.ProductAdmin)
+
+router.get('/produtos/:id/excluir', adminMiddleware, productsController.productDestroy)
 
 
+// administração de USUARIOS
 router.get('/usuarios', adminMiddleware, userController.allUsers)
 router.get('/usuarios/:id', adminMiddleware, userController.userDetail)
 

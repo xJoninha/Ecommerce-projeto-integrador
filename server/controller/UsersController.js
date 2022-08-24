@@ -1,9 +1,4 @@
-// const { json } = require('sequelize');
-// const Sequelize = require('sequelize');
-// const config = require("../config/database")
-
 const db = require('../models')
-// const sequelize = db.sequelize
 const User = db.User
 
 const controller = {};
@@ -59,7 +54,7 @@ controller.allUsers = async (req, res) => {
   const usuarios = await User.findAll();
   res.render('usuarios', {
     titulo: 'Usuários',
-    subtitulo: `Listagem de Usuários, Total: ${usuarios.length}`,
+    subtitulo: `Gerenciamento de Usuários, Total: ${usuarios.length}`,
     usuarios,
     usuarioLogado: req.cookies.usuario,
     usuarioAdmin: req.cookies.admin
@@ -84,7 +79,7 @@ controller.destroy = async (req, res) => {
   if (usuario) 
     res.redirect('/admin/usuarios')
   else
-    res.json({ status: 500, msg: 'Prepara o extintor!'})
+    res.json({ status: 500, msg: 'Solicitação negada!'})
 };
 // OK
 controller.update = (req, res) => {
@@ -102,10 +97,10 @@ controller.update = (req, res) => {
 // OK
 controller.edit = async (req, res) => {
   const { id } = req.params
-  let { nome, sobrenome, nascimento, email, senha, cpf, telefone } = req.body
+  let { nome, sobrenome, nascimento, email, senha, cpf, telefone, userAdmin } = req.body
   // telefone = telefone.replace(/\D/g, '')
   const usuario = await User.update(
-    { nome, sobrenome, nascimento, email, senha, cpf, telefone },
+    { nome, sobrenome, nascimento, email, senha, cpf, telefone, userAdmin },
     { where: { id } }
   )
   res.redirect('../../usuarios')

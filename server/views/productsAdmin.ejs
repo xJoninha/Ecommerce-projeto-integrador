@@ -1,16 +1,50 @@
 <%- include('partials/header')%>
+<head>
+    <link rel="stylesheet" href="/stylesheets/produtos-admin-style.css">
+</head>
 <main>
-    <h1>Gerenciamento de Produtos</h1>
-    <section>
-        <table>
+    <h1 class="product-admin-title">Gerenciamento de Produtos, Total: <%= produtos.length %></h1>
+    <section class="products-admin-box">
+        <% if (locals.produtos) {%>
+        <table class="products-admin-table">
             <thead>
-                <tr>
+                <tr class="products-table-title">
                     <td>ID</td>
-                    <td>nome</td>
-                    <td></td>
-                    <td></td>
+                    <td>Nome</td>
+                    <td>Imagem</td>
+                    <td>Tipo</td>
+                    <td>Teor alcoolico</td>
+                    <td>Pais</td>
+                    <td>Temperatura</td>
+                    <td>Estoque</td>
+                    <td>Configurações</td>
                 </tr>
             </thead>
+
+            <% for (let produto of produtos) { %>
+            <tbody>
+                <tr class="products-table-content">
+                    <td><%= produto.id %></td>
+                    <td><%= produto.nome %></td>
+                    <td><img src="<%= produto.image %>" alt=""></td>
+                    <td><%= produto.tipo %></td>
+                    <td><%= produto.teor_alcoolico %></td>
+                    <td><%= produto.pais %></td>
+                    <td><%= produto.temperatura %></td>
+                    <td><%= produto.estoque %></td>
+                    <td class="product-table-options">
+                        <a href="/admin/produtos/<%= produto.id %>" class="config-ver">Ver</a>
+                        <a href="/admin/produtos/<%= produto.id %>/excluir" class="config-excluir">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+            <% } %>
         </table>
+        <% } else { %>
+            <div>
+                <h3>Não há Produto cadastrado</h3>
+            </div>
+        <% } %>
     </section>
 </main>
+<%- include('partials/footer')%>

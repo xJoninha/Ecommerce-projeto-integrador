@@ -40,6 +40,20 @@
 
                     <label for="telefone">Telefone</label>
                     <input type="number" name="telefone" id="telefone" value="<%= usuario.telefone %>">
+
+                    <label for="userAdmin">Administrador</label>
+                    <select name="userAdmin" id="userAdmin">
+                        <option value="" selected disabled>
+                            <% if(locals.usuario.userAdmin == 1) { %>
+                                Sim
+                            <% } else { %>
+                                Não
+                            <% }%>
+                        </option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+
                     <div class="form-btt">
                         <button type="submit">Atualizar</button>
                     </div>

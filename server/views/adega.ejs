@@ -20,29 +20,7 @@
                 
                 <section class="container-vitrine">
                     
-                    <% for( let produto of produtoPesquisado) { %>
-                    <section class="">
-        
-                        <div class="">
-                            
-                            <a href=" /produtos/produto/<%= produto.id %> ">
-                                <img src="<%= produto.image %> " alt=""></a>
-                        </div>
-                        <h3> <%= produto.nome %> </h3>
-                        <p> R$ <%= produto.preco %> </p>
-        
-        
-                        <!-- Botão de adicionar a Adega -->
-                        <form id="formulario_do_botao" method="post" action="/pedidos">
-                            <input type="hidden" name="produtos_id" id="produtos_id" value="<%= produto.id %>" />
-                            <input min="1" type="number" id="quantidade" name="quantidade" value="1" />
-                            <button onclick="postPedido()" id="form_pedido_btn" type="submit">Adicionar a Adega</button>
-                        </form>
-        
-        
-        
-                    </section>
-                    <% } %>
+                   
                 </section>
 
 
