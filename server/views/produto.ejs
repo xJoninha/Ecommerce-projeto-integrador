@@ -23,52 +23,42 @@
   <%- include('../views/partials/header'); -%>
 
     <main>
-      <div class="corpoTodo">
-        <section class="flex-produto">
-          <div class="card mb-0 flex-produtos-corpo"> 
-            <div class="row">
-              <div class="col-md">
-                <div class="imagenzinha">
-                  <img src="<%= product.image %> " class="img-fluid rounded-start imagem-card"
-                    alt="...">
-                </div>
-              </div>
-              <div class="col-md-7 cor-detalhes">
-                <div class="card-body">
-                  <h5>
-                    <%= product.nome %>
-                  </h5>
-                  <h6>Detalhes</h6>
-                  <p class="card-text">
-                    <%= product.descricao %>
-                  </p>
-                  <div class="row justify-content-center">
-                    <div class="row produtos-descricao m-5">
-                      <div class="col-6">
-                        <p></i>Origem: <%= product.pais %></p>
-                      </div>
-                      <div class="col-6">
-                        <p>Teor alcoólico: <%= product.teor_alcoolico %>
-                        </p>
-                      </div>
-                      <div class="col-6">
-                        <p></i>Temperatura: <%= product.temperatura %>°C</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center my-5">
-                    <div class="preco-produto">R$ <%= product.preco %></div>
-                  </div>
-                </div>
-              </div>
+
+      <div class="corpo-todo">
+
+        <section class="detalhes-produto-unitario">
+          
+          <!-- Div imagem -->
+          <div class="imagem-produto">
+            <img src="<%= product.image %> " class="img-fluid rounded-start imagem-card" alt="...">
+          </div>
+              
+          <!-- Div detalhes/informações produto -->
+          <div class="detalhes-produto">
+            
+            <div class="titulo-detalhes-produto">
+              <h5> <%= product.nome %> </h5>
+                <h6>Detalhes</h6>
+                  <p class="card-text"> <%= product.descricao %> </p>
             </div>
 
+            <div class="outros-detalhes">
+              <p></i> Origem: <%= product.pais %> </p>
+              <p> Teor alcoólico: <%= product.teor_alcoolico %> </p>
+              <p></i> Temperatura: <%= product.temperatura %>°C </p>
+            </div>
 
-            <div class="adicionar-adega">
-              <button type="button" class="botao-adicionar-adega">Adicionar à Adega</button>
+            <div class="produto-preco-produto">
+              <div class="preco-produto">R$ <%= product.preco %></div>
             </div>
 
           </div>
+
+          <!-- Did botão adicionar à adega -->
+          <div class="adicionar-adega">
+            <button type="button" class="botao-adicionar-adega">Adicionar à Adega</button>
+          </div>
+
         </section>
       </div>
     </main>

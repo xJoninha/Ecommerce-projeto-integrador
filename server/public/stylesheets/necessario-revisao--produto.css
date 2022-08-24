@@ -38,17 +38,21 @@ body {
   background-color: var(--cor-secundaria);
 }
 
-.corpoTodo {
+
+
+/* Código antigo */
+
+/* .corpoTodo {
   margin: 10px auto 10px;
   width: 95vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
-}
+} */
 
 /* é o card do produto todo */
-.flex-produto {
+/* .flex-produto {
   height: auto;
   display: flex;
   flex-direction: row;
@@ -65,41 +69,41 @@ body {
   background-color: #fff;
   background-clip: border-box;
   border: none !important;
-}
+} */
 
 /* Caixa no torno da descrição */
-.produtos-descricao {
+/* .produtos-descricao {
   font-weight: bolder;
   color: var(--cor-texto-secundaria);
-}
+} */
 
 /* **************************** IMAGEM ****************************************** */
-.row, .col-md {
+/* .row, .col-md {
   width: 100%;
   max-width: 100%;
-}
+} */
 
-.imagenzinha {
+/* .imagenzinha {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   padding-top: 20px;
-}
+} */
 
-.imagem-card {
+/* .imagem-card {
   border-radius: 10px;
-}
+} */
 
 /* **************************** TEXTOS ****************************************** */
 
-.card-body h5 {
+/* .card-body h5 {
   font-family: var(--estilo-fonte-1);
   font-size: var(--fonte-tamanho-medio);
   font-weight: bold;
-}
+} */
 
-.card-body h6 {
+/* .card-body h6 {
   font-family: var(--estilo-fonte-1);
   font-size: var(--fonte-tamanho-pequeno);
   font-weight: bold;
@@ -164,4 +168,4 @@ body {
 .botao-adicionar-adega:hover {
   color: var(--cor-secundaria-claro);
   background-color: var(--cor-primaria-claro);
-}
+} */
