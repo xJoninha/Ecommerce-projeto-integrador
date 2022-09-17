@@ -76,7 +76,8 @@ controller.adega = (req, res) => {
     })
 }
 controller.allProductsAdmin = async (req, res) => {
-    const products = await Product.findAll();
+    const products = await Product.findAll({ limit: 10});
+
     res.render('productsAdmin', {
         produtos: products,
         usuarioLogado: req.cookies.usuario,
