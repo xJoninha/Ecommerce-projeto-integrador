@@ -17,7 +17,10 @@ controller.add = async (req, res) => {
   const userExists = await User.findOne({ where: {email} })
 
   if(userExists) {
-    res.render("errorPage",{title:"Erro...",message:"Email já cadastrado"})
+    res.render("errorPage",{
+      title:"Erro...",
+      message:'Campos preenchidos incorretamente ou o "Email" já cadastrado !'
+    })
   } else {
     User.create({ nome, sobrenome, nascimento, email, senha, cpf, telefone })
     res.render("login")
