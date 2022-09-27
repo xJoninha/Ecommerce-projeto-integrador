@@ -17,7 +17,10 @@ controller.add = async (req, res) => {
   const userExists = await User.findOne({ where: {email} })
 
   if(userExists) {
-    res.render("errorPage",{title:"Erro...",message:"Email já cadastrado"})
+    res.render("errorPage",{
+      title:"Erro...",
+      message:'Campos preenchidos incorretamente ou o "Email" já cadastrado !'
+    })
   } else {
     User.create({ nome, sobrenome, nascimento, email, senha, cpf, telefone })
     res.render("login")
@@ -28,17 +31,24 @@ controller.add = async (req, res) => {
 controller.login = (req, res) => {
   let { email, senha } = req.body
   const usuario = User.findOne({where: email, senha})
-  if(usuario) {
-    res.render("login", {
-        usuario,
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-      })
+
+  if (req.cookies.usuario) {
+    res.redirect("../../")
   } else {
-    res.render('errorPage', {
-      title: 'Solicitação negada!',
-      message: 'Usuario não cadastrado | email e/ou senha incorretos!',
-    })
+
+    if(usuario) {
+      res.render("login", {
+          usuario,
+          usuarioLogado: req.cookies.usuario,
+          usuarioAdmin: req.cookies.admin
+        })
+    } else {
+      res.render('errorPage', {
+        title: 'Solicitação negada!',
+        message: 'Usuario não cadastrado | email e/ou senha incorretos!',
+      })
+    }
+    console.log("Pagina login: verificando se deu certo")
   }
 };
 // OK

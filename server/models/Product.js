@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         image: { 
-            type: dataTypes.STRING
+            type: dataTypes.BLOB('medium')
         }, 
         nome: {
             type: dataTypes.STRING

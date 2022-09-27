@@ -6,21 +6,25 @@
 
     <main>
         <!-- novo card -->
-        <h1 class="container-title"> <%= tipo %></h1>
-        <div class="container-produtos">
-            <% for( let vinho of produto) { %>
-            <section>
-                <div>
-                    <a href="/produtos/produto/<%= vinho.id %>">
-                        <img src="<%= vinho.image %>" alt="">
-                    </a>
-                </div>
-                <h3><%= vinho.nome %></h3></a>
-                <p>R$ <%= vinho.preco %></p>
-                <button>Adicionar a adega</button>
-            </section>
-            <% } %>
-        </div>
+        <div class="container-main">
+            <div class="vitrine-title">
+                <h1 class="container-title"><%= tipo %></h1>
+            </div>
+            <div class="container-produtos">
+                <% for( let vinho of produto) { %>
+                <section class="card">
+                    <div>
+                        <a href="/produtos/produto/<%= vinho.id %>">
+                            <img src="<%= vinho.image %>" alt="">
+                        </a>
+                    </div>
+                    <h3 title="<%= vinho.nome %>"><%= vinho.nome %></h3></a>
+                    <p>R$ <%= vinho.preco %></p>
+                    <button>Adicionar a adega</button>
+                </section>
+                <% } %>
+            </div><!-- container-produtos -->
+        </div><!-- container-main -->
         <!-- novo card -->
     </main>
           
