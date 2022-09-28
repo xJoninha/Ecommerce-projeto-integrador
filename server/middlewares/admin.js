@@ -1,10 +1,14 @@
 const admin = async (req, res, next) => {
     
     let isAdmin = req.cookies.admin;
-    console.log(`Middleware admin: ${isAdmin}`)
-    if (isAdmin === "false") {
+    let logado = JSON.stringify(req.cookies.usuario) 
+    console.log(`Middleware admin ?: ${isAdmin}`)
+    console.log(`Middleware Logado ?: ${logado}`)
+
+    if (isAdmin === "false" || logado === "false") {
         return res.status(200).redirect("../")
     }
+
     // if (isAdmin === "false") {
     //     return res.render("login", {
     //         titulo: "Ops!",
